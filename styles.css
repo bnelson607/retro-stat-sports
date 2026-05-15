@@ -20,7 +20,8 @@
      16. Season Detail Page — Headline Cards
      17. Season Detail Page — Standings Table
      18. Season Detail Page — Playoff Bracket
-     19. Responsive
+     19. Season Detail Page — Regular Season Tab (leaderboards, streaks, distribution)
+     20. Responsive
    ============================================================ */
 
 
@@ -996,6 +997,15 @@ h3 { font-size: 24px; }
   border-bottom-color: #A4161A;
 }
 
+/* Tab content panes — only the active one is visible */
+.rss-tab-pane {
+  display: none;
+}
+
+.rss-tab-pane.active {
+  display: block;
+}
+
 
 /* -----------------------------------
    16. Season Detail Page — Headline Cards
@@ -1384,7 +1394,223 @@ h3 { font-size: 24px; }
 
 
 /* -----------------------------------
-   19. Responsive
+   19. Season Detail Page — Regular Season Tab
+   (leaderboards, streaks, distribution)
+----------------------------------- */
+
+/* Detailed standings — slightly more compact version of the standings table */
+.rss-standings-detailed thead th,
+.rss-standings-detailed tbody td {
+  padding: 8px 10px;
+  font-size: 12.5px;
+}
+
+.rss-standings-detailed thead th {
+  font-size: 11px;
+}
+
+/* Wrapper around the division nav inside the Regular Season tab */
+.rss-division-nav-wrap {
+  margin-bottom: 14px;
+}
+
+/* Side-by-side leaderboards (Overachievers + Disappointments) */
+.rss-leaderboard-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.rss-leaderboard {
+  background-color: white;
+  border-radius: 8px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.rss-leaderboard-title {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 16px;
+  color: #1C1C1C;
+  letter-spacing: 0.5px;
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rss-leaderboard-title i {
+  font-size: 18px;
+}
+
+.rss-leaderboard:first-child .rss-leaderboard-title i {
+  color: #00642E;
+}
+
+.rss-leaderboard:last-child .rss-leaderboard-title i {
+  color: #A4161A;
+}
+
+.rss-leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.rss-leaderboard-table thead th {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #555;
+  text-align: left;
+  padding: 6px 8px;
+  border-bottom: 1px solid #eee;
+  font-weight: normal;
+}
+
+.rss-leaderboard-table thead th.num {
+  text-align: right;
+}
+
+.rss-leaderboard-table thead th.rank {
+  width: 28px;
+  text-align: center;
+}
+
+.rss-leaderboard-table tbody td {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #1C1C1C;
+  padding: 8px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.rss-leaderboard-table tbody td.num {
+  text-align: right;
+}
+
+.rss-leaderboard-table tbody td.rank {
+  text-align: center;
+  color: #777;
+}
+
+.rss-leaderboard-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.rss-leaderboard-table .rss-overperform {
+  color: #00642E;
+  font-weight: 500;
+}
+
+.rss-leaderboard-table .rss-underperform {
+  color: #A4161A;
+  font-weight: 500;
+}
+
+/* Streaks table */
+.rss-streaks-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  font-variant-numeric: tabular-nums;
+}
+
+.rss-streaks-table thead th {
+  background: #002744;
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: normal;
+}
+
+.rss-streaks-table thead th.num,
+.rss-streaks-table thead th.dates {
+  text-align: right;
+}
+
+.rss-streaks-table tbody td {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #1C1C1C;
+  padding: 9px 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.rss-streaks-table tbody td.num {
+  text-align: right;
+  font-weight: 600;
+}
+
+.rss-streaks-table tbody td.dates {
+  text-align: right;
+  color: #777;
+  font-size: 12px;
+}
+
+.rss-streaks-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.rss-streaks-table tbody tr:hover {
+  background: #fafafa;
+}
+
+/* Win distribution table */
+.rss-distribution-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  font-variant-numeric: tabular-nums;
+}
+
+.rss-distribution-table thead th {
+  background: #002744;
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: normal;
+}
+
+.rss-distribution-table thead th.num {
+  text-align: right;
+}
+
+.rss-distribution-table tbody td {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #1C1C1C;
+  padding: 9px 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.rss-distribution-table tbody td.num {
+  text-align: right;
+}
+
+.rss-distribution-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.rss-distribution-table tbody tr:hover {
+  background: #fafafa;
+}
+
+
+/* -----------------------------------
+   20. Responsive
 ----------------------------------- */
 
 /* Header & footer — stack on narrow screens */
@@ -1560,5 +1786,58 @@ h3 { font-size: 24px; }
 
   .rss-bracket-ws-title {
     font-size: 20px;
+  }
+}
+
+/* Regular Season tab — responsive behavior */
+@media (max-width: 900px) {
+  .rss-leaderboard-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Streaks table — hide date columns on phones */
+  .rss-streaks-table thead th.dates,
+  .rss-streaks-table tbody td.dates {
+    display: none;
+  }
+
+  .rss-streaks-table thead th,
+  .rss-streaks-table tbody td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  /* Win distribution — hide outer percentiles on phones, keep p25/p50/p75 */
+  .rss-distribution-table thead th:nth-child(3),
+  .rss-distribution-table tbody td:nth-child(3),
+  .rss-distribution-table thead th:last-child,
+  .rss-distribution-table tbody td:last-child {
+    display: none;
+  }
+
+  .rss-distribution-table thead th,
+  .rss-distribution-table tbody td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .rss-leaderboard {
+    padding: 14px 16px;
+  }
+
+  .rss-leaderboard-table thead th,
+  .rss-leaderboard-table tbody td {
+    padding: 7px 6px;
+    font-size: 12px;
+  }
+
+  /* Detailed standings — already has mobile-hide on score-diff cols,
+     also hide Sim Range to keep it readable */
+  .rss-standings-detailed thead th,
+  .rss-standings-detailed tbody td {
+    padding: 6px 6px;
+    font-size: 11.5px;
   }
 }
