@@ -13,7 +13,7 @@
      9. League Page — Breadcrumb & Page Header
      10. League Page — Live Projection Callout
      11. League Page — Generic Sections & Story Cards
-     12. League Page — Era Filters & Season Display
+     12. League Page — Era Filters & Season Tiles
      13. League Page — Browse by Team Callout
      14. Responsive
    ============================================================ */
@@ -656,7 +656,7 @@ h3 { font-size: 24px; }
 
 
 /* -----------------------------------
-   12. League Page — Era Filters & Season Display
+   12. League Page — Era Filters & Season Tiles
 ----------------------------------- */
 .rss-era-filters {
   display: flex;
@@ -702,8 +702,14 @@ h3 { font-size: 24px; }
   color: white;
 }
 
+/* Era sections are hidden by default; only the .active one shows */
 .rss-era-section {
+  display: none;
   margin: 0 0 24px;
+}
+
+.rss-era-section.active {
+  display: block;
 }
 
 .rss-era-section-label {
@@ -728,18 +734,19 @@ h3 { font-size: 24px; }
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
-/* Season cards — visual layout for the recent decade */
+/* Season tiles — 2-column layout, used for every decade.
+   Wider tiles allow more substantial blurbs (1-2 sentences). */
 .rss-season-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
 }
 
 .rss-season-card {
   display: block;
   background-color: white;
   border-radius: 8px;
-  padding: 14px 18px;
+  padding: 18px 22px;
   text-decoration: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
   transition: transform 0.1s ease, box-shadow 0.15s ease;
@@ -755,12 +762,12 @@ h3 { font-size: 24px; }
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin: 0 0 6px;
+  margin: 0 0 8px;
 }
 
 .rss-season-year {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 26px;
+  font-size: 30px;
   letter-spacing: 1px;
   color: #002744;
   line-height: 1;
@@ -768,7 +775,7 @@ h3 { font-size: 24px; }
 
 .rss-season-status {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 1.5px;
   color: #555;
   text-transform: uppercase;
@@ -776,67 +783,18 @@ h3 { font-size: 24px; }
 
 .rss-season-champ {
   font-family: 'Inter', sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   color: #1C1C1C;
-  margin: 0 0 3px;
+  margin: 0 0 6px;
 }
 
 .rss-season-blurb {
   font-family: 'Inter', sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   color: #555;
   margin: 0;
-  line-height: 1.4;
-}
-
-/* Season rows — compressed layout for older decades */
-.rss-season-rows {
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
-
-.rss-season-row {
-  display: grid;
-  grid-template-columns: 60px 1fr 1.5fr 24px;
-  gap: 14px;
-  padding: 12px 18px;
-  border-bottom: 1px solid #eee;
-  text-decoration: none;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  color: #1C1C1C;
-  align-items: center;
-  transition: background-color 0.1s ease;
-}
-
-.rss-season-row:hover {
-  background-color: #fafafa;
-  text-decoration: none;
-}
-
-.rss-season-row:last-child {
-  border-bottom: none;
-}
-
-.rss-row-year {
-  font-weight: 600;
-}
-
-.rss-row-champ {
-  color: #1C1C1C;
-}
-
-.rss-row-blurb {
-  color: #555;
-}
-
-.rss-row-arrow {
-  color: #999;
-  font-size: 14px;
-  justify-self: end;
+  line-height: 1.5;
 }
 
 
@@ -963,7 +921,7 @@ h3 { font-size: 24px; }
   }
 }
 
-/* League page — adapt header, grids, and rows for tablet/phone */
+/* League page — adapt header, story grid, season tiles for tablet/phone */
 @media (max-width: 900px) {
   .rss-league-page-title {
     font-size: 28px;
@@ -973,28 +931,23 @@ h3 { font-size: 24px; }
     grid-template-columns: 1fr;
   }
 
-  .rss-season-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .rss-browse-callout {
     flex-direction: column;
     align-items: flex-start;
   }
 }
 
-@media (max-width: 600px) {
+/* Season tiles collapse to 1 column on narrower screens (phones, narrow tablets) */
+@media (max-width: 700px) {
   .rss-season-grid {
     grid-template-columns: 1fr;
   }
 
-  .rss-season-row {
-    grid-template-columns: 50px 1fr 30px;
-    font-size: 13px;
-    padding: 10px 14px;
+  .rss-season-card {
+    padding: 16px 18px;
   }
 
-  .rss-row-blurb {
-    display: none;
+  .rss-season-year {
+    font-size: 26px;
   }
 }

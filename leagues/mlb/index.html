@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="/retro-stat-sports/styles.css">
 
-    <!-- Tabler Icons for sport icon, arrows, chevrons -->
+    <!-- Tabler Icons for sport icon, arrows -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 
     <script defer src="/retro-stat-sports/scripts/main.js"></script>
@@ -65,7 +65,7 @@
         <section class="rss-live-callout">
             <div class="rss-live-callout-header">
                 <span class="rss-live-badge">Live</span>
-                <span class="rss-live-meta">Updated 4 hours ago</span>
+                <span class="rss-live-meta">Updated <span id="update-date">—</span></span>
             </div>
             <p class="rss-live-eyebrow">2026 Projection</p>
             <h2 class="rss-live-title">Dodgers lead at 18.2%, but eight teams are above 5%</h2>
@@ -100,13 +100,12 @@
         <!-- Every MLB Season -->
         <section class="rss-section">
             <h2 class="rss-section-title">Every MLB Season</h2>
-            <p class="rss-section-subtitle">Click any year for the full simulation and standings.</p>
+            <p class="rss-section-subtitle">Click a decade to explore.</p>
 
-            <!-- Era filter buttons — one per decade, newest first -->
+            <!-- Era filter buttons — no "All", one per decade, newest first -->
             <div class="rss-era-filters">
                 <span class="rss-era-label">Era:</span>
-                <button onclick="filterEra(event, 'all')" class="rss-filter-btn active">All</button>
-                <button onclick="filterEra(event, '2020s')" class="rss-filter-btn">2020s</button>
+                <button onclick="filterEra(event, '2020s')" class="rss-filter-btn active">2020s</button>
                 <button onclick="filterEra(event, '2010s')" class="rss-filter-btn">2010s</button>
                 <button onclick="filterEra(event, '2000s')" class="rss-filter-btn">2000s</button>
                 <button onclick="filterEra(event, '1990s')" class="rss-filter-btn">1990s</button>
@@ -121,8 +120,8 @@
                 <button onclick="filterEra(event, '1900s')" class="rss-filter-btn">1900s</button>
             </div>
 
-            <!-- 2020s — shown as cards (recent decade gets the visual treatment) -->
-            <div class="rss-era-section" data-era="2020s">
+            <!-- 2020s — active by default -->
+            <div class="rss-era-section active" data-era="2020s">
                 <p class="rss-era-section-label">2020s</p>
                 <div class="rss-season-grid">
                     <a href="/retro-stat-sports/leagues/mlb/2025/" class="rss-season-card">
@@ -131,7 +130,7 @@
                             <span class="rss-season-status">Final</span>
                         </div>
                         <p class="rss-season-champ">[Champion]</p>
-                        <p class="rss-season-blurb">[Placeholder — fill in actual result]</p>
+                        <p class="rss-season-blurb">[Placeholder — fill in the actual 2025 result and a brief summary of the season's defining story.]</p>
                     </a>
                     <a href="/retro-stat-sports/leagues/mlb/2024/" class="rss-season-card">
                         <div class="rss-season-card-header">
@@ -139,7 +138,7 @@
                             <span class="rss-season-status">Final</span>
                         </div>
                         <p class="rss-season-champ">Dodgers</p>
-                        <p class="rss-season-blurb">Tigers biggest overachiever (+11.3 wins)</p>
+                        <p class="rss-season-blurb">Cruised to the expected title, but Tigers (+11.3 wins) stole the storyline as the decade's biggest overachiever.</p>
                     </a>
                     <a href="/retro-stat-sports/leagues/mlb/2023/" class="rss-season-card">
                         <div class="rss-season-card-header">
@@ -147,7 +146,7 @@
                             <span class="rss-season-status">Final</span>
                         </div>
                         <p class="rss-season-champ">Rangers</p>
-                        <p class="rss-season-blurb">3.2% odds entering playoffs</p>
+                        <p class="rss-season-blurb">Entered the playoffs with just 3.2% title odds, then ran the table for the first championship in franchise history.</p>
                     </a>
                     <a href="/retro-stat-sports/leagues/mlb/2022/" class="rss-season-card">
                         <div class="rss-season-card-header">
@@ -155,7 +154,7 @@
                             <span class="rss-season-status">Final</span>
                         </div>
                         <p class="rss-season-champ">Astros</p>
-                        <p class="rss-season-blurb">Most predictable champion since 2019</p>
+                        <p class="rss-season-blurb">Most predictable champion of the post-2019 era — the sim gave them top odds from June onward.</p>
                     </a>
                     <a href="/retro-stat-sports/leagues/mlb/2021/" class="rss-season-card">
                         <div class="rss-season-card-header">
@@ -163,7 +162,7 @@
                             <span class="rss-season-status">Final</span>
                         </div>
                         <p class="rss-season-champ">Braves</p>
-                        <p class="rss-season-blurb">Snapped 26-year title drought</p>
+                        <p class="rss-season-blurb">Snapped a 26-year title drought despite sitting below .500 as late as August 6.</p>
                     </a>
                     <a href="/retro-stat-sports/leagues/mlb/2020/" class="rss-season-card">
                         <div class="rss-season-card-header">
@@ -171,44 +170,54 @@
                             <span class="rss-season-status">Final</span>
                         </div>
                         <p class="rss-season-champ">Dodgers</p>
-                        <p class="rss-season-blurb">Ended 32-year drought, 60-game season</p>
+                        <p class="rss-season-blurb">Ended a 32-year drought in a strange 60-game season with expanded 16-team playoffs.</p>
                     </a>
                 </div>
             </div>
 
-            <!-- 2010s — rows -->
+            <!-- 2010s -->
             <div class="rss-era-section" data-era="2010s">
                 <p class="rss-era-section-label">2010s</p>
-                <div class="rss-season-rows">
-                    <a href="/retro-stat-sports/leagues/mlb/2019/" class="rss-season-row">
-                        <span class="rss-row-year">2019</span>
-                        <span class="rss-row-champ">Nationals</span>
-                        <span class="rss-row-blurb">Won at 4.1% preseason odds</span>
-                        <i class="ti ti-chevron-right rss-row-arrow"></i>
+                <div class="rss-season-grid">
+                    <a href="/retro-stat-sports/leagues/mlb/2019/" class="rss-season-card">
+                        <div class="rss-season-card-header">
+                            <span class="rss-season-year">2019</span>
+                            <span class="rss-season-status">Final</span>
+                        </div>
+                        <p class="rss-season-champ">Nationals</p>
+                        <p class="rss-season-blurb">First franchise title at just 4.1% preseason odds — every playoff game won on the road.</p>
                     </a>
-                    <a href="/retro-stat-sports/leagues/mlb/2018/" class="rss-season-row">
-                        <span class="rss-row-year">2018</span>
-                        <span class="rss-row-champ">Red Sox</span>
-                        <span class="rss-row-blurb">108-win regular season</span>
-                        <i class="ti ti-chevron-right rss-row-arrow"></i>
+                    <a href="/retro-stat-sports/leagues/mlb/2018/" class="rss-season-card">
+                        <div class="rss-season-card-header">
+                            <span class="rss-season-year">2018</span>
+                            <span class="rss-season-status">Final</span>
+                        </div>
+                        <p class="rss-season-champ">Red Sox</p>
+                        <p class="rss-season-blurb">108-win regular season, then a near-flawless postseason — second-most dominant October of the decade.</p>
                     </a>
-                    <a href="/retro-stat-sports/leagues/mlb/2017/" class="rss-season-row">
-                        <span class="rss-row-year">2017</span>
-                        <span class="rss-row-champ">Astros</span>
-                        <span class="rss-row-blurb">Sim flagged 2nd-biggest upset of decade</span>
-                        <i class="ti ti-chevron-right rss-row-arrow"></i>
+                    <a href="/retro-stat-sports/leagues/mlb/2017/" class="rss-season-card">
+                        <div class="rss-season-card-header">
+                            <span class="rss-season-year">2017</span>
+                            <span class="rss-season-status">Final</span>
+                        </div>
+                        <p class="rss-season-champ">Astros</p>
+                        <p class="rss-season-blurb">Sim flagged this as the decade's second-biggest upset behind only 2019. (Subsequent sign-stealing reveal not in model.)</p>
                     </a>
-                    <a href="/retro-stat-sports/leagues/mlb/2016/" class="rss-season-row">
-                        <span class="rss-row-year">2016</span>
-                        <span class="rss-row-champ">Cubs</span>
-                        <span class="rss-row-blurb">First title since 1908</span>
-                        <i class="ti ti-chevron-right rss-row-arrow"></i>
+                    <a href="/retro-stat-sports/leagues/mlb/2016/" class="rss-season-card">
+                        <div class="rss-season-card-header">
+                            <span class="rss-season-year">2016</span>
+                            <span class="rss-season-status">Final</span>
+                        </div>
+                        <p class="rss-season-champ">Cubs</p>
+                        <p class="rss-season-blurb">First title since 1908 — won a Game 7 the model gave them just 22% odds to take.</p>
                     </a>
-                    <a href="/retro-stat-sports/leagues/mlb/2015/" class="rss-season-row">
-                        <span class="rss-row-year">2015</span>
-                        <span class="rss-row-champ">Royals</span>
-                        <span class="rss-row-blurb">Back-to-back World Series appearances</span>
-                        <i class="ti ti-chevron-right rss-row-arrow"></i>
+                    <a href="/retro-stat-sports/leagues/mlb/2015/" class="rss-season-card">
+                        <div class="rss-season-card-header">
+                            <span class="rss-season-year">2015</span>
+                            <span class="rss-season-status">Final</span>
+                        </div>
+                        <p class="rss-season-champ">Royals</p>
+                        <p class="rss-season-blurb">Back-to-back World Series appearances finished off — defeated the Mets in five.</p>
                     </a>
                 </div>
             </div>
@@ -216,12 +225,14 @@
             <!-- 2000s -->
             <div class="rss-era-section" data-era="2000s">
                 <p class="rss-era-section-label">2000s</p>
-                <div class="rss-season-rows">
-                    <a href="/retro-stat-sports/leagues/mlb/2001/" class="rss-season-row">
-                        <span class="rss-row-year">2001</span>
-                        <span class="rss-row-champ">Diamondbacks</span>
-                        <span class="rss-row-blurb">4th-year expansion team won it all</span>
-                        <i class="ti ti-chevron-right rss-row-arrow"></i>
+                <div class="rss-season-grid">
+                    <a href="/retro-stat-sports/leagues/mlb/2001/" class="rss-season-card">
+                        <div class="rss-season-card-header">
+                            <span class="rss-season-year">2001</span>
+                            <span class="rss-season-status">Final</span>
+                        </div>
+                        <p class="rss-season-champ">Diamondbacks</p>
+                        <p class="rss-season-blurb">A 4th-year expansion team won it all — defeated the dynasty Yankees in a Game 7 walkoff.</p>
                     </a>
                 </div>
             </div>
@@ -229,18 +240,22 @@
             <!-- 1990s -->
             <div class="rss-era-section" data-era="1990s">
                 <p class="rss-era-section-label">1990s</p>
-                <div class="rss-season-rows">
-                    <a href="/retro-stat-sports/leagues/mlb/1998/" class="rss-season-row">
-                        <span class="rss-row-year">1998</span>
-                        <span class="rss-row-champ">Yankees</span>
-                        <span class="rss-row-blurb">114 wins — highest peak Elo ever</span>
-                        <i class="ti ti-chevron-right rss-row-arrow"></i>
+                <div class="rss-season-grid">
+                    <a href="/retro-stat-sports/leagues/mlb/1998/" class="rss-season-card">
+                        <div class="rss-season-card-header">
+                            <span class="rss-season-year">1998</span>
+                            <span class="rss-season-status">Final</span>
+                        </div>
+                        <p class="rss-season-champ">Yankees</p>
+                        <p class="rss-season-blurb">114 wins, the highest peak Elo in MLB history, and a four-game sweep of the Padres to cap it.</p>
                     </a>
-                    <a href="/retro-stat-sports/leagues/mlb/1991/" class="rss-season-row">
-                        <span class="rss-row-year">1991</span>
-                        <span class="rss-row-champ">Twins</span>
-                        <span class="rss-row-blurb">Worst-to-first season, 1.8% preseason odds</span>
-                        <i class="ti ti-chevron-right rss-row-arrow"></i>
+                    <a href="/retro-stat-sports/leagues/mlb/1991/" class="rss-season-card">
+                        <div class="rss-season-card-header">
+                            <span class="rss-season-year">1991</span>
+                            <span class="rss-season-status">Final</span>
+                        </div>
+                        <p class="rss-season-champ">Twins</p>
+                        <p class="rss-season-blurb">Worst-to-first miracle at just 1.8% preseason odds — beat the Braves in seven games, three of them in extras.</p>
                     </a>
                 </div>
             </div>
@@ -314,8 +329,7 @@
 
     <div id="site-footer"></div>
 
-    <!-- Era filter logic — small enough to live inline for now;
-         we can move it to main.js once we have multiple league pages using it. -->
+    <!-- Era filter logic -->
     <script>
         function filterEra(event, era) {
             // Update active button styling
@@ -324,12 +338,12 @@
             });
             event.target.classList.add('active');
 
-            // Show/hide era sections
+            // Show only the selected decade
             document.querySelectorAll('.rss-era-section').forEach(section => {
-                if (era === 'all' || section.dataset.era === era) {
-                    section.style.display = '';
+                if (section.dataset.era === era) {
+                    section.classList.add('active');
                 } else {
-                    section.style.display = 'none';
+                    section.classList.remove('active');
                 }
             });
         }
