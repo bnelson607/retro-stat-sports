@@ -5,21 +5,20 @@
      1.  Fonts
      2.  Globals (body, links, images, hr)
      3.  Typography (headings, article/sim titles)
-     4.  Site Header
-     5.  Main Navigation & Dropdowns
-     6.  Submenus
-     7.  Content Containers (legacy — used by pages not yet redesigned)
-     8.  Article Lists & Season Headers
-     9.  Generic Tables
-     10. Standings Tables (pipeline-generated, sport-specific)
-     11. Season-in-Review (pipeline-generated)
-     12. Tabs
-     13. Collapsible Sections (details/summary)
-     14. Iframes & Graph Labels
-     15. Side-by-Side Flex Layouts
-     16. Playoff Brackets (pipeline-generated)
-     17. Homepage — Hero, Stats, Sections, Tiles (rss- prefixed)
-     18. Responsive
+     4.  Site Header & Nav
+     5.  Site Footer
+     6.  Content Containers (legacy — used by pages not yet redesigned)
+     7.  Article Lists & Season Headers
+     8.  Generic Tables
+     9.  Standings Tables (pipeline-generated, sport-specific)
+     10. Season-in-Review (pipeline-generated)
+     11. Tabs
+     12. Collapsible Sections (details/summary)
+     13. Iframes & Graph Labels
+     14. Side-by-Side Flex Layouts
+     15. Playoff Brackets (pipeline-generated)
+     16. Homepage — Hero, Stats, Sections, Tiles (rss- prefixed)
+     17. Responsive
    ============================================================ */
 
 
@@ -113,171 +112,112 @@ h3 { font-size: 24px; }
 
 
 /* -----------------------------------
-   4. Site Header
+   4. Site Header & Nav
 ----------------------------------- */
 #site-header {
-  text-align: center;
-  padding: 10px 0;
-  margin-bottom: 10px;
+  /* Reset wrapper — actual styles live on .site-header-bar */
   background: transparent;
 }
 
-#site-header .site-title {
-  margin: 1em 0;
-  line-height: 1;
+.site-header-bar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 20px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
-#site-header a#site-title-link {
+.site-brand {
   font-family: 'Graduate', serif;
   color: #A4161A;
   letter-spacing: 1.5px;
-  font-size: 48px;
-  display: block;
+  font-size: 28px;
   text-decoration: none;
+  line-height: 1;
 }
 
-#site-header a#site-title-link:hover,
-#site-header a#site-title-link:focus {
+.site-brand:hover,
+.site-brand:focus {
   color: #A4161A;
   text-decoration: none;
 }
 
-#site-header * {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-
-/* -----------------------------------
-   5. Main Navigation & Dropdowns
------------------------------------ */
-nav {
-  background-color: #002744;
-  padding: 8px 12px;
-  margin: 0;
+.site-nav {
   display: flex;
-  justify-content: center;
-  gap: 16px;
+  gap: 24px;
+  align-items: center;
   flex-wrap: wrap;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 20px;
-  letter-spacing: 1px;
-  color: white;
 }
 
-nav.main-nav {
-  background-color: #002744;
-}
-
-.nav-divider {
-  border-left: 1px solid white;
-  height: 24px;
-  margin: 0 12px;
-  align-self: center;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropbtn {
-  background-color: #002744;
-  color: white;
-  padding: 8px 10px;
-  font-size: 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-  font-family: 'Bebas Neue', sans-serif;
-  transition: background-color 0.3s ease;
-}
-
-.dropbtn:hover {
-  background-color: #004080;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  min-width: 100px;
-  width: max-content;
-  z-index: 1;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  font-size: 18px;
-}
-
-.dropdown-content a {
-  display: block;
-  line-height: 1.25;
-  padding: 10px 16px;
-  color: #002744;
+.site-nav a {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 15px;
+  color: #555;
   text-decoration: none;
-  font-weight: 600;
-  font-family: 'Bebas Neue', sans-serif;
-  white-space: nowrap;
-  text-align: left;
+  transition: color 0.15s ease;
+  letter-spacing: 0.2px;
 }
 
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown-separator {
-  border: none;
-  border-top: 1px dashed #002744;
-  margin: 6px 12px;
+.site-nav a:hover {
+  color: #A4161A;
+  text-decoration: none;
 }
 
 
 /* -----------------------------------
-   6. Submenus
+   5. Site Footer
 ----------------------------------- */
-.submenu {
-  position: relative;
+.site-footer {
+  border-top: 1px solid #ccc;
+  margin-top: 40px;
+  padding: 24px 0;
+  background: transparent;
 }
 
-.submenu > a::after {
-  content: " ▶";
-  float: right;
+.site-footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
-.submenu-content {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  background-color: white;
-  min-width: 130px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  z-index: 2;
+.site-footer-brand {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 13px;
+  color: #555;
+  margin: 0;
 }
 
-.submenu:hover .submenu-content {
-  display: block;
+.site-footer-nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.scrollable-menu {
-  max-height: 350px;
-  overflow-y: auto;
-  border-radius: 4px;
+.site-footer-nav a {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 13px;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.15s ease;
 }
 
-.dropdown-content,
-.submenu-content {
-  will-change: opacity, transform;
+.site-footer-nav a:hover {
+  color: #A4161A;
+  text-decoration: none;
 }
 
 
 /* -----------------------------------
-   7. Content Containers (legacy)
+   6. Content Containers (legacy)
    Used by pages not yet redesigned: USA/UEFA/NCAA landings,
    methodology, about. Will be replaced over time.
 ----------------------------------- */
@@ -306,7 +246,7 @@ nav.main-nav {
 
 
 /* -----------------------------------
-   8. Article Lists & Season Headers
+   7. Article Lists & Season Headers
 ----------------------------------- */
 .article-list {
   list-style: none;
@@ -353,7 +293,7 @@ nav.main-nav {
 
 
 /* -----------------------------------
-   9. Generic Tables
+   8. Generic Tables
 ----------------------------------- */
 table {
   width: 100%;
@@ -373,7 +313,7 @@ th {
 
 
 /* -----------------------------------
-   10. Standings Tables (pipeline-generated)
+   9. Standings Tables (pipeline-generated)
 ----------------------------------- */
 .standings-table {
   table-layout: fixed;
@@ -499,7 +439,7 @@ th {
 
 
 /* -----------------------------------
-   11. Season-in-Review (pipeline-generated)
+   10. Season-in-Review (pipeline-generated)
 ----------------------------------- */
 .season-in-review {
   font-family: 'Inter', sans-serif;
@@ -569,7 +509,7 @@ th {
 
 
 /* -----------------------------------
-   12. Tabs
+   11. Tabs
 ----------------------------------- */
 .tab-buttons {
   display: flex;
@@ -605,7 +545,7 @@ th {
 
 
 /* -----------------------------------
-   13. Collapsible Sections
+   12. Collapsible Sections
 ----------------------------------- */
 details {
   background: white;
@@ -625,7 +565,7 @@ summary {
 
 
 /* -----------------------------------
-   14. Iframes & Graph Labels
+   13. Iframes & Graph Labels
 ----------------------------------- */
 iframe {
   display: block;
@@ -666,7 +606,7 @@ iframe {
 
 
 /* -----------------------------------
-   15. Side-by-Side Flex Layouts
+   14. Side-by-Side Flex Layouts
 ----------------------------------- */
 .side-by-side-flex-wrapper {
   display: flex;
@@ -693,7 +633,7 @@ iframe {
 
 
 /* -----------------------------------
-   16. Playoff Brackets (pipeline-generated)
+   15. Playoff Brackets (pipeline-generated)
 ----------------------------------- */
 .playoffs-wrapper {
   overflow-x: auto;
@@ -869,7 +809,7 @@ iframe {
 
 
 /* ============================================================
-   17. Homepage — Hero, Stats, Sections, Tiles
+   16. Homepage — Hero, Stats, Sections, Tiles
    All classes prefixed with "rss-" to avoid collisions.
    ============================================================ */
 
@@ -1166,7 +1106,7 @@ iframe {
 
 
 /* ============================================================
-   18. Responsive
+   17. Responsive
    ============================================================ */
 
 /* Standings tables — collapse columns on narrow screens */
@@ -1311,6 +1251,26 @@ iframe {
     gap: 16px !important;
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch !important;
+  }
+}
+
+
+/* Header & footer — mobile (stack title above nav) */
+@media (max-width: 600px) {
+  .site-header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .site-nav {
+    gap: 16px;
+  }
+
+  .site-footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 }
 
