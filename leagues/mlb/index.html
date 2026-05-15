@@ -1,0 +1,339 @@
+<!-- /leagues/mlb/index.html — MLB league landing page -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Major League Baseball — Retro Stat Sports</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Every MLB season simulated 10,000 times. Elo ratings, playoff probabilities, and alternate histories from 1901 to present.">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/retro-stat-sports/usa/favicons/apple-touch-icon.png">
+    <link rel="icon" href="/retro-stat-sports/usa/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/retro-stat-sports/usa/favicons/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/retro-stat-sports/usa/favicons/android-chrome-192x192.png" type="image/png" sizes="192x192">
+
+    <link rel="stylesheet" href="/retro-stat-sports/styles.css">
+
+    <!-- Tabler Icons for sport icon, arrows, chevrons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+    <script defer src="/retro-stat-sports/scripts/main.js"></script>
+</head>
+
+<body>
+    <div id="site-header"></div>
+
+    <main class="container">
+
+        <!-- Breadcrumb -->
+        <div class="rss-breadcrumb">
+            <a href="/retro-stat-sports/leagues/">Pro Leagues</a> / MLB
+        </div>
+
+        <!-- League page header -->
+        <header class="rss-league-page-header">
+            <i class="ti ti-ball-baseball rss-league-page-icon"></i>
+            <div>
+                <h1 class="rss-league-page-title">Major League Baseball</h1>
+                <p class="rss-league-page-subtitle">125 seasons · 1901 to present</p>
+            </div>
+        </header>
+
+        <!-- Stats strip -->
+        <section class="rss-stats-strip">
+            <div class="rss-stat">
+                <p class="rss-stat-label">Seasons</p>
+                <p class="rss-stat-value">125</p>
+            </div>
+            <div class="rss-stat">
+                <p class="rss-stat-label">Franchises</p>
+                <p class="rss-stat-value">52</p>
+            </div>
+            <div class="rss-stat">
+                <p class="rss-stat-label">Games Simulated</p>
+                <p class="rss-stat-value">2.4M</p>
+            </div>
+            <div class="rss-stat">
+                <p class="rss-stat-label">Most Titles</p>
+                <p class="rss-stat-value">Yankees</p>
+            </div>
+        </section>
+
+        <!-- Live projection callout -->
+        <section class="rss-live-callout">
+            <div class="rss-live-callout-header">
+                <span class="rss-live-badge">Live</span>
+                <span class="rss-live-meta">Updated 4 hours ago</span>
+            </div>
+            <p class="rss-live-eyebrow">2026 Projection</p>
+            <h2 class="rss-live-title">Dodgers lead at 18.2%, but eight teams are above 5%</h2>
+            <p class="rss-live-subtitle">Biggest mover this week: Tigers, up 3.4 points after sweeping the Rangers.</p>
+            <a href="/retro-stat-sports/leagues/mlb/2026/" class="rss-live-link">See full 2026 projection <i class="ti ti-arrow-right"></i></a>
+        </section>
+
+        <!-- MLB Stories -->
+        <section class="rss-section">
+            <h2 class="rss-section-title">MLB Stories</h2>
+            <p class="rss-section-subtitle">Auto-generated rankings across every season we've simulated.</p>
+
+            <div class="rss-story-grid">
+                <a href="/retro-stat-sports/leagues/mlb/1998/" class="rss-story-card">
+                    <p class="rss-story-tag">Most Dominant</p>
+                    <p class="rss-story-headline">1998 Yankees</p>
+                    <p class="rss-story-detail">Highest peak Elo in MLB history.</p>
+                </a>
+                <a href="/retro-stat-sports/leagues/mlb/1991/" class="rss-story-card">
+                    <p class="rss-story-tag">Biggest Upset</p>
+                    <p class="rss-story-headline">1991 Twins</p>
+                    <p class="rss-story-detail">Won title at 1.8% preseason odds.</p>
+                </a>
+                <a href="/retro-stat-sports/leagues/mlb/2001/" class="rss-story-card">
+                    <p class="rss-story-tag">Most Heartbreaking</p>
+                    <p class="rss-story-headline">2001 Mariners</p>
+                    <p class="rss-story-detail">116 wins, no title, 71% sim odds.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Every MLB Season -->
+        <section class="rss-section">
+            <h2 class="rss-section-title">Every MLB Season</h2>
+            <p class="rss-section-subtitle">Click any year for the full simulation and standings.</p>
+
+            <!-- Era filter buttons — one per decade, newest first -->
+            <div class="rss-era-filters">
+                <span class="rss-era-label">Era:</span>
+                <button onclick="filterEra(event, 'all')" class="rss-filter-btn active">All</button>
+                <button onclick="filterEra(event, '2020s')" class="rss-filter-btn">2020s</button>
+                <button onclick="filterEra(event, '2010s')" class="rss-filter-btn">2010s</button>
+                <button onclick="filterEra(event, '2000s')" class="rss-filter-btn">2000s</button>
+                <button onclick="filterEra(event, '1990s')" class="rss-filter-btn">1990s</button>
+                <button onclick="filterEra(event, '1980s')" class="rss-filter-btn">1980s</button>
+                <button onclick="filterEra(event, '1970s')" class="rss-filter-btn">1970s</button>
+                <button onclick="filterEra(event, '1960s')" class="rss-filter-btn">1960s</button>
+                <button onclick="filterEra(event, '1950s')" class="rss-filter-btn">1950s</button>
+                <button onclick="filterEra(event, '1940s')" class="rss-filter-btn">1940s</button>
+                <button onclick="filterEra(event, '1930s')" class="rss-filter-btn">1930s</button>
+                <button onclick="filterEra(event, '1920s')" class="rss-filter-btn">1920s</button>
+                <button onclick="filterEra(event, '1910s')" class="rss-filter-btn">1910s</button>
+                <button onclick="filterEra(event, '1900s')" class="rss-filter-btn">1900s</button>
+            </div>
+
+            <!-- 2020s — shown as cards (recent decade gets the visual treatment) -->
+            <div class="rss-era-section" data-era="2020s">
+                <p class="rss-era-section-label">2020s</p>
+                <div class="rss-season-grid">
+                    <a href="/retro-stat-sports/leagues/mlb/2025/" class="rss-season-card">
+                        <div class="rss-season-card-header">
+                            <span class="rss-season-year">2025</span>
+                            <span class="rss-season-status">Final</span>
+                        </div>
+                        <p class="rss-season-champ">[Champion]</p>
+                        <p class="rss-season-blurb">[Placeholder — fill in actual result]</p>
+                    </a>
+                    <a href="/retro-stat-sports/leagues/mlb/2024/" class="rss-season-card">
+                        <div class="rss-season-card-header">
+                            <span class="rss-season-year">2024</span>
+                            <span class="rss-season-status">Final</span>
+                        </div>
+                        <p class="rss-season-champ">Dodgers</p>
+                        <p class="rss-season-blurb">Tigers biggest overachiever (+11.3 wins)</p>
+                    </a>
+                    <a href="/retro-stat-sports/leagues/mlb/2023/" class="rss-season-card">
+                        <div class="rss-season-card-header">
+                            <span class="rss-season-year">2023</span>
+                            <span class="rss-season-status">Final</span>
+                        </div>
+                        <p class="rss-season-champ">Rangers</p>
+                        <p class="rss-season-blurb">3.2% odds entering playoffs</p>
+                    </a>
+                    <a href="/retro-stat-sports/leagues/mlb/2022/" class="rss-season-card">
+                        <div class="rss-season-card-header">
+                            <span class="rss-season-year">2022</span>
+                            <span class="rss-season-status">Final</span>
+                        </div>
+                        <p class="rss-season-champ">Astros</p>
+                        <p class="rss-season-blurb">Most predictable champion since 2019</p>
+                    </a>
+                    <a href="/retro-stat-sports/leagues/mlb/2021/" class="rss-season-card">
+                        <div class="rss-season-card-header">
+                            <span class="rss-season-year">2021</span>
+                            <span class="rss-season-status">Final</span>
+                        </div>
+                        <p class="rss-season-champ">Braves</p>
+                        <p class="rss-season-blurb">Snapped 26-year title drought</p>
+                    </a>
+                    <a href="/retro-stat-sports/leagues/mlb/2020/" class="rss-season-card">
+                        <div class="rss-season-card-header">
+                            <span class="rss-season-year">2020</span>
+                            <span class="rss-season-status">Final</span>
+                        </div>
+                        <p class="rss-season-champ">Dodgers</p>
+                        <p class="rss-season-blurb">Ended 32-year drought, 60-game season</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2010s — rows -->
+            <div class="rss-era-section" data-era="2010s">
+                <p class="rss-era-section-label">2010s</p>
+                <div class="rss-season-rows">
+                    <a href="/retro-stat-sports/leagues/mlb/2019/" class="rss-season-row">
+                        <span class="rss-row-year">2019</span>
+                        <span class="rss-row-champ">Nationals</span>
+                        <span class="rss-row-blurb">Won at 4.1% preseason odds</span>
+                        <i class="ti ti-chevron-right rss-row-arrow"></i>
+                    </a>
+                    <a href="/retro-stat-sports/leagues/mlb/2018/" class="rss-season-row">
+                        <span class="rss-row-year">2018</span>
+                        <span class="rss-row-champ">Red Sox</span>
+                        <span class="rss-row-blurb">108-win regular season</span>
+                        <i class="ti ti-chevron-right rss-row-arrow"></i>
+                    </a>
+                    <a href="/retro-stat-sports/leagues/mlb/2017/" class="rss-season-row">
+                        <span class="rss-row-year">2017</span>
+                        <span class="rss-row-champ">Astros</span>
+                        <span class="rss-row-blurb">Sim flagged 2nd-biggest upset of decade</span>
+                        <i class="ti ti-chevron-right rss-row-arrow"></i>
+                    </a>
+                    <a href="/retro-stat-sports/leagues/mlb/2016/" class="rss-season-row">
+                        <span class="rss-row-year">2016</span>
+                        <span class="rss-row-champ">Cubs</span>
+                        <span class="rss-row-blurb">First title since 1908</span>
+                        <i class="ti ti-chevron-right rss-row-arrow"></i>
+                    </a>
+                    <a href="/retro-stat-sports/leagues/mlb/2015/" class="rss-season-row">
+                        <span class="rss-row-year">2015</span>
+                        <span class="rss-row-champ">Royals</span>
+                        <span class="rss-row-blurb">Back-to-back World Series appearances</span>
+                        <i class="ti ti-chevron-right rss-row-arrow"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2000s -->
+            <div class="rss-era-section" data-era="2000s">
+                <p class="rss-era-section-label">2000s</p>
+                <div class="rss-season-rows">
+                    <a href="/retro-stat-sports/leagues/mlb/2001/" class="rss-season-row">
+                        <span class="rss-row-year">2001</span>
+                        <span class="rss-row-champ">Diamondbacks</span>
+                        <span class="rss-row-blurb">4th-year expansion team won it all</span>
+                        <i class="ti ti-chevron-right rss-row-arrow"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 1990s -->
+            <div class="rss-era-section" data-era="1990s">
+                <p class="rss-era-section-label">1990s</p>
+                <div class="rss-season-rows">
+                    <a href="/retro-stat-sports/leagues/mlb/1998/" class="rss-season-row">
+                        <span class="rss-row-year">1998</span>
+                        <span class="rss-row-champ">Yankees</span>
+                        <span class="rss-row-blurb">114 wins — highest peak Elo ever</span>
+                        <i class="ti ti-chevron-right rss-row-arrow"></i>
+                    </a>
+                    <a href="/retro-stat-sports/leagues/mlb/1991/" class="rss-season-row">
+                        <span class="rss-row-year">1991</span>
+                        <span class="rss-row-champ">Twins</span>
+                        <span class="rss-row-blurb">Worst-to-first season, 1.8% preseason odds</span>
+                        <i class="ti ti-chevron-right rss-row-arrow"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 1980s -->
+            <div class="rss-era-section" data-era="1980s">
+                <p class="rss-era-section-label">1980s</p>
+                <p class="rss-empty-decade">Seasons coming soon.</p>
+            </div>
+
+            <!-- 1970s -->
+            <div class="rss-era-section" data-era="1970s">
+                <p class="rss-era-section-label">1970s</p>
+                <p class="rss-empty-decade">Seasons coming soon.</p>
+            </div>
+
+            <!-- 1960s -->
+            <div class="rss-era-section" data-era="1960s">
+                <p class="rss-era-section-label">1960s</p>
+                <p class="rss-empty-decade">Seasons coming soon.</p>
+            </div>
+
+            <!-- 1950s -->
+            <div class="rss-era-section" data-era="1950s">
+                <p class="rss-era-section-label">1950s</p>
+                <p class="rss-empty-decade">Seasons coming soon.</p>
+            </div>
+
+            <!-- 1940s -->
+            <div class="rss-era-section" data-era="1940s">
+                <p class="rss-era-section-label">1940s</p>
+                <p class="rss-empty-decade">Seasons coming soon.</p>
+            </div>
+
+            <!-- 1930s -->
+            <div class="rss-era-section" data-era="1930s">
+                <p class="rss-era-section-label">1930s</p>
+                <p class="rss-empty-decade">Seasons coming soon.</p>
+            </div>
+
+            <!-- 1920s -->
+            <div class="rss-era-section" data-era="1920s">
+                <p class="rss-era-section-label">1920s</p>
+                <p class="rss-empty-decade">Seasons coming soon.</p>
+            </div>
+
+            <!-- 1910s -->
+            <div class="rss-era-section" data-era="1910s">
+                <p class="rss-era-section-label">1910s</p>
+                <p class="rss-empty-decade">Seasons coming soon.</p>
+            </div>
+
+            <!-- 1900s -->
+            <div class="rss-era-section" data-era="1900s">
+                <p class="rss-era-section-label">1900s (1901–1909)</p>
+                <p class="rss-empty-decade">Seasons coming soon.</p>
+            </div>
+
+        </section>
+
+        <!-- Browse by team callout -->
+        <section class="rss-browse-callout">
+            <div>
+                <p class="rss-browse-title">Or browse by team</p>
+                <p class="rss-browse-subtitle">See every simulated season for any franchise — Yankees to Tampa Bay.</p>
+            </div>
+            <a href="/retro-stat-sports/teams/" class="rss-browse-btn">All Teams <i class="ti ti-arrow-right"></i></a>
+        </section>
+
+    </main>
+
+    <div id="site-footer"></div>
+
+    <!-- Era filter logic — small enough to live inline for now;
+         we can move it to main.js once we have multiple league pages using it. -->
+    <script>
+        function filterEra(event, era) {
+            // Update active button styling
+            document.querySelectorAll('.rss-filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Show/hide era sections
+            document.querySelectorAll('.rss-era-section').forEach(section => {
+                if (era === 'all' || section.dataset.era === era) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
