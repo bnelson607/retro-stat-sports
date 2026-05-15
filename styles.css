@@ -104,7 +104,7 @@ h3 { font-size: 24px; }
   font-family: 'Graduate', serif;
   color: #A4161A;
   letter-spacing: 1.5px;
-  font-size: 48px;
+  font-size: 36px;
   text-decoration: none;
   line-height: 1;
 }
@@ -457,9 +457,9 @@ h3 { font-size: 24px; }
 }
 
 
-/* -----------------------------------------
+/* -----------------------------------
    9. League Page — Breadcrumb & Page Header
--------------------------------------------- */
+----------------------------------- */
 .rss-breadcrumb {
   font-family: 'Inter Tight', sans-serif;
   font-size: 14px;
@@ -1839,5 +1839,240 @@ h3 { font-size: 24px; }
   .rss-standings-detailed tbody td {
     padding: 6px 6px;
     font-size: 11.5px;
+  }
+}
+
+/* -----------------------------------
+   20. Season Detail Page — Season Summary, H2H, Charts
+----------------------------------- */
+
+/* Filter row (above season summary) */
+.rss-table-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+}
+
+.rss-table-filter label {
+  color: #555;
+}
+
+.rss-filter-select {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  padding: 6px 10px;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  color: #1C1C1C;
+  cursor: pointer;
+}
+
+.rss-filter-select:hover {
+  border-color: #002744;
+}
+
+/* Big season summary table — scrolls horizontally on narrow screens */
+.rss-season-summary-wrap {
+  overflow-x: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.rss-season-summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+  font-family: 'Inter', sans-serif;
+}
+
+.rss-season-summary-table thead th {
+  background: #002744;
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 11.5px;
+  letter-spacing: 1px;
+  padding: 10px 10px;
+  text-align: left;
+  font-weight: normal;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+}
+
+.rss-season-summary-table thead th.num {
+  text-align: right;
+}
+
+.rss-season-summary-table thead th:hover {
+  background: #003c66;
+}
+
+/* Tablesort indicator caret */
+.rss-season-summary-table thead th[aria-sort]::after {
+  content: ' ↕';
+  opacity: 0.4;
+  font-size: 11px;
+}
+.rss-season-summary-table thead th[aria-sort="ascending"]::after  { content: ' ↑'; opacity: 1; }
+.rss-season-summary-table thead th[aria-sort="descending"]::after { content: ' ↓'; opacity: 1; }
+
+.rss-season-summary-table tbody td {
+  font-size: 12.5px;
+  color: #1C1C1C;
+  padding: 8px 10px;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+}
+
+.rss-season-summary-table tbody td.num {
+  text-align: right;
+}
+
+.rss-season-summary-table tbody td.team {
+  font-weight: 500;
+}
+
+.rss-season-summary-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.rss-season-summary-table tbody tr:hover {
+  background: #fafafa;
+}
+
+/* Head-to-head matrices */
+.rss-h2h-block {
+  margin-bottom: 28px;
+}
+
+.rss-h2h-title {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 18px;
+  color: #002744;
+  letter-spacing: 0.5px;
+  margin: 0 0 10px;
+}
+
+.rss-h2h-wrap {
+  overflow-x: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.rss-h2h-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+  font-family: 'Inter', sans-serif;
+}
+
+.rss-h2h-table thead th {
+  background: #002744;
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 9px 8px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.rss-h2h-table thead th.team {
+  text-align: left;
+}
+
+.rss-h2h-table tbody td {
+  font-size: 12px;
+  padding: 6px 8px;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: center;
+}
+
+.rss-h2h-table tbody td.team {
+  background: #fafafa;
+  font-weight: 500;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.rss-h2h-record {
+  font-weight: 600;
+}
+
+.rss-h2h-expected {
+  font-size: 10.5px;
+  color: #888;
+  margin-top: 1px;
+}
+
+.rss-h2h-self {
+  background: #f5f5f5;
+  color: #aaa;
+}
+
+/* Color hint for over/underperformance vs expected */
+.rss-h2h-over {
+  background: rgba(0, 100, 46, 0.08);
+}
+
+.rss-h2h-over .rss-h2h-record {
+  color: #00642E;
+}
+
+.rss-h2h-under {
+  background: rgba(164, 22, 26, 0.08);
+}
+
+.rss-h2h-under .rss-h2h-record {
+  color: #A4161A;
+}
+
+/* Chart frame */
+.rss-chart-frame {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.rss-chart-empty {
+  text-align: center;
+  color: #888;
+  padding: 40px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+
+@media (max-width: 900px) {
+  .rss-season-summary-table thead th,
+  .rss-season-summary-table tbody td {
+    padding: 7px 8px;
+    font-size: 11.5px;
+  }
+
+  .rss-h2h-table thead th,
+  .rss-h2h-table tbody td {
+    padding: 5px 6px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 600px) {
+  .rss-table-filter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rss-season-summary-table thead th,
+  .rss-season-summary-table tbody td {
+    font-size: 11px;
+    padding: 6px 6px;
   }
 }
