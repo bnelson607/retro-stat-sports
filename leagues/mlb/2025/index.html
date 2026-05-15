@@ -1580,8 +1580,36 @@
     team beat the model's expectations in that matchup; red cells mean they fell short.
   </p>
 
-    <div class="rss-h2h-block">
-      <h3 class="rss-h2h-title">AL Central</h3>
+  <div class="rss-division-nav" role="tablist">
+    <button type="button"
+            class="rss-division-btn active"
+            data-division="al-central"
+            role="tab">AL Central</button>
+    <button type="button"
+            class="rss-division-btn"
+            data-division="al-east"
+            role="tab">AL East</button>
+    <button type="button"
+            class="rss-division-btn"
+            data-division="al-west"
+            role="tab">AL West</button>
+    <button type="button"
+            class="rss-division-btn"
+            data-division="nl-central"
+            role="tab">NL Central</button>
+    <button type="button"
+            class="rss-division-btn"
+            data-division="nl-east"
+            role="tab">NL East</button>
+    <button type="button"
+            class="rss-division-btn"
+            data-division="nl-west"
+            role="tab">NL West</button>
+</div>
+
+
+    <div class="rss-h2h-block active"
+         data-division="al-central">
       <div class="rss-h2h-wrap">
         <table class="rss-h2h-table">
           <thead>
@@ -1699,8 +1727,8 @@
         </table>
       </div>
     </div>
-    <div class="rss-h2h-block">
-      <h3 class="rss-h2h-title">AL East</h3>
+    <div class="rss-h2h-block"
+         data-division="al-east">
       <div class="rss-h2h-wrap">
         <table class="rss-h2h-table">
           <thead>
@@ -1818,8 +1846,8 @@
         </table>
       </div>
     </div>
-    <div class="rss-h2h-block">
-      <h3 class="rss-h2h-title">AL West</h3>
+    <div class="rss-h2h-block"
+         data-division="al-west">
       <div class="rss-h2h-wrap">
         <table class="rss-h2h-table">
           <thead>
@@ -1937,8 +1965,8 @@
         </table>
       </div>
     </div>
-    <div class="rss-h2h-block">
-      <h3 class="rss-h2h-title">NL Central</h3>
+    <div class="rss-h2h-block"
+         data-division="nl-central">
       <div class="rss-h2h-wrap">
         <table class="rss-h2h-table">
           <thead>
@@ -2056,8 +2084,8 @@
         </table>
       </div>
     </div>
-    <div class="rss-h2h-block">
-      <h3 class="rss-h2h-title">NL East</h3>
+    <div class="rss-h2h-block"
+         data-division="nl-east">
       <div class="rss-h2h-wrap">
         <table class="rss-h2h-table">
           <thead>
@@ -2175,8 +2203,8 @@
         </table>
       </div>
     </div>
-    <div class="rss-h2h-block">
-      <h3 class="rss-h2h-title">NL West</h3>
+    <div class="rss-h2h-block"
+         data-division="nl-west">
       <div class="rss-h2h-wrap">
         <table class="rss-h2h-table">
           <thead>
@@ -2604,10 +2632,11 @@
                 btn.classList.add('active');
             }
 
-            // Within this scope, switch which standings block is active
-            // (use the closest section so we don't cross sections in the same tab)
+            // Within this scope, switch which standings/H2H block is active.
+            // Scoped to the closest section so a Regular-Season switcher
+            // doesn't fight with the Overview-tab switcher.
             const section = btn.closest('section') || scope;
-            section.querySelectorAll('.rss-standings-block').forEach(block => {
+            section.querySelectorAll('.rss-standings-block, .rss-h2h-block').forEach(block => {
                 block.classList.toggle('active', block.dataset.division === target);
             });
         });

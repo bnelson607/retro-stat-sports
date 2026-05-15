@@ -1947,15 +1947,11 @@ h3 { font-size: 24px; }
 
 /* Head-to-head matrices */
 .rss-h2h-block {
-  margin-bottom: 28px;
+  display: none;
 }
 
-.rss-h2h-title {
-  font-family: 'Barlow Semi Condensed', sans-serif;
-  font-size: 18px;
-  color: #002744;
-  letter-spacing: 0.5px;
-  margin: 0 0 10px;
+.rss-h2h-block.active {
+  display: block;
 }
 
 .rss-h2h-wrap {
