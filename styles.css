@@ -15,7 +15,8 @@
      11. League Page — Generic Sections & Story Cards
      12. League Page — Era Filters & Season Tiles
      13. League Page — Browse by Team Callout
-     14. Responsive
+     14. Placeholder Pages (Coming Soon)
+     15. Responsive
    ============================================================ */
 
 
@@ -853,7 +854,56 @@ h3 { font-size: 24px; }
 
 
 /* -----------------------------------
-   14. Responsive
+   14. Placeholder Pages (Coming Soon)
+----------------------------------- */
+.rss-coming-soon {
+  background-color: white;
+  border-radius: 10px;
+  padding: 60px 40px;
+  margin: 24px 0;
+  text-align: center;
+  border-left: 6px solid #B8860B;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.rss-coming-soon-icon {
+  font-size: 56px;
+  color: #B8860B;
+  display: block;
+  margin: 0 0 16px;
+  line-height: 1;
+}
+
+.rss-coming-soon-title {
+  font-family: 'Graduate', serif;
+  font-size: 36px;
+  color: #A4161A;
+  letter-spacing: 1.5px;
+  margin: 0 0 6px;
+  line-height: 1.1;
+}
+
+.rss-coming-soon-subtitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #555;
+  text-transform: uppercase;
+  margin: 0 0 16px;
+}
+
+.rss-coming-soon-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.55;
+  margin: 0 auto 24px;
+  max-width: 480px;
+}
+
+
+/* -----------------------------------
+   15. Responsive
 ----------------------------------- */
 
 /* Header & footer — stack on narrow screens */
@@ -949,5 +999,20 @@ h3 { font-size: 24px; }
 
   .rss-season-year {
     font-size: 26px;
+  }
+}
+
+/* Coming soon placeholder — reduce padding on phones */
+@media (max-width: 600px) {
+  .rss-coming-soon {
+    padding: 40px 24px;
+  }
+
+  .rss-coming-soon-title {
+    font-size: 28px;
+  }
+
+  .rss-coming-soon-icon {
+    font-size: 44px;
   }
 }
