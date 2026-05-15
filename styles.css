@@ -2,24 +2,20 @@
    Retro Stat Sports — Stylesheet
    ============================================================
    Sections:
-     1.  Fonts
-     2.  Globals (body, links, images, hr)
-     3.  Typography (headings, article/sim titles)
-     4.  Site Header & Nav
-     5.  Site Footer
-     6.  Content Containers (legacy — used by pages not yet redesigned)
-     7.  Article Lists & Season Headers
-     8.  Generic Tables
-     9.  Standings Tables (pipeline-generated, sport-specific)
-     10. Season-in-Review (pipeline-generated)
-     11. Tabs
-     12. Collapsible Sections (details/summary)
-     13. Iframes & Graph Labels
-     14. Side-by-Side Flex Layouts
-     15. Playoff Brackets (pipeline-generated)
-     16. Homepage — Hero, Stats, Sections, Tiles (rss- prefixed)
-     17. Responsive
-     18. League Landing Page
+     1. Fonts
+     2. Globals (body, links, images, hr, typography)
+     3. Site Header & Nav
+     4. Site Footer
+     5. Container
+     6. Homepage — Hero & Stats Strip
+     7. Homepage — League Sections & Tiles
+     8. Homepage — How It Works
+     9. League Page — Breadcrumb & Page Header
+     10. League Page — Live Projection Callout
+     11. League Page — Generic Sections & Story Cards
+     12. League Page — Era Filters & Season Display
+     13. League Page — Browse by Team Callout
+     14. Responsive
    ============================================================ */
 
 
@@ -46,6 +42,7 @@ a {
   color: #002744;
   text-decoration: none;
 }
+
 a:hover {
   color: #004080;
   text-decoration: underline;
@@ -65,10 +62,7 @@ hr {
   border-top: 1px solid #999999;
 }
 
-
-/* -----------------------------------
-   3. Typography
------------------------------------ */
+/* Default heading styles — overridden where needed by .rss-* classes */
 h1, h2, h3 {
   font-family: 'Barlow Semi Condensed', sans-serif;
   color: #A4161A;
@@ -80,43 +74,11 @@ h1 { font-size: 40px; }
 h2 { font-size: 32px; }
 h3 { font-size: 24px; }
 
-.sim-title {
-  font-family: 'Barlow Semi Condensed', sans-serif;
-  letter-spacing: 1px;
-  position: relative;
-  top: -0.61em;
-  margin-bottom: -0.61em;
-}
-
-.sim-subsection {
-  font-size: 24px;
-  font-family: 'Graduate', sans-serif;
-  letter-spacing: 1px;
-  line-height: 1.2;
-  color: #002744;
-}
-
-.article-header {
-  font-size: 32px;
-  font-family: 'Graduate', sans-serif;
-}
-
-.article-title {
-  font-family: 'Barlow Semi Condensed', sans-serif;
-}
-
-.article-title-link {
-  font-size: 24px;
-  font-family: 'Barlow Semi Condensed', sans-serif;
-  line-height: 1.2;
-}
-
 
 /* -----------------------------------
-   4. Site Header & Nav
+   3. Site Header & Nav
 ----------------------------------- */
 #site-header {
-  /* Reset wrapper — actual styles live on .site-header-bar */
   background: transparent;
 }
 
@@ -170,7 +132,7 @@ h3 { font-size: 24px; }
 
 
 /* -----------------------------------
-   5. Site Footer
+   4. Site Footer
 ----------------------------------- */
 .site-footer {
   border-top: 1px solid #ccc;
@@ -218,602 +180,8 @@ h3 { font-size: 24px; }
 
 
 /* -----------------------------------
-   6. Content Containers (legacy)
-   Used by pages not yet redesigned: USA/UEFA/NCAA landings,
-   methodology, about. Will be replaced over time.
+   5. Container
 ----------------------------------- */
-.content,
-.article-list-page {
-  background-color: white;
-  border-left: 6px solid #002744;
-  border-radius: 8px;
-  padding: 10px 30px;
-  margin: 40px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-.article-list-page {
-  max-width: 800px;
-  padding: 20px;
-}
-
-.update-date {
-  font-size: 14px;
-  color: #555;
-  margin-top: -10px;
-  margin-bottom: 10px;
-  font-style: italic;
-}
-
-
-/* -----------------------------------
-   7. Article Lists & Season Headers
------------------------------------ */
-.article-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.article-list li {
-  margin-bottom: 2.5em;
-}
-
-.article-list h3 {
-  margin-bottom: 0.1em;
-}
-
-.extra-top-margin {
-  margin-top: 48px;
-}
-
-.season-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 0.5em;
-}
-
-.season-links {
-  text-align: right;
-  font-family: 'Barlow Semi Condensed', sans-serif;
-  color: #002744;
-  font-size: 16px;
-  margin: 0;
-}
-
-.season-links a {
-  color: #002744;
-  text-decoration: none;
-  margin-left: 1em;
-}
-
-.season-links a:first-child {
-  margin-left: 0;
-}
-
-
-/* -----------------------------------
-   8. Generic Tables
------------------------------------ */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 8px 0;
-}
-
-th, td {
-  border: 1px solid #999999;
-  padding: 8px 12px;
-  text-align: center;
-}
-
-th {
-  background-color: #f1f1f1;
-}
-
-
-/* -----------------------------------
-   9. Standings Tables (pipeline-generated)
------------------------------------ */
-.standings-table {
-  table-layout: fixed;
-  width: 100%;
-  font-family: 'Inter', sans-serif;
-  border-collapse: collapse;
-  border: 1px solid #ccc;
-  max-width: none;
-}
-
-.standings-table th,
-.standings-table td {
-  padding: 2px 8px;
-  line-height: 28px;
-  border: 1px solid #ccc;
-  text-align: left;
-}
-
-
-/* UEFA standings */
-.standings-table.uefa {
-  width: 100%;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  table-layout: fixed;
-}
-
-.standings-table.uefa th:nth-child(1),
-.standings-table.uefa td:nth-child(1) {
-  width: 9%;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.standings-table.uefa th:nth-child(2),
-.standings-table.uefa td:nth-child(2) {
-  width: 28%;
-  text-align: left;
-}
-
-.standings-table.uefa th:nth-child(3), .standings-table.uefa td:nth-child(3),
-.standings-table.uefa th:nth-child(4), .standings-table.uefa td:nth-child(4),
-.standings-table.uefa th:nth-child(5), .standings-table.uefa td:nth-child(5),
-.standings-table.uefa th:nth-child(6), .standings-table.uefa td:nth-child(6),
-.standings-table.uefa th:nth-child(7), .standings-table.uefa td:nth-child(7),
-.standings-table.uefa th:nth-child(8), .standings-table.uefa td:nth-child(8),
-.standings-table.uefa th:nth-child(9), .standings-table.uefa td:nth-child(9) {
-  width: 9%;
-  text-align: center;
-}
-
-.standings-table.uefa td:nth-child(6),
-.standings-table.uefa th:nth-child(6) {
-  font-weight: bold;
-}
-
-
-/* NHL, MLS, USL standings (7 columns: Team, W, D, L, Pts, GF, GA) */
-.standings-table.nhl-mls th:nth-child(1),
-.standings-table.nhl-mls td:nth-child(1) {
-  width: 40%;
-  text-align: left;
-}
-
-.standings-table.nhl-mls th:nth-child(2), .standings-table.nhl-mls td:nth-child(2),
-.standings-table.nhl-mls th:nth-child(3), .standings-table.nhl-mls td:nth-child(3),
-.standings-table.nhl-mls th:nth-child(4), .standings-table.nhl-mls td:nth-child(4),
-.standings-table.nhl-mls th:nth-child(5), .standings-table.nhl-mls td:nth-child(5),
-.standings-table.nhl-mls th:nth-child(6), .standings-table.nhl-mls td:nth-child(6),
-.standings-table.nhl-mls th:nth-child(7), .standings-table.nhl-mls td:nth-child(7) {
-  width: 10%;
-  text-align: center;
-}
-
-
-/* Baseball and basketball (5 columns: Team, W, L, WPct, GB) */
-.standings-table.mlb-nba th:nth-child(1),
-.standings-table.mlb-nba td:nth-child(1) { width: 52%; white-space: nowrap; }
-
-.standings-table.mlb-nba th:nth-child(2),
-.standings-table.mlb-nba td:nth-child(2) { width: 10%; text-align: center; }
-
-.standings-table.mlb-nba th:nth-child(3),
-.standings-table.mlb-nba td:nth-child(3) { width: 10%; text-align: center; }
-
-.standings-table.mlb-nba th:nth-child(4),
-.standings-table.mlb-nba td:nth-child(4) { width: 15%; text-align: center; }
-
-.standings-table.mlb-nba th:nth-child(5),
-.standings-table.mlb-nba td:nth-child(5) { width: 13%; text-align: center; }
-
-
-/* NFL standings without ties */
-.standings-table.nfl-no-ties th:nth-child(1),
-.standings-table.nfl-no-ties td:nth-child(1) { width: 50%; white-space: nowrap; }
-
-.standings-table.nfl-no-ties th:nth-child(2),
-.standings-table.nfl-no-ties td:nth-child(2) { width: 14%; text-align: center; }
-
-.standings-table.nfl-no-ties th:nth-child(3),
-.standings-table.nfl-no-ties td:nth-child(3) { width: 14%; text-align: center; }
-
-.standings-table.nfl-no-ties th:nth-child(4),
-.standings-table.nfl-no-ties td:nth-child(4) { width: 22%; text-align: center; }
-
-
-/* NFL standings with ties and 1990s NHL */
-.standings-table.nfl-ties th:nth-child(1),
-.standings-table.nfl-ties td:nth-child(1) { width: 46%; white-space: nowrap; }
-
-.standings-table.nfl-ties th:nth-child(2),
-.standings-table.nfl-ties td:nth-child(2) { width: 12%; text-align: center; }
-
-.standings-table.nfl-ties th:nth-child(3),
-.standings-table.nfl-ties td:nth-child(3) { width: 12%; text-align: center; }
-
-.standings-table.nfl-ties th:nth-child(4),
-.standings-table.nfl-ties td:nth-child(4) { width: 12%; text-align: center; }
-
-.standings-table.nfl-ties th:nth-child(5),
-.standings-table.nfl-ties td:nth-child(5) { width: 18%; text-align: center; }
-
-
-/* -----------------------------------
-   10. Season-in-Review (pipeline-generated)
------------------------------------ */
-.season-in-review {
-  font-family: 'Inter', sans-serif;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  padding-left: 1rem;
-  border-left: 4px solid #A4161A;
-  color: #1C1C1C;
-}
-
-.season-in-review h3 {
-  font-family: 'Barlow Semi Condensed', sans-serif;
-  font-size: 24px;
-  color: #A4161A;
-  margin-top: 0;
-  margin-bottom: 0;
-  letter-spacing: 1px;
-}
-
-.season-in-review ul {
-  list-style-type: disc;
-  padding-left: 1rem;
-  color: #1C1C1C;
-  margin: 0.25rem;
-}
-
-.season-in-review li {
-  margin-bottom: 0.4rem;
-  line-height: 1.6;
-  text-indent: 0;
-  padding-left: 0;
-}
-
-.review-section-container {
-  border-left: 4px solid #A4161A;
-  padding-left: 1rem;
-}
-
-.review-table {
-  table-layout: fixed;
-  width: 100%;
-  font-family: 'Inter', sans-serif;
-  border-collapse: collapse;
-  border: 1px solid #ccc;
-  max-width: none;
-  padding-left: 1rem;
-  border-left: 4px solid #A4161A;
-}
-
-.review-table th,
-.review-table td {
-  padding: 2px 8px;
-  line-height: 28px;
-  border: 1px solid #ccc;
-  text-align: left;
-}
-
-.review-table td:first-child {
-  font-weight: bold;
-  width: 50%;
-}
-
-.review-table td:last-child {
-  width: 50%;
-  padding-left: 2ch;
-}
-
-
-/* -----------------------------------
-   11. Tabs
------------------------------------ */
-.tab-buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 10px 0;
-}
-
-.tab-buttons button {
-  padding: 10px 15px;
-  border: none;
-  background-color: #f1f1f1;
-  cursor: pointer;
-  border-radius: 4px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-}
-
-.tab-buttons button.active {
-  background-color: #002744;
-  color: white;
-}
-
-.tab-content {
-  display: none;
-}
-
-.tab-content.active {
-  display: block;
-  justify-content: center;
-}
-
-
-/* -----------------------------------
-   12. Collapsible Sections
------------------------------------ */
-details {
-  background: white;
-  border: 1px solid #999999;
-  border-radius: 5px;
-  padding: 5px;
-  margin-bottom: 5px;
-}
-
-summary {
-  font-size: 1.1em !important;
-  cursor: pointer !important;
-  margin: 4px 0 !important;
-  padding: 4px 6px !important;
-  line-height: 1.3 !important;
-}
-
-
-/* -----------------------------------
-   13. Iframes & Graph Labels
------------------------------------ */
-iframe {
-  display: block;
-  width: 100%;
-  max-width: 1200px;
-  margin: 5px auto;
-  background: white;
-  border: none;
-  overflow-x: hidden;
-  box-sizing: border-box;
-}
-
-.iframe-block,
-.iframe-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow-x: hidden;
-  box-sizing: border-box;
-}
-
-.iframe-wrapper iframe {
-  width: 100%;
-  border: none;
-  display: block;
-}
-
-.graph-label {
-  align-self: flex-start;
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #002744;
-  margin: 0 0 8px 10px;
-}
-
-
-/* -----------------------------------
-   14. Side-by-Side Flex Layouts
------------------------------------ */
-.side-by-side-flex-wrapper {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.side-by-side-flex-wrapper img,
-.side-by-side-flex-wrapper table {
-  flex: 1 1 50%;
-  max-width: 100%;
-  height: auto;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-}
-
-.standings-table-container {
-  padding-left: 1rem;
-  flex: 1 1 23%;
-  min-width: 250px;
-  box-sizing: border-box;
-}
-
-
-/* -----------------------------------
-   15. Playoff Brackets (pipeline-generated)
------------------------------------ */
-.playoffs-wrapper {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  white-space: nowrap;
-  width: 100%;
-  display: block;
-  text-align: center;
-}
-
-.playin-container,
-.bracket-container {
-  display: inline-block;
-  vertical-align: top;
-  min-width: 1160px;
-  white-space: normal;
-  text-align: left;
-}
-
-.bracket-container {
-  max-width: 1160px;
-  width: 100%;
-  overflow-x: auto;
-  padding-bottom: 10px;
-  margin: 0 auto;
-  -webkit-overflow-scrolling: touch;
-  box-sizing: border-box;
-}
-
-.bracket {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  min-width: 0;
-  box-sizing: border-box;
-}
-
-.region {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  padding: 8px;
-  border-radius: 10px;
-  box-sizing: border-box;
-}
-
-.round {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  position: relative;
-}
-
-.round-title {
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 0;
-}
-
-.round:empty {
-  display: none;
-}
-
-.matchup {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.team {
-  display: flex;
-  align-items: center;
-  height: 28px;
-  width: 150px;
-  border-radius: 6px;
-  border: 1px solid #999999;
-  font-family: 'Inter Tight', sans-serif;
-  font-size: 14px;
-  user-select: none;
-  box-sizing: border-box;
-}
-
-.club {
-  display: flex;
-  align-items: center;
-  height: 28px;
-  width: 256px;
-  border-radius: 6px;
-  border: 1px solid #999999;
-  font-family: 'Inter Tight', sans-serif;
-  font-size: 14px;
-  user-select: none;
-  box-sizing: border-box;
-}
-
-.team.placeholder {
-  height: 28px;
-  background-color: #FFFFFF;
-  border: 1px solid #FFFFFF;
-}
-
-.seed {
-  width: 24px;
-  text-align: center;
-  padding: 4px 0;
-  font-size: 14px;
-  user-select: text;
-  box-sizing: border-box;
-}
-
-.name {
-  flex-grow: 1;
-  padding: 4px 2px;
-  box-sizing: border-box;
-}
-
-.score {
-  width: 32px;
-  text-align: center;
-  padding: 4px 0;
-  font-size: 14px;
-  user-select: text;
-  cursor: default;
-  box-sizing: border-box;
-}
-
-/* Bracket region color coding */
-#left .team,
-#left .club {
-  background-color: #F0F0F0;
-  border-color: #A4161A;
-  color: #A4161A;
-}
-
-#right .team,
-#right .club {
-  background-color: #F0F0F0;
-  border-color: #002744;
-  color: #002744;
-}
-
-#finals .team,
-#finals .club {
-  background-color: #F0F0F0;
-  border-color: #1C1C1C;
-  color: #1C1C1C;
-}
-
-/* Play-in container */
-.playin-container {
-  max-width: 1160px;
-  margin: 4px auto 0;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
-  box-sizing: border-box;
-}
-
-.playin-matchups {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 8px;
-  overflow-x: auto;
-  padding-bottom: 10px;
-  box-sizing: border-box;
-}
-
-
-/* ============================================================
-   16. Homepage — Hero, Stats, Sections, Tiles
-   All classes prefixed with "rss-" to avoid collisions.
-   ============================================================ */
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -821,7 +189,9 @@ iframe {
 }
 
 
-/* Hero Section */
+/* -----------------------------------
+   6. Homepage — Hero & Stats Strip
+----------------------------------- */
 .rss-hero {
   background-color: white;
   border-radius: 10px;
@@ -842,7 +212,7 @@ iframe {
 
 .rss-hero-title {
   font-family: 'Barlow Semi Condensed', sans-serif;
-  font-size: 48px;
+  font-size: 32px;
   line-height: 1.05;
   color: #A4161A;
   letter-spacing: 1px;
@@ -899,8 +269,6 @@ iframe {
   text-decoration: none;
 }
 
-
-/* Stats Strip */
 .rss-stats-strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -935,7 +303,9 @@ iframe {
 }
 
 
-/* League Section (base) */
+/* -----------------------------------
+   7. Homepage — League Sections & Tiles
+----------------------------------- */
 .rss-league-section {
   background-color: white;
   border-radius: 10px;
@@ -967,51 +337,24 @@ iframe {
   line-height: 1.5;
 }
 
-
 /* USA: Goldenrod */
-.rss-league-section-usa {
-  border-left-color: #B8860B;
-}
-.rss-league-section-usa .rss-league-section-title {
-  color: #B8860B;
-}
-.rss-league-section-usa .rss-league-tile:hover {
-  border-color: #B8860B;
-}
-.rss-league-section-usa .rss-league-tile:hover .rss-league-tile-name {
-  color: #B8860B;
-}
+.rss-league-section-usa { border-left-color: #B8860B; }
+.rss-league-section-usa .rss-league-section-title { color: #B8860B; }
+.rss-league-section-usa .rss-league-tile:hover { border-color: #B8860B; }
+.rss-league-section-usa .rss-league-tile:hover .rss-league-tile-name { color: #B8860B; }
 
 /* UEFA: Emerald Green */
-.rss-league-section-uefa {
-  border-left-color: #00642E;
-}
-.rss-league-section-uefa .rss-league-section-title {
-  color: #00642E;
-}
-.rss-league-section-uefa .rss-league-tile:hover {
-  border-color: #00642E;
-}
-.rss-league-section-uefa .rss-league-tile:hover .rss-league-tile-name {
-  color: #00642E;
-}
+.rss-league-section-uefa { border-left-color: #00642E; }
+.rss-league-section-uefa .rss-league-section-title { color: #00642E; }
+.rss-league-section-uefa .rss-league-tile:hover { border-color: #00642E; }
+.rss-league-section-uefa .rss-league-tile:hover .rss-league-tile-name { color: #00642E; }
 
 /* NCAA: Burgundy */
-.rss-league-section-ncaa {
-  border-left-color: #660000;
-}
-.rss-league-section-ncaa .rss-league-section-title {
-  color: #660000;
-}
-.rss-league-section-ncaa .rss-league-tile:hover {
-  border-color: #660000;
-}
-.rss-league-section-ncaa .rss-league-tile:hover .rss-league-tile-name {
-  color: #660000;
-}
+.rss-league-section-ncaa { border-left-color: #660000; }
+.rss-league-section-ncaa .rss-league-section-title { color: #660000; }
+.rss-league-section-ncaa .rss-league-tile:hover { border-color: #660000; }
+.rss-league-section-ncaa .rss-league-tile:hover .rss-league-tile-name { color: #660000; }
 
-
-/* League Grid & Tiles */
 .rss-league-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -1053,7 +396,9 @@ iframe {
 }
 
 
-/* How It Works */
+/* -----------------------------------
+   8. Homepage — How It Works
+----------------------------------- */
 .rss-how-it-works {
   background-color: white;
   border-radius: 10px;
@@ -1106,157 +451,454 @@ iframe {
 }
 
 
-/* ============================================================
-   17. Responsive
-   ============================================================ */
+/* -----------------------------------
+   9. League Page — Breadcrumb & Page Header
+----------------------------------- */
+.rss-breadcrumb {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 14px;
+  color: #555;
+  margin: 24px 0 16px;
+}
 
-/* Standings tables — collapse columns on narrow screens */
-@media (max-width: 900px) {
-  /* UEFA: show position, team, points, GD only */
-  .standings-table.uefa th:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(6)):not(:nth-child(9)),
-  .standings-table.uefa td:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(6)):not(:nth-child(9)) {
-    display: none;
-  }
+.rss-breadcrumb a {
+  color: #555;
+  text-decoration: none;
+}
 
-  /* NHL/MLS/USL: show team, wins, points only */
-  .standings-table.nhl-mls th:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(5)),
-  .standings-table.nhl-mls td:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(5)) {
-    display: none;
-  }
+.rss-breadcrumb a:hover {
+  color: #A4161A;
+  text-decoration: underline;
+}
 
-  /* MLB/NBA: show team, wins, losses only */
-  .standings-table.mlb-nba th:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)),
-  .standings-table.mlb-nba td:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)) {
-    display: none;
-  }
+.rss-league-page-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0 0 24px;
+}
 
-  /* NFL no ties: show team, wins, losses only */
-  .standings-table.nfl-no-ties th:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)),
-  .standings-table.nfl-no-ties td:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)) {
-    display: none;
-  }
+.rss-league-page-icon {
+  font-size: 40px;
+  color: #B8860B;
+  line-height: 1;
+}
 
-  /* NFL ties: show team, wins, losses only */
-  .standings-table.nfl-ties th:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)),
-  .standings-table.nfl-ties td:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)) {
-    display: none;
-  }
+.rss-league-page-title {
+  font-family: 'Graduate', serif;
+  font-size: 36px;
+  color: #A4161A;
+  letter-spacing: 1.5px;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.rss-league-page-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #555;
+  margin: 4px 0 0;
+  line-height: 1.4;
 }
 
 
-/* Side-by-side layouts — stack on narrow screens */
-@media (max-width: 700px) {
-  .side-by-side-flex-wrapper {
-    flex-direction: column;
-    gap: 10px;
-  }
+/* -----------------------------------
+   10. League Page — Live Projection Callout
+----------------------------------- */
+.rss-live-callout {
+  background-color: white;
+  border-radius: 10px;
+  padding: 24px 28px;
+  margin: 0 0 32px;
+  border-left: 6px solid #A4161A;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
 
-  .review-table-container {
-    flex: 1 1 100%;
-    min-width: 0;
-  }
+.rss-live-callout-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 12px;
+}
 
-  .review-table {
-    display: block;
-    overflow-x: auto;
-    width: 100%;
-    box-sizing: border-box;
-    font-size: 14px;
-  }
+.rss-live-badge {
+  background-color: #A4161A;
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.rss-live-meta {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 12px;
+  color: #555;
+}
+
+.rss-live-eyebrow {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #555;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.rss-live-title {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 22px;
+  color: #1C1C1C;
+  letter-spacing: 0.5px;
+  margin: 0 0 10px;
+  line-height: 1.3;
+}
+
+.rss-live-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #555;
+  margin: 0 0 14px;
+  line-height: 1.5;
+}
+
+.rss-live-link {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #002744;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rss-live-link:hover {
+  color: #A4161A;
+  text-decoration: none;
+}
+
+.rss-live-link i {
+  font-size: 16px;
 }
 
 
-/* Playoff Bracket — mobile */
-@media (max-width: 600px) {
-  .playoffs-wrapper {
-    white-space: normal !important;
-  }
+/* -----------------------------------
+   11. League Page — Generic Sections & Story Cards
+----------------------------------- */
+.rss-section {
+  margin: 0 0 36px;
+}
 
-  .playin-container,
-  .bracket-container {
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
+.rss-section-title {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 26px;
+  color: #002744;
+  letter-spacing: 1px;
+  margin: 0 0 4px;
+}
 
-  .bracket {
-    display: inline-flex !important;
-    justify-content: flex-start !important;
-    flex-wrap: nowrap !important;
-    min-width: 0 !important;
-    width: max-content !important;
-    margin: 0 !important;
-    box-sizing: border-box;
-  }
+.rss-section-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #555;
+  margin: 0 0 20px;
+}
 
-  .region {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    flex-shrink: 1 !important;
-    min-width: 0 !important;
-    box-sizing: border-box;
-  }
+.rss-story-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
 
-  .team {
-    width: 140px;
-    font-size: 12px;
-  }
+.rss-story-card {
+  display: block;
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px 20px;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  transition: transform 0.1s ease, box-shadow 0.15s ease;
+}
 
-  .seed {
-    width: 25px;
-    font-size: 12px;
-  }
+.rss-story-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+}
 
-  .score {
-    width: 30px;
-    font-size: 12px;
-  }
+.rss-story-tag {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #555;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
 
-  .round {
-    gap: 25px;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
+.rss-story-headline {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 18px;
+  color: #1C1C1C;
+  margin: 0 0 8px;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+}
 
-  .matchup {
-    gap: 3px;
-  }
-
-  .playin-container {
-    display: inline-block !important;
-    vertical-align: top !important;
-    min-width: 0 !important;
-    max-width: 100% !important;
-    overflow-x: auto !important;
-    box-sizing: border-box !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-    margin: 0 auto !important;
-    text-align: left !important;
-  }
-
-  .playin-matchups {
-    display: inline-flex !important;
-    justify-content: flex-start !important;
-    flex-wrap: nowrap !important;
-    min-width: 0 !important;
-    width: max-content !important;
-    margin: 0 !important;
-    padding-left: 0 !important;
-    box-sizing: border-box !important;
-    gap: 16px !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-  }
+.rss-story-detail {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
 }
 
 
-/* Header & footer — mobile (stack title above nav) */
+/* -----------------------------------
+   12. League Page — Era Filters & Season Display
+----------------------------------- */
+.rss-era-filters {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 0 0 24px;
+  flex-wrap: wrap;
+}
+
+.rss-era-label {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 13px;
+  color: #555;
+  margin-right: 6px;
+}
+
+.rss-filter-btn {
+  background: white;
+  border: 1.5px solid #ddd;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.rss-filter-btn:hover {
+  border-color: #B8860B;
+  color: #B8860B;
+}
+
+.rss-filter-btn.active {
+  background: #002744;
+  color: white;
+  border-color: #002744;
+}
+
+.rss-filter-btn.active:hover {
+  background: #002744;
+  color: white;
+}
+
+.rss-era-section {
+  margin: 0 0 24px;
+}
+
+.rss-era-section-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #555;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+
+.rss-empty-decade {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #777;
+  font-style: italic;
+  background: white;
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin: 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+/* Season cards — visual layout for the recent decade */
+.rss-season-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.rss-season-card {
+  display: block;
+  background-color: white;
+  border-radius: 8px;
+  padding: 14px 18px;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  transition: transform 0.1s ease, box-shadow 0.15s ease;
+}
+
+.rss-season-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+}
+
+.rss-season-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 0 6px;
+}
+
+.rss-season-year {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 1px;
+  color: #002744;
+  line-height: 1;
+}
+
+.rss-season-status {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #555;
+  text-transform: uppercase;
+}
+
+.rss-season-champ {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1C1C1C;
+  margin: 0 0 3px;
+}
+
+.rss-season-blurb {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #555;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Season rows — compressed layout for older decades */
+.rss-season-rows {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.rss-season-row {
+  display: grid;
+  grid-template-columns: 60px 1fr 1.5fr 24px;
+  gap: 14px;
+  padding: 12px 18px;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #1C1C1C;
+  align-items: center;
+  transition: background-color 0.1s ease;
+}
+
+.rss-season-row:hover {
+  background-color: #fafafa;
+  text-decoration: none;
+}
+
+.rss-season-row:last-child {
+  border-bottom: none;
+}
+
+.rss-row-year {
+  font-weight: 600;
+}
+
+.rss-row-champ {
+  color: #1C1C1C;
+}
+
+.rss-row-blurb {
+  color: #555;
+}
+
+.rss-row-arrow {
+  color: #999;
+  font-size: 14px;
+  justify-self: end;
+}
+
+
+/* -----------------------------------
+   13. League Page — Browse by Team Callout
+----------------------------------- */
+.rss-browse-callout {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 28px;
+  margin: 0 0 32px;
+  border-left: 6px solid #B8860B;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.rss-browse-title {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 18px;
+  color: #1C1C1C;
+  letter-spacing: 0.5px;
+  margin: 0 0 2px;
+}
+
+.rss-browse-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #555;
+  margin: 0;
+}
+
+.rss-browse-btn {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  color: white;
+  background: #002744;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  transition: background 0.15s ease;
+}
+
+.rss-browse-btn:hover {
+  background: #003a64;
+  color: white;
+  text-decoration: none;
+}
+
+
+/* -----------------------------------
+   14. Responsive
+----------------------------------- */
+
+/* Header & footer — stack on narrow screens */
 @media (max-width: 600px) {
   .site-header-bar {
     flex-direction: column;
@@ -1275,15 +917,10 @@ iframe {
   }
 }
 
-
-/* Homepage — mobile */
+/* Homepage — adapt grids and hero for tablet/phone */
 @media (max-width: 900px) {
   .rss-hero {
     padding: 32px 24px;
-  }
-
-  .rss-hero-title {
-    font-size: 36px;
   }
 
   .rss-hero-subtitle {
@@ -1305,10 +942,6 @@ iframe {
 }
 
 @media (max-width: 480px) {
-  .rss-hero-title {
-    font-size: 30px;
-  }
-
   .rss-hero-buttons {
     flex-direction: column;
   }
@@ -1330,502 +963,37 @@ iframe {
   }
 }
 
-
-/* ============================================================
-   18. League Landing Page (MLB, NFL, NBA, etc.)
-============================================================ */
- 
- 
-/* Hero title — reduced size (was 48px on desktop, felt overpowering) */
-.rss-hero-title {
-  font-size: 40px;
-}
- 
-@media (max-width: 900px) {
-  .rss-hero-title {
-    font-size: 32px;
-  }
-}
- 
-@media (max-width: 480px) {
-  .rss-hero-title {
-    font-size: 26px;
-  }
-}
- 
- 
-/* Breadcrumb */
-.rss-breadcrumb {
-  font-family: 'Inter Tight', sans-serif;
-  font-size: 14px;
-  color: #555;
-  margin: 24px 0 16px;
-}
- 
-.rss-breadcrumb a {
-  color: #555;
-  text-decoration: none;
-}
- 
-.rss-breadcrumb a:hover {
-  color: #A4161A;
-  text-decoration: underline;
-}
- 
- 
-/* League page header (sport icon + league name + date range) */
-.rss-league-page-header {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin: 0 0 24px;
-}
- 
-.rss-league-page-icon {
-  font-size: 40px;
-  color: #B8860B;
-  line-height: 1;
-}
- 
-.rss-league-page-title {
-  font-family: 'Graduate', serif;
-  font-size: 36px;
-  color: #A4161A;
-  letter-spacing: 1.5px;
-  margin: 0;
-  line-height: 1.1;
-}
- 
-.rss-league-page-subtitle {
-  font-family: 'Inter', sans-serif;
-  font-size: 15px;
-  color: #555;
-  margin: 4px 0 0;
-  line-height: 1.4;
-}
- 
- 
-/* Live projection callout */
-.rss-live-callout {
-  background-color: white;
-  border-radius: 10px;
-  padding: 24px 28px;
-  margin: 0 0 32px;
-  border-left: 6px solid #A4161A;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
- 
-.rss-live-callout-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 0 12px;
-}
- 
-.rss-live-badge {
-  background-color: #A4161A;
-  color: white;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 12px;
-  letter-spacing: 1.5px;
-  padding: 4px 12px;
-  border-radius: 999px;
-}
- 
-.rss-live-meta {
-  font-family: 'Inter Tight', sans-serif;
-  font-size: 12px;
-  color: #555;
-}
- 
-.rss-live-eyebrow {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 12px;
-  letter-spacing: 2px;
-  color: #555;
-  text-transform: uppercase;
-  margin: 0 0 8px;
-}
- 
-.rss-live-title {
-  font-family: 'Barlow Semi Condensed', sans-serif;
-  font-size: 22px;
-  color: #1C1C1C;
-  letter-spacing: 0.5px;
-  margin: 0 0 10px;
-  line-height: 1.3;
-}
- 
-.rss-live-subtitle {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  color: #555;
-  margin: 0 0 14px;
-  line-height: 1.5;
-}
- 
-.rss-live-link {
-  font-family: 'Inter Tight', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: #002744;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
- 
-.rss-live-link:hover {
-  color: #A4161A;
-  text-decoration: none;
-}
- 
-.rss-live-link i {
-  font-size: 16px;
-}
- 
- 
-/* Generic content section */
-.rss-section {
-  margin: 0 0 36px;
-}
- 
-.rss-section-title {
-  font-family: 'Barlow Semi Condensed', sans-serif;
-  font-size: 26px;
-  color: #002744;
-  letter-spacing: 1px;
-  margin: 0 0 4px;
-}
- 
-.rss-section-subtitle {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  color: #555;
-  margin: 0 0 20px;
-}
- 
- 
-/* Story cards (Most Dominant / Biggest Upset / Most Heartbreaking) */
-.rss-story-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-}
- 
-.rss-story-card {
-  display: block;
-  background-color: white;
-  border-radius: 8px;
-  padding: 16px 20px;
-  text-decoration: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-  transition: transform 0.1s ease, box-shadow 0.15s ease;
-}
- 
-.rss-story-card:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  text-decoration: none;
-}
- 
-.rss-story-tag {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 11px;
-  letter-spacing: 1.5px;
-  color: #555;
-  text-transform: uppercase;
-  margin: 0 0 8px;
-}
- 
-.rss-story-headline {
-  font-family: 'Barlow Semi Condensed', sans-serif;
-  font-size: 18px;
-  color: #1C1C1C;
-  margin: 0 0 8px;
-  letter-spacing: 0.5px;
-  line-height: 1.3;
-}
- 
-.rss-story-detail {
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  color: #555;
-  margin: 0;
-  line-height: 1.5;
-}
- 
- 
-/* Era filter buttons */
-.rss-era-filters {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  margin: 0 0 24px;
-  flex-wrap: wrap;
-}
- 
-.rss-era-label {
-  font-family: 'Inter Tight', sans-serif;
-  font-size: 13px;
-  color: #555;
-  margin-right: 6px;
-}
- 
-.rss-filter-btn {
-  background: white;
-  border: 1.5px solid #ddd;
-  border-radius: 999px;
-  padding: 6px 14px;
-  font-family: 'Inter Tight', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  color: #555;
-  cursor: pointer;
-  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
-}
- 
-.rss-filter-btn:hover {
-  border-color: #B8860B;
-  color: #B8860B;
-}
- 
-.rss-filter-btn.active {
-  background: #002744;
-  color: white;
-  border-color: #002744;
-}
- 
-.rss-filter-btn.active:hover {
-  background: #002744;
-  color: white;
-}
- 
- 
-/* Era section wrappers */
-.rss-era-section {
-  margin: 0 0 24px;
-}
- 
-.rss-era-section-label {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 14px;
-  letter-spacing: 2px;
-  color: #555;
-  text-transform: uppercase;
-  margin: 0 0 12px;
-}
- 
-.rss-empty-decade {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  color: #777;
-  font-style: italic;
-  background: white;
-  border-radius: 8px;
-  padding: 18px 22px;
-  margin: 0;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
- 
- 
-/* Season cards (recent decade — visual layout) */
-.rss-season-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-}
- 
-.rss-season-card {
-  display: block;
-  background-color: white;
-  border-radius: 8px;
-  padding: 14px 18px;
-  text-decoration: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-  transition: transform 0.1s ease, box-shadow 0.15s ease;
-}
- 
-.rss-season-card:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  text-decoration: none;
-}
- 
-.rss-season-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin: 0 0 6px;
-}
- 
-.rss-season-year {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 26px;
-  letter-spacing: 1px;
-  color: #002744;
-  line-height: 1;
-}
- 
-.rss-season-status {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 10px;
-  letter-spacing: 1.5px;
-  color: #555;
-  text-transform: uppercase;
-}
- 
-.rss-season-champ {
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  color: #1C1C1C;
-  margin: 0 0 3px;
-}
- 
-.rss-season-blurb {
-  font-family: 'Inter', sans-serif;
-  font-size: 12px;
-  color: #555;
-  margin: 0;
-  line-height: 1.4;
-}
- 
- 
-/* Season rows (older decades — compressed layout) */
-.rss-season-rows {
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
- 
-.rss-season-row {
-  display: grid;
-  grid-template-columns: 60px 1fr 1.5fr 24px;
-  gap: 14px;
-  padding: 12px 18px;
-  border-bottom: 1px solid #eee;
-  text-decoration: none;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  color: #1C1C1C;
-  align-items: center;
-  transition: background-color 0.1s ease;
-}
- 
-.rss-season-row:hover {
-  background-color: #fafafa;
-  text-decoration: none;
-}
- 
-.rss-season-row:last-child {
-  border-bottom: none;
-}
- 
-.rss-row-year {
-  font-weight: 600;
-}
- 
-.rss-row-champ {
-  color: #1C1C1C;
-}
- 
-.rss-row-blurb {
-  color: #555;
-}
- 
-.rss-row-arrow {
-  color: #999;
-  font-size: 14px;
-  justify-self: end;
-}
- 
- 
-/* Browse by team callout */
-.rss-browse-callout {
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px 28px;
-  margin: 0 0 32px;
-  border-left: 6px solid #B8860B;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-}
- 
-.rss-browse-title {
-  font-family: 'Barlow Semi Condensed', sans-serif;
-  font-size: 18px;
-  color: #1C1C1C;
-  letter-spacing: 0.5px;
-  margin: 0 0 2px;
-}
- 
-.rss-browse-subtitle {
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  color: #555;
-  margin: 0;
-}
- 
-.rss-browse-btn {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 14px;
-  letter-spacing: 1.5px;
-  color: white;
-  background: #002744;
-  padding: 10px 18px;
-  border-radius: 6px;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  white-space: nowrap;
-  transition: background 0.15s ease;
-}
- 
-.rss-browse-btn:hover {
-  background: #003a64;
-  color: white;
-  text-decoration: none;
-}
- 
- 
-/* Responsive */
+/* League page — adapt header, grids, and rows for tablet/phone */
 @media (max-width: 900px) {
   .rss-league-page-title {
     font-size: 28px;
   }
- 
+
   .rss-story-grid {
     grid-template-columns: 1fr;
   }
- 
+
   .rss-season-grid {
     grid-template-columns: repeat(2, 1fr);
   }
- 
+
   .rss-browse-callout {
     flex-direction: column;
     align-items: flex-start;
   }
 }
- 
+
 @media (max-width: 600px) {
   .rss-season-grid {
     grid-template-columns: 1fr;
   }
- 
+
   .rss-season-row {
     grid-template-columns: 50px 1fr 30px;
     font-size: 13px;
     padding: 10px 14px;
   }
- 
+
   .rss-row-blurb {
     display: none;
   }
