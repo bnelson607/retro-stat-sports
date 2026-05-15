@@ -16,7 +16,11 @@
      12. League Page — Era Filters & Season Tiles
      13. League Page — Browse by Team Callout
      14. Placeholder Pages (Coming Soon)
-     15. Responsive
+     15. Season Detail Page — Header & Tabs
+     16. Season Detail Page — Headline Cards
+     17. Season Detail Page — Standings Table
+     18. Season Detail Page — Playoff Bracket
+     19. Responsive
    ============================================================ */
 
 
@@ -903,7 +907,484 @@ h3 { font-size: 24px; }
 
 
 /* -----------------------------------
-   15. Responsive
+   15. Season Detail Page — Header & Tabs
+----------------------------------- */
+.rss-season-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin: 24px 0;
+  flex-wrap: wrap;
+}
+
+.rss-season-header-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.rss-season-header-icon {
+  font-size: 36px;
+  color: #B8860B;
+  line-height: 1;
+}
+
+.rss-season-title {
+  font-family: 'Graduate', serif;
+  font-size: 30px;
+  color: #A4161A;
+  letter-spacing: 1px;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.rss-season-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #555;
+  margin: 4px 0 0;
+}
+
+.rss-season-status-badge {
+  display: inline-block;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  padding: 5px 14px;
+  border-radius: 999px;
+}
+
+.rss-status-final {
+  background: #002744;
+  color: white;
+}
+
+.rss-status-live {
+  background: #A4161A;
+  color: white;
+}
+
+/* Tab navigation */
+.rss-tab-nav {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid #ddd;
+  margin: 0 0 28px;
+  flex-wrap: wrap;
+}
+
+.rss-tab {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  color: #555;
+  padding: 12px 18px;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  margin-bottom: -1px;
+}
+
+.rss-tab:hover {
+  color: #A4161A;
+  text-decoration: none;
+}
+
+.rss-tab.active {
+  color: #A4161A;
+  border-bottom-color: #A4161A;
+}
+
+
+/* -----------------------------------
+   16. Season Detail Page — Headline Cards
+----------------------------------- */
+.rss-headline-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin: 0 0 36px;
+}
+
+.rss-headline-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  border-top: 4px solid #ddd;
+  position: relative;
+}
+
+.rss-headline-card-icon {
+  font-size: 22px;
+  color: #555;
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  line-height: 1;
+}
+
+.rss-headline-card-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #555;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.rss-headline-card-team {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 18px;
+  color: #1C1C1C;
+  letter-spacing: 0.3px;
+  margin: 0 0 6px;
+  line-height: 1.2;
+}
+
+.rss-headline-card-detail {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #555;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Accent variants */
+.rss-headline-champion {
+  border-top-color: #B8860B;
+}
+.rss-headline-champion .rss-headline-card-icon {
+  color: #B8860B;
+}
+
+.rss-headline-overachiever {
+  border-top-color: #00642E;
+}
+.rss-headline-overachiever .rss-headline-card-icon {
+  color: #00642E;
+}
+
+.rss-headline-underachiever {
+  border-top-color: #A4161A;
+}
+.rss-headline-underachiever .rss-headline-card-icon {
+  color: #A4161A;
+}
+
+
+/* -----------------------------------
+   17. Season Detail Page — Standings Table
+----------------------------------- */
+
+/* Division switcher buttons */
+.rss-division-nav {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 0 0 16px;
+}
+
+.rss-division-btn {
+  background: white;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.rss-division-btn:hover {
+  border-color: #002744;
+  color: #002744;
+}
+
+.rss-division-btn.active {
+  background: #002744;
+  color: white;
+  border-color: #002744;
+}
+
+.rss-division-btn.active:hover {
+  color: white;
+}
+
+/* Standings block — only the .active one is shown */
+.rss-standings-block {
+  display: none;
+}
+
+.rss-standings-block.active {
+  display: block;
+}
+
+/* Standings table */
+.rss-standings-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  font-variant-numeric: tabular-nums;
+}
+
+.rss-standings-table thead th {
+  background: #002744;
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: normal;
+}
+
+.rss-standings-table thead th.num {
+  text-align: right;
+}
+
+.rss-standings-table thead th.rank {
+  width: 36px;
+  text-align: center;
+}
+
+.rss-standings-table thead th.team {
+  min-width: 180px;
+}
+
+.rss-standings-table tbody td {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #1C1C1C;
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.rss-standings-table tbody td.num {
+  text-align: right;
+}
+
+.rss-standings-table tbody td.rank {
+  text-align: center;
+  color: #777;
+  font-weight: 500;
+}
+
+.rss-standings-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.rss-team-name {
+  font-weight: 500;
+}
+
+/* Cell color hints for over/under performance */
+.rss-standings-table .rss-overperform {
+  color: #00642E;
+  font-weight: 500;
+}
+
+.rss-standings-table .rss-underperform {
+  color: #A4161A;
+  font-weight: 500;
+}
+
+/* Badges */
+.rss-badge {
+  display: inline-block;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  margin-left: 8px;
+  color: white;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.rss-badge-playoff {
+  background: #B8860B;
+}
+
+.rss-badge-div {
+  background: #002744;
+}
+
+.rss-badge-wc {
+  background: #555;
+}
+
+.rss-badge-champ {
+  background: #A4161A;
+}
+
+
+/* -----------------------------------
+   18. Season Detail Page — Playoff Bracket
+----------------------------------- */
+.rss-bracket {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.rss-bracket-league {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  border-left: 6px solid #002744;
+}
+
+.rss-bracket-al { border-left-color: #002744; }
+.rss-bracket-nl { border-left-color: #00642E; }
+
+.rss-bracket-league-title {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 22px;
+  color: #002744;
+  letter-spacing: 1px;
+  margin: 0 0 18px;
+}
+
+.rss-bracket-al .rss-bracket-league-title { color: #002744; }
+.rss-bracket-nl .rss-bracket-league-title { color: #00642E; }
+
+/* Rounds: arrange horizontally on desktop, vertically on phones */
+.rss-bracket-league .rss-bracket-round {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(33.333% - 12px);
+  margin-right: 12px;
+}
+
+.rss-bracket-league .rss-bracket-round:last-child {
+  margin-right: 0;
+}
+
+.rss-bracket-round-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #555;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+/* Individual matchup card */
+.rss-bracket-matchup {
+  background: #fafafa;
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  border-left: 3px solid #ddd;
+}
+
+.rss-bracket-matchup:last-child {
+  margin-bottom: 0;
+}
+
+.rss-bracket-team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  color: #777;
+}
+
+.rss-bracket-team-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.rss-bracket-team-score {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  color: #999;
+  letter-spacing: 1px;
+}
+
+/* Winner row gets emphasis */
+.rss-bracket-winner {
+  color: #1C1C1C;
+}
+
+.rss-bracket-winner .rss-bracket-team-name {
+  font-weight: 600;
+}
+
+.rss-bracket-winner .rss-bracket-team-score {
+  color: #002744;
+  font-weight: bold;
+}
+
+.rss-bracket-matchup:has(.rss-bracket-winner) {
+  border-left-color: #002744;
+}
+
+.rss-bracket-matchup-meta {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 11px;
+  color: #999;
+  margin: 6px 0 0;
+  text-align: right;
+}
+
+/* World Series centerpiece */
+.rss-bracket-ws {
+  background-color: white;
+  border-radius: 10px;
+  padding: 24px 28px;
+  box-shadow: 0 2px 8px rgba(164, 22, 26, 0.15);
+  border-left: 6px solid #A4161A;
+  text-align: center;
+}
+
+.rss-bracket-ws-title {
+  font-family: 'Graduate', serif;
+  font-size: 24px;
+  color: #A4161A;
+  letter-spacing: 1.5px;
+  margin: 0 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.rss-bracket-ws-title i {
+  font-size: 26px;
+  color: #B8860B;
+}
+
+.rss-bracket-matchup-big {
+  max-width: 480px;
+  margin: 0 auto;
+  background: #fafafa;
+  padding: 14px 20px;
+  border-radius: 8px;
+  border-left: 4px solid #A4161A;
+}
+
+.rss-bracket-matchup-big .rss-bracket-team-name {
+  font-size: 16px;
+}
+
+.rss-bracket-matchup-big .rss-bracket-team-score {
+  font-size: 22px;
+}
+
+
+/* -----------------------------------
+   19. Responsive
 ----------------------------------- */
 
 /* Header & footer — stack on narrow screens */
@@ -1014,5 +1495,70 @@ h3 { font-size: 24px; }
 
   .rss-coming-soon-icon {
     font-size: 44px;
+  }
+}
+
+/* Season detail page — adapt header, cards, standings, bracket */
+@media (max-width: 900px) {
+  .rss-season-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rss-season-title {
+    font-size: 26px;
+  }
+
+  .rss-headline-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rss-bracket-league .rss-bracket-round {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+
+  .rss-bracket-league .rss-bracket-round:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .rss-tab {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .rss-headline-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Hide RS/RA in standings table on phones */
+  .rss-standings-table .mobile-hide {
+    display: none;
+  }
+
+  .rss-standings-table thead th,
+  .rss-standings-table tbody td {
+    padding: 8px 8px;
+    font-size: 12px;
+  }
+
+  .rss-season-title {
+    font-size: 22px;
+  }
+
+  .rss-bracket-league {
+    padding: 16px 18px;
+  }
+
+  .rss-bracket-ws {
+    padding: 18px 20px;
+  }
+
+  .rss-bracket-ws-title {
+    font-size: 20px;
   }
 }
