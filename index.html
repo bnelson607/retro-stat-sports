@@ -1,0 +1,193 @@
+<!-- index.html — Retro Stat Sports homepage -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Retro Stat Sports – Monte Carlo Simulations of Historic Sports Seasons</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Monte Carlo simulations of every major historic sports season — plus live projections. Elo ratings, playoff probabilities, and alternate histories across MLB, NFL, NBA, NHL, UEFA's biggest leagues, and major NCAA sports.">
+
+    <!-- Apple Touch Icon for iOS / Safari favorites -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/sports-history-test/usa/favicons/apple-touch-icon.png">
+
+    <!-- Standard favicon -->
+    <link rel="icon" href="/sports-history-test/usa/favicons/favicon.ico" type="image/x-icon">
+
+    <!-- PNG favicons for modern browsers -->
+    <link rel="icon" href="/sports-history-test/usa/favicons/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/sports-history-test/usa/favicons/android-chrome-192x192.png" type="image/png" sizes="192x192">
+
+    <link rel="stylesheet" href="/sports-history-test/styles.css">
+    <script defer src="/sports-history-test/scripts/main.js"></script>
+</head>
+
+
+<body>
+    <div id="site-header"></div>
+
+    <main class="container">
+
+        <!-- Hero section -->
+        <section class="rss-hero">
+            <p class="rss-hero-eyebrow">Monte Carlo Sports Simulations</p>
+            <h1 class="rss-hero-title">We Replayed Every Season 10,000 Times.</h1>
+            <p class="rss-hero-subtitle">
+                Historic simulations and live projections across the major US pro leagues, the Big 5 of European soccer,
+                and major NCAA sports. Elo ratings, playoff probabilities, and alternate histories — for every season we have data on.
+            </p>
+            <div class="rss-hero-buttons">
+                <a href="/sports-history-test/projections/" class="rss-btn rss-btn-primary">Current Projections</a>
+                <a href="/sports-history-test/leagues/" class="rss-btn rss-btn-secondary">Explore Historic Seasons</a>
+            </div>
+        </section>
+
+        <!-- Stats strip -->
+        <section class="rss-stats-strip">
+            <div class="rss-stat">
+                <p class="rss-stat-label">Leagues Covered</p>
+                <p class="rss-stat-value">15</p>
+            </div>
+            <div class="rss-stat">
+                <p class="rss-stat-label">Seasons Simulated</p>
+                <p class="rss-stat-value">Growing</p>
+            </div>
+            <div class="rss-stat">
+                <p class="rss-stat-label">Sims per Season</p>
+                <p class="rss-stat-value">10K</p>
+            </div>
+            <div class="rss-stat">
+                <p class="rss-stat-label">Updated</p>
+                <p class="rss-stat-value">Daily</p>
+            </div>
+        </section>
+
+        <!-- ============================================
+             USA Pro Leagues
+             To add a league: copy a .rss-league-tile block and edit
+             the href, the name, and the meta line.
+             ============================================ -->
+        <section class="rss-league-section rss-league-section-usa">
+            <header class="rss-league-section-header">
+                <h2 class="rss-league-section-title">USA Pro Leagues</h2>
+                <p class="rss-league-section-subtitle">American professional sports — historic seasons and live projections.</p>
+            </header>
+            <div class="rss-league-grid">
+                <a href="/sports-history-test/leagues/mlb/" class="rss-league-tile">
+                    <div class="rss-league-tile-name">MLB</div>
+                    <div class="rss-league-tile-meta">Major League Baseball<br>1903 – present</div>
+                </a>
+                <a href="/sports-history-test/leagues/nfl/" class="rss-league-tile">
+                    <div class="rss-league-tile-name">NFL</div>
+                    <div class="rss-league-tile-meta">National Football League<br>1933 – present</div>
+                </a>
+                <a href="/sports-history-test/leagues/nba/" class="rss-league-tile">
+                    <div class="rss-league-tile-name">NBA</div>
+                    <div class="rss-league-tile-meta">National Basketball Association<br>1946 – present</div>
+                </a>
+                <a href="/sports-history-test/leagues/nhl/" class="rss-league-tile">
+                    <div class="rss-league-tile-name">NHL</div>
+                    <div class="rss-league-tile-meta">National Hockey League<br>1917 – present</div>
+                </a>
+                <a href="/sports-history-test/leagues/wnba/" class="rss-league-tile">
+                    <div class="rss-league-tile-name">WNBA</div>
+                    <div class="rss-league-tile-meta">Women's National Basketball Association<br>1997 – present</div>
+                </a>
+                <a href="/sports-history-test/leagues/mls/" class="rss-league-tile">
+                    <div class="rss-league-tile-name">MLS</div>
+                    <div class="rss-league-tile-meta">Major League Soccer<br>1996 – present</div>
+                </a>
+                <a href="/sports-history-test/leagues/usl/" class="rss-league-tile">
+                    <div class="rss-league-tile-name">USL</div>
+                    <div class="rss-league-tile-meta">United Soccer League<br>2011 – present</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ============================================
+             European Soccer (UEFA's Big 5)
+             ============================================ -->
+        <section class="rss-league-section rss-league-section-uefa">
+            <header class="rss-league-section-header">
+                <h2 class="rss-league-section-title">European Soccer</h2>
+                <p class="rss-league-section-subtitle">UEFA's Big 5 leagues — more European leagues coming.</p>
+            </header>
+            <div class="rss-league-grid">
+                <a href="/sports-history-test/leagues/premier-league/" class="rss-league-tile">
+                    <div class="rss-league-tile-name">EPL</div>
+                    <div class="rss-league-tile-meta">English Premier League<br>England · Top Flight</div>
+                </a>
+                <a href="/sports-history-test/leagues/la-liga/" class="rss-league-tile">
+                    <div class="rss-league-tile-name">La Liga</div>
+                    <div class="rss-league-tile-meta">La Liga<br>Spain · Top Flight</div>
+                </a>
+                <a href="/sports-history-test/leagues/bundesliga/" class="rss-league-tile">
+                    <div class="rss-league-tile-name">Bundesliga</div>
+                    <div class="rss-league-tile-meta">Bundesliga<br>Germany · Top Flight</div>
+                </a>
+                <a href="/sports-history-test/leagues/serie-a/" class="rss-league-tile">
+                    <div class="rss-league-tile-name">Serie A</div>
+                    <div class="rss-league-tile-meta">Serie A<br>Italy · Top Flight</div>
+                </a>
+                <a href="/sports-history-test/leagues/ligue-1/" class="rss-league-tile">
+                    <div class="rss-league-tile-name">Ligue 1</div>
+                    <div class="rss-league-tile-meta">Ligue 1<br>France · Top Flight</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ============================================
+             NCAA / College Sports
+             ============================================ -->
+        <section class="rss-league-section rss-league-section-ncaa">
+            <header class="rss-league-section-header">
+                <h2 class="rss-league-section-title">College Sports</h2>
+                <p class="rss-league-section-subtitle">NCAA football and basketball — more sports coming.</p>
+            </header>
+            <div class="rss-league-grid">
+                <a href="/sports-history-test/leagues/ncaa-football/" class="rss-league-tile">
+                    <div class="rss-league-tile-name">NCAAF</div>
+                    <div class="rss-league-tile-meta">College Football<br>FBS Division</div>
+                </a>
+                <a href="/sports-history-test/leagues/ncaa-basketball-men/" class="rss-league-tile">
+                    <div class="rss-league-tile-name">NCAAB</div>
+                    <div class="rss-league-tile-meta">Men's College Basketball<br>Division I</div>
+                </a>
+                <a href="/sports-history-test/leagues/ncaa-basketball-women/" class="rss-league-tile">
+                    <div class="rss-league-tile-name">NCAAW</div>
+                    <div class="rss-league-tile-meta">Women's College Basketball<br>Division I</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- How it works -->
+        <section class="rss-how-it-works">
+            <header class="rss-league-section-header">
+                <h2 class="rss-league-section-title">How It Works</h2>
+            </header>
+            <div class="rss-how-grid">
+                <div class="rss-how-step">
+                    <div class="rss-how-step-num">Step 1</div>
+                    <div class="rss-how-step-title">Rate every team with Elo.</div>
+                    <div class="rss-how-step-detail">Each team's strength rating updates after every game played.</div>
+                </div>
+                <div class="rss-how-step">
+                    <div class="rss-how-step-num">Step 2</div>
+                    <div class="rss-how-step-title">Simulate the schedule 10,000 times.</div>
+                    <div class="rss-how-step-detail">Each game's outcome is random, weighted by team strength.</div>
+                </div>
+                <div class="rss-how-step">
+                    <div class="rss-how-step-num">Step 3</div>
+                    <div class="rss-how-step-title">Show the full range of outcomes.</div>
+                    <div class="rss-how-step-detail">Win totals, playoff odds, and championship probabilities.</div>
+                </div>
+            </div>
+            <p class="rss-how-link"><a href="/sports-history-test/methodology/basics/">Read the full methodology →</a></p>
+        </section>
+
+    </main>
+
+    <div id="site-footer"></div>
+
+</body>
+</html>
