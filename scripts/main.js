@@ -4,14 +4,14 @@
 // #uefa-header, or #ncaa-header divs, those divs can be deleted from those pages.
 
 // Load main page header HTML dynamically
-fetch('/sports-history-test/header.html')
+fetch('/retro-stat-sports/header.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('site-header').innerHTML = data;
     });
 
 // Load main page footer HTML dynamically
-fetch('/sports-history-test/footer.html')
+fetch('/retro-stat-sports/footer.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('site-footer').innerHTML = data;
