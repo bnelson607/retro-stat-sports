@@ -3400,10 +3400,523 @@
 </section>
 
 
+<section class="rss-section">
+  <h2 class="rss-section-title">Actual Bracket Simulation</h2>
+  <p class="rss-section-subtitle">
+    With the actual playoff bracket fixed in place, this second simulation re-runs each
+    matchup 1,000 times and tallies how often each team
+    advanced past each round and won the title. The matchup heatmaps below show the
+    probability of every potential winner–loser pairing at each round.
+  </p>
+
+    <h3 class="rss-subsection-title">Bracket Sim Outcomes</h3>
+    <div class="rss-leaderboard rss-playoff-table">
+      <table class="rss-leaderboard-table" data-tablesort>
+        <thead>
+          <tr>
+            <th class="team">Team</th>
+              <th class="num" data-sort-method="number">Advanced to LDS</th>
+              <th class="num" data-sort-method="number">Advanced to LCS</th>
+              <th class="num" data-sort-method="number">Advanced to World Series</th>
+              <th class="num" data-sort-method="number">Won World Series</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td class="team"><span class="rss-team-name">Milwaukee Brewers</span></td>
+                <td class="num"
+                    data-sort="1.0">100.0%</td>
+                <td class="num"
+                    data-sort="0.605">60.5%</td>
+                <td class="num"
+                    data-sort="0.332">33.2%</td>
+                <td class="num rss-td-champ"
+                    data-sort="0.191">19.1%</td>
+            </tr>
+            <tr>
+              <td class="team"><span class="rss-team-name">Philadelphia Phillies</span></td>
+                <td class="num"
+                    data-sort="1.0">100.0%</td>
+                <td class="num"
+                    data-sort="0.535">53.5%</td>
+                <td class="num"
+                    data-sort="0.257">25.7%</td>
+                <td class="num rss-td-champ"
+                    data-sort="0.147">14.7%</td>
+            </tr>
+            <tr>
+              <td class="team"><span class="rss-team-name">Seattle Mariners</span></td>
+                <td class="num"
+                    data-sort="1.0">100.0%</td>
+                <td class="num"
+                    data-sort="0.594">59.4%</td>
+                <td class="num"
+                    data-sort="0.288">28.8%</td>
+                <td class="num rss-td-champ"
+                    data-sort="0.123">12.3%</td>
+            </tr>
+            <tr>
+              <td class="team"><span class="rss-team-name">New York Yankees</span></td>
+                <td class="num"
+                    data-sort="0.586">58.6%</td>
+                <td class="num"
+                    data-sort="0.352">35.2%</td>
+                <td class="num"
+                    data-sort="0.206">20.6%</td>
+                <td class="num rss-td-champ"
+                    data-sort="0.101">10.1%</td>
+            </tr>
+            <tr>
+              <td class="team"><span class="rss-team-name">Los Angeles Dodgers</span></td>
+                <td class="num"
+                    data-sort="0.603">60.3%</td>
+                <td class="num"
+                    data-sort="0.307">30.7%</td>
+                <td class="num"
+                    data-sort="0.155">15.5%</td>
+                <td class="num rss-td-champ"
+                    data-sort="0.095">9.5%</td>
+            </tr>
+            <tr>
+              <td class="team"><span class="rss-team-name">Toronto Blue Jays</span></td>
+                <td class="num"
+                    data-sort="1.0">100.0%</td>
+                <td class="num"
+                    data-sort="0.406">40.6%</td>
+                <td class="num"
+                    data-sort="0.197">19.7%</td>
+                <td class="num rss-td-champ"
+                    data-sort="0.084">8.4%</td>
+            </tr>
+            <tr>
+              <td class="team"><span class="rss-team-name">Boston Red Sox</span></td>
+                <td class="num"
+                    data-sort="0.414">41.4%</td>
+                <td class="num"
+                    data-sort="0.242">24.2%</td>
+                <td class="num"
+                    data-sort="0.137">13.7%</td>
+                <td class="num rss-td-champ"
+                    data-sort="0.067">6.7%</td>
+            </tr>
+            <tr>
+              <td class="team"><span class="rss-team-name">Chicago Cubs</span></td>
+                <td class="num"
+                    data-sort="0.527">52.7%</td>
+                <td class="num"
+                    data-sort="0.225">22.5%</td>
+                <td class="num"
+                    data-sort="0.117">11.7%</td>
+                <td class="num rss-td-champ"
+                    data-sort="0.061">6.1%</td>
+            </tr>
+            <tr>
+              <td class="team"><span class="rss-team-name">Cleveland Guardians</span></td>
+                <td class="num"
+                    data-sort="0.539">53.9%</td>
+                <td class="num"
+                    data-sort="0.245">24.5%</td>
+                <td class="num"
+                    data-sort="0.112">11.2%</td>
+                <td class="num rss-td-champ"
+                    data-sort="0.048">4.8%</td>
+            </tr>
+            <tr>
+              <td class="team"><span class="rss-team-name">San Diego Padres</span></td>
+                <td class="num"
+                    data-sort="0.473">47.3%</td>
+                <td class="num"
+                    data-sort="0.17">17.0%</td>
+                <td class="num"
+                    data-sort="0.084">8.4%</td>
+                <td class="num rss-td-champ"
+                    data-sort="0.043">4.3%</td>
+            </tr>
+            <tr>
+              <td class="team"><span class="rss-team-name">Cincinnati Reds</span></td>
+                <td class="num"
+                    data-sort="0.397">39.7%</td>
+                <td class="num"
+                    data-sort="0.158">15.8%</td>
+                <td class="num"
+                    data-sort="0.055">5.5%</td>
+                <td class="num rss-td-champ"
+                    data-sort="0.021">2.1%</td>
+            </tr>
+            <tr>
+              <td class="team"><span class="rss-team-name">Detroit Tigers</span></td>
+                <td class="num"
+                    data-sort="0.461">46.1%</td>
+                <td class="num"
+                    data-sort="0.161">16.1%</td>
+                <td class="num"
+                    data-sort="0.06">6.0%</td>
+                <td class="num rss-td-champ"
+                    data-sort="0.019">1.9%</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="rss-subsection-title">Matchup Probabilities by Round</h3>
+
+    <div class="rss-switcher-bar" data-switcher="matchup">
+        <button type="button"
+                class="rss-switcher-btn active"
+                data-target="wild-card--american">Wild Card — American</button>
+        <button type="button"
+                class="rss-switcher-btn"
+                data-target="wild-card--national">Wild Card — National</button>
+        <button type="button"
+                class="rss-switcher-btn"
+                data-target="lds--american">LDS — American</button>
+        <button type="button"
+                class="rss-switcher-btn"
+                data-target="lds--national">LDS — National</button>
+        <button type="button"
+                class="rss-switcher-btn"
+                data-target="lcs--american">LCS — American</button>
+        <button type="button"
+                class="rss-switcher-btn"
+                data-target="lcs--national">LCS — National</button>
+        <button type="button"
+                class="rss-switcher-btn"
+                data-target="world-series">World Series</button>
+    </div>
+
+      <div class="rss-switcher-block active"
+           data-switcher="matchup"
+           data-block="wild-card--american">
+        <div class="rss-chart-frame"><div>                            <div id="playoff-matchup-wild-card--american" class="plotly-graph-div" style="height:800px; width:800px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("playoff-matchup-wild-card--american")) {                    Plotly.newPlot(                        "playoff-matchup-wild-card--american",                        [{"coloraxis":"coloraxis","name":"0","texttemplate":"%{z:.1%}","x":["Boston Red Sox","Cleveland Guardians","Detroit Tigers","New York Yankees"],"y":["Boston Red Sox","Cleveland Guardians","Detroit Tigers","New York Yankees"],"z":[[null,null,null,0.414],[null,null,0.539,null],[null,0.461,null,null],[0.586,null,null,null]],"type":"heatmap","xaxis":"x","yaxis":"y","hovertemplate":"Losing Team: %{x}\u003cbr\u003eWinning Team: %{y}\u003cbr\u003eProbability: %{z}\u003cextra\u003e\u003c\u002fextra\u003e"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Losing Team"},"fixedrange":true,"side":"bottom","automargin":true},"yaxis":{"anchor":"x","domain":[0.0,1.0],"autorange":"reversed","title":{"text":"Winning Team"},"fixedrange":true,"automargin":true},"coloraxis":{"colorbar":{"title":{"text":"Probability"}},"colorscale":[[0.0,"#FFFFFF"],[0.15,"#EEF1F5"],[0.4,"#9FB4C5"],[0.7,"#3E5E7C"],[1.0,"#002744"]],"showscale":false},"margin":{"t":60,"l":20,"r":20,"b":20},"font":{"family":"Inter, sans-serif","size":12,"color":"#1C1C1C"},"title":{"font":{"size":15,"color":"#1C1C1C"},"text":"Wild Card — American — Matchup Probabilities","x":0.5,"xanchor":"center"},"dragmode":false,"hovermode":"closest","width":800,"height":800,"autosize":false,"paper_bgcolor":"white","plot_bgcolor":"white"},                        {"displayModeBar": false, "responsive": false}                    )                };            </script>        </div></div>
+      </div>
+      <div class="rss-switcher-block"
+           data-switcher="matchup"
+           data-block="wild-card--national">
+        <div class="rss-chart-frame"><div>                            <div id="playoff-matchup-wild-card--national" class="plotly-graph-div" style="height:800px; width:800px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("playoff-matchup-wild-card--national")) {                    Plotly.newPlot(                        "playoff-matchup-wild-card--national",                        [{"coloraxis":"coloraxis","name":"0","texttemplate":"%{z:.1%}","x":["Chicago Cubs","Cincinnati Reds","Los Angeles Dodgers","San Diego Padres"],"y":["Chicago Cubs","Cincinnati Reds","Los Angeles Dodgers","San Diego Padres"],"z":[[null,null,null,0.527],[null,null,0.397,null],[null,0.603,null,null],[0.473,null,null,null]],"type":"heatmap","xaxis":"x","yaxis":"y","hovertemplate":"Losing Team: %{x}\u003cbr\u003eWinning Team: %{y}\u003cbr\u003eProbability: %{z}\u003cextra\u003e\u003c\u002fextra\u003e"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Losing Team"},"fixedrange":true,"side":"bottom","automargin":true},"yaxis":{"anchor":"x","domain":[0.0,1.0],"autorange":"reversed","title":{"text":"Winning Team"},"fixedrange":true,"automargin":true},"coloraxis":{"colorbar":{"title":{"text":"Probability"}},"colorscale":[[0.0,"#FFFFFF"],[0.15,"#EEF1F5"],[0.4,"#9FB4C5"],[0.7,"#3E5E7C"],[1.0,"#002744"]],"showscale":false},"margin":{"t":60,"l":20,"r":20,"b":20},"font":{"family":"Inter, sans-serif","size":12,"color":"#1C1C1C"},"title":{"font":{"size":15,"color":"#1C1C1C"},"text":"Wild Card — National — Matchup Probabilities","x":0.5,"xanchor":"center"},"dragmode":false,"hovermode":"closest","width":800,"height":800,"autosize":false,"paper_bgcolor":"white","plot_bgcolor":"white"},                        {"displayModeBar": false, "responsive": false}                    )                };            </script>        </div></div>
+      </div>
+      <div class="rss-switcher-block"
+           data-switcher="matchup"
+           data-block="lds--american">
+        <div class="rss-chart-frame"><div>                            <div id="playoff-matchup-lds--american" class="plotly-graph-div" style="height:800px; width:800px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("playoff-matchup-lds--american")) {                    Plotly.newPlot(                        "playoff-matchup-lds--american",                        [{"coloraxis":"coloraxis","name":"0","texttemplate":"%{z:.1%}","x":["Boston Red Sox","Cleveland Guardians","Detroit Tigers","New York Yankees","Seattle Mariners","Toronto Blue Jays"],"y":["Boston Red Sox","Cleveland Guardians","Detroit Tigers","New York Yankees","Seattle Mariners","Toronto Blue Jays"],"z":[[null,null,null,null,null,0.242],[null,null,null,null,0.245,null],[null,null,null,null,0.161,null],[null,null,null,null,null,0.352],[null,0.294,0.3,null,null,null],[0.172,null,null,0.234,null,null]],"type":"heatmap","xaxis":"x","yaxis":"y","hovertemplate":"Losing Team: %{x}\u003cbr\u003eWinning Team: %{y}\u003cbr\u003eProbability: %{z}\u003cextra\u003e\u003c\u002fextra\u003e"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Losing Team"},"fixedrange":true,"side":"bottom","automargin":true},"yaxis":{"anchor":"x","domain":[0.0,1.0],"autorange":"reversed","title":{"text":"Winning Team"},"fixedrange":true,"automargin":true},"coloraxis":{"colorbar":{"title":{"text":"Probability"}},"colorscale":[[0.0,"#FFFFFF"],[0.15,"#EEF1F5"],[0.4,"#9FB4C5"],[0.7,"#3E5E7C"],[1.0,"#002744"]],"showscale":false},"margin":{"t":60,"l":20,"r":20,"b":20},"font":{"family":"Inter, sans-serif","size":12,"color":"#1C1C1C"},"title":{"font":{"size":15,"color":"#1C1C1C"},"text":"LDS — American — Matchup Probabilities","x":0.5,"xanchor":"center"},"dragmode":false,"hovermode":"closest","width":800,"height":800,"autosize":false,"paper_bgcolor":"white","plot_bgcolor":"white"},                        {"displayModeBar": false, "responsive": false}                    )                };            </script>        </div></div>
+      </div>
+      <div class="rss-switcher-block"
+           data-switcher="matchup"
+           data-block="lds--national">
+        <div class="rss-chart-frame"><div>                            <div id="playoff-matchup-lds--national" class="plotly-graph-div" style="height:800px; width:800px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("playoff-matchup-lds--national")) {                    Plotly.newPlot(                        "playoff-matchup-lds--national",                        [{"coloraxis":"coloraxis","name":"0","texttemplate":"%{z:.1%}","x":["Chicago Cubs","Cincinnati Reds","Los Angeles Dodgers","Milwaukee Brewers","Philadelphia Phillies","San Diego Padres"],"y":["Chicago Cubs","Cincinnati Reds","Los Angeles Dodgers","Milwaukee Brewers","Philadelphia Phillies","San Diego Padres"],"z":[[null,null,null,0.225,null,null],[null,null,null,null,0.158,null],[null,null,null,null,0.307,null],[0.302,null,null,null,null,0.303],[null,0.239,0.296,null,null,null],[null,null,null,0.17,null,null]],"type":"heatmap","xaxis":"x","yaxis":"y","hovertemplate":"Losing Team: %{x}\u003cbr\u003eWinning Team: %{y}\u003cbr\u003eProbability: %{z}\u003cextra\u003e\u003c\u002fextra\u003e"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Losing Team"},"fixedrange":true,"side":"bottom","automargin":true},"yaxis":{"anchor":"x","domain":[0.0,1.0],"autorange":"reversed","title":{"text":"Winning Team"},"fixedrange":true,"automargin":true},"coloraxis":{"colorbar":{"title":{"text":"Probability"}},"colorscale":[[0.0,"#FFFFFF"],[0.15,"#EEF1F5"],[0.4,"#9FB4C5"],[0.7,"#3E5E7C"],[1.0,"#002744"]],"showscale":false},"margin":{"t":60,"l":20,"r":20,"b":20},"font":{"family":"Inter, sans-serif","size":12,"color":"#1C1C1C"},"title":{"font":{"size":15,"color":"#1C1C1C"},"text":"LDS — National — Matchup Probabilities","x":0.5,"xanchor":"center"},"dragmode":false,"hovermode":"closest","width":800,"height":800,"autosize":false,"paper_bgcolor":"white","plot_bgcolor":"white"},                        {"displayModeBar": false, "responsive": false}                    )                };            </script>        </div></div>
+      </div>
+      <div class="rss-switcher-block"
+           data-switcher="matchup"
+           data-block="lcs--american">
+        <div class="rss-chart-frame"><div>                            <div id="playoff-matchup-lcs--american" class="plotly-graph-div" style="height:800px; width:800px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("playoff-matchup-lcs--american")) {                    Plotly.newPlot(                        "playoff-matchup-lcs--american",                        [{"coloraxis":"coloraxis","name":"0","texttemplate":"%{z:.1%}","x":["Boston Red Sox","Cleveland Guardians","Detroit Tigers","New York Yankees","Seattle Mariners","Toronto Blue Jays"],"y":["Boston Red Sox","Cleveland Guardians","Detroit Tigers","New York Yankees","Seattle Mariners","Toronto Blue Jays"],"z":[[null,0.031,0.022,null,0.084,null],[0.021,null,null,0.035,null,0.056],[0.014,null,null,0.022,null,0.024],[null,0.059,0.038,null,0.109,null],[0.07,null,null,0.089,null,0.129],[null,0.043,0.041,null,0.113,null]],"type":"heatmap","xaxis":"x","yaxis":"y","hovertemplate":"Losing Team: %{x}\u003cbr\u003eWinning Team: %{y}\u003cbr\u003eProbability: %{z}\u003cextra\u003e\u003c\u002fextra\u003e"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Losing Team"},"fixedrange":true,"side":"bottom","automargin":true},"yaxis":{"anchor":"x","domain":[0.0,1.0],"autorange":"reversed","title":{"text":"Winning Team"},"fixedrange":true,"automargin":true},"coloraxis":{"colorbar":{"title":{"text":"Probability"}},"colorscale":[[0.0,"#FFFFFF"],[0.15,"#EEF1F5"],[0.4,"#9FB4C5"],[0.7,"#3E5E7C"],[1.0,"#002744"]],"showscale":false},"margin":{"t":60,"l":20,"r":20,"b":20},"font":{"family":"Inter, sans-serif","size":12,"color":"#1C1C1C"},"title":{"font":{"size":15,"color":"#1C1C1C"},"text":"LCS — American — Matchup Probabilities","x":0.5,"xanchor":"center"},"dragmode":false,"hovermode":"closest","width":800,"height":800,"autosize":false,"paper_bgcolor":"white","plot_bgcolor":"white"},                        {"displayModeBar": false, "responsive": false}                    )                };            </script>        </div></div>
+      </div>
+      <div class="rss-switcher-block"
+           data-switcher="matchup"
+           data-block="lcs--national">
+        <div class="rss-chart-frame"><div>                            <div id="playoff-matchup-lcs--national" class="plotly-graph-div" style="height:800px; width:800px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("playoff-matchup-lcs--national")) {                    Plotly.newPlot(                        "playoff-matchup-lcs--national",                        [{"coloraxis":"coloraxis","name":"0","texttemplate":"%{z:.1%}","x":["Chicago Cubs","Cincinnati Reds","Los Angeles Dodgers","Milwaukee Brewers","Philadelphia Phillies","San Diego Padres"],"y":["Chicago Cubs","Cincinnati Reds","Los Angeles Dodgers","Milwaukee Brewers","Philadelphia Phillies","San Diego Padres"],"z":[[null,0.028,0.027,null,0.062,null],[0.01,null,null,0.037,null,0.008],[0.036,null,null,0.082,null,0.037],[null,0.059,0.103,null,0.17,null],[0.062,null,null,0.154,null,0.041],[null,0.016,0.022,null,0.046,null]],"type":"heatmap","xaxis":"x","yaxis":"y","hovertemplate":"Losing Team: %{x}\u003cbr\u003eWinning Team: %{y}\u003cbr\u003eProbability: %{z}\u003cextra\u003e\u003c\u002fextra\u003e"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Losing Team"},"fixedrange":true,"side":"bottom","automargin":true},"yaxis":{"anchor":"x","domain":[0.0,1.0],"autorange":"reversed","title":{"text":"Winning Team"},"fixedrange":true,"automargin":true},"coloraxis":{"colorbar":{"title":{"text":"Probability"}},"colorscale":[[0.0,"#FFFFFF"],[0.15,"#EEF1F5"],[0.4,"#9FB4C5"],[0.7,"#3E5E7C"],[1.0,"#002744"]],"showscale":false},"margin":{"t":60,"l":20,"r":20,"b":20},"font":{"family":"Inter, sans-serif","size":12,"color":"#1C1C1C"},"title":{"font":{"size":15,"color":"#1C1C1C"},"text":"LCS — National — Matchup Probabilities","x":0.5,"xanchor":"center"},"dragmode":false,"hovermode":"closest","width":800,"height":800,"autosize":false,"paper_bgcolor":"white","plot_bgcolor":"white"},                        {"displayModeBar": false, "responsive": false}                    )                };            </script>        </div></div>
+      </div>
+      <div class="rss-switcher-block"
+           data-switcher="matchup"
+           data-block="world-series">
+        <div class="rss-chart-frame"><div>                            <div id="playoff-matchup-world-series" class="plotly-graph-div" style="height:800px; width:800px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("playoff-matchup-world-series")) {                    Plotly.newPlot(                        "playoff-matchup-world-series",                        [{"coloraxis":"coloraxis","name":"0","texttemplate":"%{z:.1%}","x":["Boston Red Sox","Chicago Cubs","Cincinnati Reds","Cleveland Guardians","Detroit Tigers","Los Angeles Dodgers","Milwaukee Brewers","New York Yankees","Philadelphia Phillies","San Diego Padres","Seattle Mariners","Toronto Blue Jays"],"y":["Boston Red Sox","Chicago Cubs","Cincinnati Reds","Cleveland Guardians","Detroit Tigers","Los Angeles Dodgers","Milwaukee Brewers","New York Yankees","Philadelphia Phillies","San Diego Padres","Seattle Mariners","Toronto Blue Jays"],"z":[[null,0.01,0.006,null,null,0.004,0.024,null,0.018,0.005,null,null],[0.008,null,null,0.009,0.003,null,null,0.004,null,null,0.025,0.012],[0.005,null,null,0.003,null,null,null,null,null,null,0.004,0.009],[null,0.008,0.005,null,null,0.01,0.013,null,0.01,0.002,null,null],[null,0.002,null,null,null,0.003,0.006,null,0.004,0.004,null,null],[0.009,null,null,0.005,0.005,null,null,0.022,null,null,0.035,0.019],[0.026,null,null,0.016,0.014,null,null,0.049,null,null,0.05,0.036],[null,0.012,0.006,null,null,0.017,0.032,null,0.02,0.014,null,null],[0.017,null,null,0.022,0.016,null,null,0.024,null,null,0.041,0.027],[0.005,null,null,0.009,0.003,null,null,0.006,null,null,0.01,0.01],[null,0.015,0.008,null,null,0.015,0.044,null,0.033,0.008,null,null],[null,0.009,0.009,null,null,0.011,0.022,null,0.025,0.008,null,null]],"type":"heatmap","xaxis":"x","yaxis":"y","hovertemplate":"Losing Team: %{x}\u003cbr\u003eWinning Team: %{y}\u003cbr\u003eProbability: %{z}\u003cextra\u003e\u003c\u002fextra\u003e"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Losing Team"},"fixedrange":true,"side":"bottom","automargin":true},"yaxis":{"anchor":"x","domain":[0.0,1.0],"autorange":"reversed","title":{"text":"Winning Team"},"fixedrange":true,"automargin":true},"coloraxis":{"colorbar":{"title":{"text":"Probability"}},"colorscale":[[0.0,"#FFFFFF"],[0.15,"#EEF1F5"],[0.4,"#9FB4C5"],[0.7,"#3E5E7C"],[1.0,"#002744"]],"showscale":false},"margin":{"t":60,"l":20,"r":20,"b":20},"font":{"family":"Inter, sans-serif","size":12,"color":"#1C1C1C"},"title":{"font":{"size":15,"color":"#1C1C1C"},"text":"World Series — Matchup Probabilities","x":0.5,"xanchor":"center"},"dragmode":false,"hovermode":"closest","width":800,"height":800,"autosize":false,"paper_bgcolor":"white","plot_bgcolor":"white"},                        {"displayModeBar": false, "responsive": false}                    )                };            </script>        </div></div>
+      </div>
+</section>
 
 
+<section class="rss-section">
+  <h2 class="rss-section-title">Projected vs. Actual Round Reached</h2>
+  <p class="rss-section-subtitle">
+    For each playoff team, the bracket simulation's pre-playoff probability of advancing
+    each round, alongside what actually happened. Teams whose actual outcome dramatically
+    beat or fell short of the model's projection are the stories of the playoff.
+  </p>
+
+  <div class="rss-leaderboard rss-playoff-table">
+    <table class="rss-leaderboard-table">
+      <thead>
+        <tr>
+          <th class="team">Team</th>
+            <th class="num">Advanced to LDS</th>
+            <th class="num">Advanced to LCS</th>
+            <th class="num">Advanced to World Series</th>
+            <th class="num">Won World Series</th>
+          <th class="team">Actual Outcome</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td class="team"><span class="rss-team-name">Los Angeles Dodgers</span></td>
+              <td class="num">60.3%</td>
+              <td class="num">30.7%</td>
+              <td class="num">15.5%</td>
+              <td class="num rss-td-champ">9.5%</td>
+            <td class="team">Won World Series</td>
+          </tr>
+          <tr>
+            <td class="team"><span class="rss-team-name">Toronto Blue Jays</span></td>
+              <td class="num">100.0%</td>
+              <td class="num">40.6%</td>
+              <td class="num">19.7%</td>
+              <td class="num rss-td-champ">8.4%</td>
+            <td class="team">Eliminated in World Series</td>
+          </tr>
+          <tr>
+            <td class="team"><span class="rss-team-name">Milwaukee Brewers</span></td>
+              <td class="num">100.0%</td>
+              <td class="num">60.5%</td>
+              <td class="num">33.2%</td>
+              <td class="num rss-td-champ">19.1%</td>
+            <td class="team">Eliminated in LCS</td>
+          </tr>
+          <tr>
+            <td class="team"><span class="rss-team-name">Seattle Mariners</span></td>
+              <td class="num">100.0%</td>
+              <td class="num">59.4%</td>
+              <td class="num">28.8%</td>
+              <td class="num rss-td-champ">12.3%</td>
+            <td class="team">Eliminated in LCS</td>
+          </tr>
+          <tr>
+            <td class="team"><span class="rss-team-name">Philadelphia Phillies</span></td>
+              <td class="num">100.0%</td>
+              <td class="num">53.5%</td>
+              <td class="num">25.7%</td>
+              <td class="num rss-td-champ">14.7%</td>
+            <td class="team">Eliminated in LDS</td>
+          </tr>
+          <tr>
+            <td class="team"><span class="rss-team-name">New York Yankees</span></td>
+              <td class="num">58.6%</td>
+              <td class="num">35.2%</td>
+              <td class="num">20.6%</td>
+              <td class="num rss-td-champ">10.1%</td>
+            <td class="team">Eliminated in LDS</td>
+          </tr>
+          <tr>
+            <td class="team"><span class="rss-team-name">Chicago Cubs</span></td>
+              <td class="num">52.7%</td>
+              <td class="num">22.5%</td>
+              <td class="num">11.7%</td>
+              <td class="num rss-td-champ">6.1%</td>
+            <td class="team">Eliminated in LDS</td>
+          </tr>
+          <tr>
+            <td class="team"><span class="rss-team-name">Detroit Tigers</span></td>
+              <td class="num">46.1%</td>
+              <td class="num">16.1%</td>
+              <td class="num">6.0%</td>
+              <td class="num rss-td-champ">1.9%</td>
+            <td class="team">Eliminated in LDS</td>
+          </tr>
+          <tr>
+            <td class="team"><span class="rss-team-name">Boston Red Sox</span></td>
+              <td class="num">41.4%</td>
+              <td class="num">24.2%</td>
+              <td class="num">13.7%</td>
+              <td class="num rss-td-champ">6.7%</td>
+            <td class="team">Eliminated in Wild Card</td>
+          </tr>
+          <tr>
+            <td class="team"><span class="rss-team-name">Cleveland Guardians</span></td>
+              <td class="num">53.9%</td>
+              <td class="num">24.5%</td>
+              <td class="num">11.2%</td>
+              <td class="num rss-td-champ">4.8%</td>
+            <td class="team">Eliminated in Wild Card</td>
+          </tr>
+          <tr>
+            <td class="team"><span class="rss-team-name">San Diego Padres</span></td>
+              <td class="num">47.3%</td>
+              <td class="num">17.0%</td>
+              <td class="num">8.4%</td>
+              <td class="num rss-td-champ">4.3%</td>
+            <td class="team">Eliminated in Wild Card</td>
+          </tr>
+          <tr>
+            <td class="team"><span class="rss-team-name">Cincinnati Reds</span></td>
+              <td class="num">39.7%</td>
+              <td class="num">15.8%</td>
+              <td class="num">5.5%</td>
+              <td class="num rss-td-champ">2.1%</td>
+            <td class="team">Eliminated in Wild Card</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
 
+<section class="rss-section">
+  <h2 class="rss-section-title">Most-Likely Championship Paths</h2>
+  <p class="rss-section-subtitle">
+    For each top contender (by championship probability under the bracket simulation),
+    the opponent they most often faced and defeated at each round across all simulations.
+    A "story-mode" view of how each title chase tends to play out in this sim.
+    Note: early-round matchups against fixed bracket opponents will show 100% — that's
+    because those pairings are determined by the bracket, not by sim outcomes.
+  </p>
+
+  <div class="rss-playoff-paths">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Milwaukee Brewers</span>
+          <span class="rss-playoff-path-pct">19.1% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">LDS</div>
+              <div class="rss-playoff-path-opp">
+                vs. <strong>San Diego Padres</strong>
+                <span class="rss-playoff-path-prob">(50.1%)</span>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">LCS</div>
+              <div class="rss-playoff-path-opp">
+                vs. <strong>Philadelphia Phillies</strong>
+                <span class="rss-playoff-path-prob">(51.2%)</span>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">World Series</div>
+              <div class="rss-playoff-path-opp">
+                vs. <strong>Seattle Mariners</strong>
+                <span class="rss-playoff-path-prob">(26.2%)</span>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Philadelphia Phillies</span>
+          <span class="rss-playoff-path-pct">14.7% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">LDS</div>
+              <div class="rss-playoff-path-opp">
+                vs. <strong>Los Angeles Dodgers</strong>
+                <span class="rss-playoff-path-prob">(55.3%)</span>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">LCS</div>
+              <div class="rss-playoff-path-opp">
+                vs. <strong>Milwaukee Brewers</strong>
+                <span class="rss-playoff-path-prob">(59.9%)</span>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">World Series</div>
+              <div class="rss-playoff-path-opp">
+                vs. <strong>Seattle Mariners</strong>
+                <span class="rss-playoff-path-prob">(27.9%)</span>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Seattle Mariners</span>
+          <span class="rss-playoff-path-pct">12.3% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">LDS</div>
+              <div class="rss-playoff-path-opp">
+                vs. <strong>Detroit Tigers</strong>
+                <span class="rss-playoff-path-prob">(50.5%)</span>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">LCS</div>
+              <div class="rss-playoff-path-opp">
+                vs. <strong>Toronto Blue Jays</strong>
+                <span class="rss-playoff-path-prob">(44.8%)</span>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">World Series</div>
+              <div class="rss-playoff-path-opp">
+                vs. <strong>Milwaukee Brewers</strong>
+                <span class="rss-playoff-path-prob">(35.8%)</span>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">New York Yankees</span>
+          <span class="rss-playoff-path-pct">10.1% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Wild Card</div>
+              <div class="rss-playoff-path-opp">
+                vs. <strong>Boston Red Sox</strong>
+                <span class="rss-playoff-path-prob">(100.0%)</span>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">LDS</div>
+              <div class="rss-playoff-path-opp">
+                vs. <strong>Toronto Blue Jays</strong>
+                <span class="rss-playoff-path-prob">(100.0%)</span>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">LCS</div>
+              <div class="rss-playoff-path-opp">
+                vs. <strong>Seattle Mariners</strong>
+                <span class="rss-playoff-path-prob">(52.9%)</span>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">World Series</div>
+              <div class="rss-playoff-path-opp">
+                vs. <strong>Milwaukee Brewers</strong>
+                <span class="rss-playoff-path-prob">(31.7%)</span>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Los Angeles Dodgers</span>
+          <span class="rss-playoff-path-pct">9.5% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Wild Card</div>
+              <div class="rss-playoff-path-opp">
+                vs. <strong>Cincinnati Reds</strong>
+                <span class="rss-playoff-path-prob">(100.0%)</span>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">LDS</div>
+              <div class="rss-playoff-path-opp">
+                vs. <strong>Philadelphia Phillies</strong>
+                <span class="rss-playoff-path-prob">(100.0%)</span>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">LCS</div>
+              <div class="rss-playoff-path-opp">
+                vs. <strong>Milwaukee Brewers</strong>
+                <span class="rss-playoff-path-prob">(52.9%)</span>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">World Series</div>
+              <div class="rss-playoff-path-opp">
+                vs. <strong>Seattle Mariners</strong>
+                <span class="rss-playoff-path-prob">(36.8%)</span>
+              </div>
+            </div>
+        </div>
+      </div>
+  </div>
+</section>
         </div>
 
         <div class="rss-tab-pane" data-tab="season-trends">
