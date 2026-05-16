@@ -2715,18 +2715,19 @@
 
 
 <section class="rss-section">
-  <h2 class="rss-section-title">Longest Streaks</h2>
+  <h2 class="rss-section-title">Most Unlikely Streaks</h2>
   <p class="rss-section-subtitle">
-    The three longest winning and losing runs of the season — plus any teams tied at
-    that third-place length. "Probability" is the model's a-priori chance of the exact streak
-    happening, calculated by multiplying the per-game win (or loss) probabilities for the
-    specific games in the streak. Lower numbers = rarer streak.
+    For each team, we identify their longest winning streak and longest losing streak of the
+    season, then compute the model's a-priori probability of that exact streak — the product
+    of per-game win (or loss) probabilities over those specific games. The three rarest streaks
+    of each kind appear below. A 6-game winning streak by a bad team is often more remarkable
+    than a 10-gamer by a great one.
   </p>
 
   <div class="rss-leaderboard-row">
     <div class="rss-leaderboard">
       <h3 class="rss-leaderboard-title">
-        <i class="ti ti-flame" aria-hidden="true"></i> Longest Win Streaks
+        <i class="ti ti-flame" aria-hidden="true"></i> Most Unlikely Win Streaks
       </h3>
       <table class="rss-leaderboard-table">
         <thead>
@@ -2741,52 +2742,24 @@
         <tbody>
             <tr>
               <td class="rank">1</td>
-              <td class="team"><span class="rss-team-name">Milwaukee Brewers</span></td>
-              <td class="num rss-overperform">14</td>
-              <td class="dates">Aug 1–16</td>
-              <td class="num">1 in 1,125</td>
-            </tr>
-            <tr>
-              <td class="rank">2</td>
               <td class="team"><span class="rss-team-name">Minnesota Twins</span></td>
               <td class="num rss-overperform">13</td>
               <td class="dates">May 3–17</td>
               <td class="num">1 in 9,807</td>
             </tr>
             <tr>
+              <td class="rank">2</td>
+              <td class="team"><span class="rss-team-name">Miami Marlins</span></td>
+              <td class="num rss-overperform">8</td>
+              <td class="dates">Jun 22–Jul 1</td>
+              <td class="num">1 in 1,850</td>
+            </tr>
+            <tr>
               <td class="rank">3</td>
-              <td class="team"><span class="rss-team-name">Atlanta Braves</span></td>
-              <td class="num rss-overperform">10</td>
-              <td class="dates">Sep 14–23</td>
-              <td class="num">1 in 622</td>
-            </tr>
-            <tr>
-              <td class="rank">4</td>
-              <td class="team"><span class="rss-team-name">Cleveland Guardians</span></td>
-              <td class="num rss-overperform">10</td>
-              <td class="dates">Sep 11–20</td>
-              <td class="num">1 in 608</td>
-            </tr>
-            <tr>
-              <td class="rank">5</td>
-              <td class="team"><span class="rss-team-name">Toronto Blue Jays</span></td>
-              <td class="num rss-overperform">10</td>
-              <td class="dates">Jun 29–Jul 8</td>
-              <td class="num">1 in 511</td>
-            </tr>
-            <tr>
-              <td class="rank">6</td>
-              <td class="team"><span class="rss-team-name">Seattle Mariners</span></td>
-              <td class="num rss-overperform">10</td>
-              <td class="dates">Sep 6–16</td>
-              <td class="num">1 in 235</td>
-            </tr>
-            <tr>
-              <td class="rank">7</td>
-              <td class="team"><span class="rss-team-name">Boston Red Sox</span></td>
-              <td class="num rss-overperform">10</td>
-              <td class="dates">Jul 4–13</td>
-              <td class="num">1 in 234</td>
+              <td class="team"><span class="rss-team-name">Los Angeles Angels</span></td>
+              <td class="num rss-overperform">8</td>
+              <td class="dates">May 16–23</td>
+              <td class="num">1 in 1,627</td>
             </tr>
         </tbody>
       </table>
@@ -2794,7 +2767,7 @@
 
     <div class="rss-leaderboard">
       <h3 class="rss-leaderboard-title">
-        <i class="ti ti-snowflake" aria-hidden="true"></i> Longest Loss Streaks
+        <i class="ti ti-snowflake" aria-hidden="true"></i> Most Unlikely Loss Streaks
       </h3>
       <table class="rss-leaderboard-table">
         <thead>
@@ -2823,10 +2796,10 @@
             </tr>
             <tr>
               <td class="rank">3</td>
-              <td class="team"><span class="rss-team-name">Cleveland Guardians</span></td>
-              <td class="num rss-underperform">10</td>
-              <td class="dates">Jun 26–Jul 6</td>
-              <td class="num">1 in 552</td>
+              <td class="team"><span class="rss-team-name">Texas Rangers</span></td>
+              <td class="num rss-underperform">8</td>
+              <td class="dates">Sep 14–23</td>
+              <td class="num">1 in 583</td>
             </tr>
         </tbody>
       </table>
