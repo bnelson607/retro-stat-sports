@@ -2222,24 +2222,26 @@ h3 { font-size: 24px; }
   display: block;
 }
 
-/* ----- Generic switcher bar (used for conf-league + sim-scatter toggles) ----- */
+/* ----- Generic switcher bar (used for finish-pos heatmaps + sim-scatter toggle) ----- */
+/* Buttons are left-justified under the section header, matching the
+   "buttons under the header, left-aligned" pattern used everywhere now. */
 .rss-switcher-bar {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 8px;
   margin: 16px 0 16px;
 }
 
 .rss-switcher-btn {
-  font-family: 'Inter Tight', 'Inter', sans-serif;
+  font-family: 'Inter Tight', sans-serif;
   font-size: 13px;
   font-weight: 500;
-  background: #fff;
+  background: white;
   color: #1C1C1C;
-  border: 1px solid #d4d4d4;
+  border: 1.5px solid #ddd;
   border-radius: 6px;
-  padding: 8px 16px;
+  padding: 6px 14px;
   cursor: pointer;
   transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
