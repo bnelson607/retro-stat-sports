@@ -2033,12 +2033,13 @@ h3 { font-size: 24px; }
 .rss-chart-frame {
   background: white;
   border-radius: 8px;
-  padding: 16px;
+  padding: 16px 0;            /* vertical padding only — keeps 1160-wide charts within container */
+  overflow: hidden;           /* clip chart corners to rounded card edges */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
   text-align: center;
 }
 
-/* Center the Plotly chart inside (covers both autosize and fixed-width cases) */
+/* Center the Plotly chart (it has explicit pixel width set in layout) */
 .rss-chart-frame > div,
 .rss-chart-frame .js-plotly-plot,
 .rss-chart-frame .plotly-graph-div {
@@ -2267,12 +2268,4 @@ h3 { font-size: 24px; }
 /* Spacing between stacked chart frames in Model Insights */
 .rss-section .rss-chart-frame + .rss-chart-frame {
   margin-top: 24px;
-}
-
-/* Chart frame should let Plotly fill its width.
-   The frame stays centered (text-align: center inherited) and the chart fills the
-   inner box. */
-.rss-section .rss-chart-frame {
-  width: 100%;
-  box-sizing: border-box;
 }
