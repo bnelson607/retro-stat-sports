@@ -2269,3 +2269,91 @@ h3 { font-size: 24px; }
 .rss-section .rss-chart-frame + .rss-chart-frame {
   margin-top: 24px;
 }
+
+/* -----------------------------------
+   23. Playoffs tab — path cards
+----------------------------------- */
+
+/* Container for the most-likely-path cards */
+.rss-playoff-paths {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rss-playoff-path-card {
+  background: white;
+  border-radius: 8px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.rss-playoff-path-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.rss-playoff-path-header .rss-team-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #002744;
+}
+
+.rss-playoff-path-pct {
+  font-size: 13px;
+  color: #555;
+  font-weight: 500;
+}
+
+.rss-playoff-path-steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+}
+
+.rss-playoff-path-step {
+  background: #f4f6f8;
+  border-radius: 6px;
+  padding: 8px 12px;
+  min-width: 0;
+}
+
+.rss-playoff-path-round {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #777;
+  margin-bottom: 2px;
+}
+
+.rss-playoff-path-opp {
+  color: #1C1C1C;
+}
+
+.rss-playoff-path-opp strong {
+  color: #002744;
+}
+
+.rss-playoff-path-prob {
+  color: #777;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.rss-playoff-path-arrow {
+  color: #888;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Champion column on success tables — slight emphasis */
+.rss-summary-table td.rss-td-champ {
+  font-weight: 600;
+  color: #002744;
+}
