@@ -2119,11 +2119,12 @@ h3 { font-size: 24px; }
   flex-direction: column;
 }
 
-/* Scatter cell: enforce a 1:1 aspect ratio on the cell itself, then the chart
-   inside fills it. CSS Grid stretches sibling cells to match, so the stats
-   card next to the scatter gets the same height automatically. */
+/* Scatter chart sits in a normal cell, but the chart div itself enforces
+   the 1:1 aspect ratio. This is more reliable than putting aspect-ratio on
+   the cell with a flex child — some browsers don't fully resolve the
+   flex+aspect-ratio combination before Plotly first measures the div. */
 .rss-cell-square {
-  aspect-ratio: 1 / 1;
+  /* No aspect-ratio here anymore — the chart inside handles it */
 }
 
 .rss-chart-mini {
@@ -2133,8 +2134,7 @@ h3 { font-size: 24px; }
 
 .rss-chart-square {
   width: 100%;
-  flex: 1 1 auto;
-  min-height: 0;
+  aspect-ratio: 1 / 1;
 }
 
 /* Stats card (bottom-right of grid) */
