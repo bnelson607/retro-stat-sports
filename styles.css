@@ -2012,22 +2012,60 @@ h3 { font-size: 24px; }
   color: #aaa;
 }
 
-/* Color hint for over/underperformance vs expected */
+/* Color hint for over/underperformance vs expected wins.
+   Navy vs goldenrod is a colorblind-safe pair (cool blue vs warm yellow,
+   not the red/green that's hardest to distinguish for RGCB viewers).
+   Opacities are 15% / 20% — enough to read as a tint, not so saturated
+   they shout over the record text. */
 .rss-h2h-over {
-  background: rgba(0, 100, 46, 0.08);
+  background: rgba(0, 39, 68, 0.15);
 }
 
 .rss-h2h-over .rss-h2h-record {
-  color: #00642E;
+  color: #002744;
+  font-weight: 700;
 }
 
 .rss-h2h-under {
-  background: rgba(164, 22, 26, 0.08);
+  background: rgba(184, 134, 11, 0.22);
 }
 
 .rss-h2h-under .rss-h2h-record {
-  color: #A4161A;
+  color: #7C5A0A;       /* darker goldenrod for AA contrast on the tinted bg */
+  font-weight: 700;
 }
+
+/* Inline legend that sits between the H2H subtitle and the matrices.
+   Shows three sample cells (over / under / neutral) so the color convention
+   is unmistakable without needing to scan the prose. */
+.rss-h2h-legend {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 8px 0 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+}
+
+.rss-h2h-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rss-h2h-legend-swatch {
+  display: inline-block;
+  width: 32px;
+  height: 18px;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  vertical-align: middle;
+}
+
+.rss-h2h-legend-swatch.rss-h2h-over   { background: rgba(0, 39, 68, 0.15); border-color: rgba(0, 39, 68, 0.3); }
+.rss-h2h-legend-swatch.rss-h2h-under  { background: rgba(184, 134, 11, 0.22); border-color: rgba(184, 134, 11, 0.4); }
+.rss-h2h-legend-swatch.rss-h2h-neutral { background: white; }
 
 /* Chart frame */
 .rss-chart-frame {
