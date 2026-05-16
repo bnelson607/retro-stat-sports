@@ -2035,6 +2035,14 @@ h3 { font-size: 24px; }
   border-radius: 8px;
   padding: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  text-align: center;
+}
+
+/* Center the Plotly chart inside (covers both autosize and fixed-width cases) */
+.rss-chart-frame > div,
+.rss-chart-frame .js-plotly-plot,
+.rss-chart-frame .plotly-graph-div {
+  margin: 0 auto;
 }
 
 .rss-chart-empty {
@@ -2070,5 +2078,103 @@ h3 { font-size: 24px; }
   .rss-season-summary-table tbody td {
     font-size: 11px;
     padding: 6px 6px;
+  }
+}
+
+/* -----------------------------------
+   21. Season Detail Page — Scoring Distribution (2x2 grid)
+----------------------------------- */
+
+.rss-scoring-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+}
+
+.rss-scoring-filter label {
+  color: #555;
+}
+
+.rss-scoring-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.rss-scoring-cell {
+  background: white;
+  border-radius: 8px;
+  padding: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rss-chart-mini {
+  width: 100%;
+  height: 320px;
+}
+
+/* Stats card (bottom-right of grid) */
+.rss-stats-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rss-stats-card-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  color: #555;
+  margin: 0 0 14px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.rss-stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Inter', sans-serif;
+  font-variant-numeric: tabular-nums;
+  margin: auto 0;
+}
+
+.rss-stats-table tbody td {
+  font-size: 13px;
+  color: #1C1C1C;
+  padding: 9px 6px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.rss-stats-table tbody td.num {
+  text-align: right;
+  font-weight: 600;
+  color: #002744;
+}
+
+.rss-stats-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 900px) {
+  .rss-scoring-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .rss-scoring-filter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rss-stats-table tbody td {
+    font-size: 12px;
+    padding: 7px 4px;
   }
 }
