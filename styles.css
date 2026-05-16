@@ -2100,7 +2100,11 @@ h3 { font-size: 24px; }
 
 .rss-scoring-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* minmax(0, 1fr) prevents columns from growing past their share when
+     content (Plotly) wants more space. Plain "1fr" defaults to minmax(auto, 1fr)
+     which lets the grid track expand to fit content — exactly what we don't
+     want here. */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 16px;
 }
 
@@ -2109,14 +2113,28 @@ h3 { font-size: 24px; }
   border-radius: 8px;
   padding: 14px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-  min-height: 320px;
+  min-width: 0;       /* allow cell to shrink below content's intrinsic width */
+  overflow: hidden;   /* safety net so a too-wide chart can't escape its cell */
   display: flex;
   flex-direction: column;
 }
 
+/* Scatter cell: enforce a 1:1 aspect ratio on the cell itself, then the chart
+   inside fills it. CSS Grid stretches sibling cells to match, so the stats
+   card next to the scatter gets the same height automatically. */
+.rss-cell-square {
+  aspect-ratio: 1 / 1;
+}
+
 .rss-chart-mini {
   width: 100%;
-  height: 320px;
+  height: 332px;
+}
+
+.rss-chart-square {
+  width: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
 }
 
 /* Stats card (bottom-right of grid) */
