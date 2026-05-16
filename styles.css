@@ -2585,3 +2585,47 @@ h3 { font-size: 24px; }
 .rss-h2h-subtitle:first-child {
   margin-top: 4px;
 }
+
+/* Vertical separators in the Season Summary table. Applied to the FIRST column
+   after each separator point so it gets a left border. Groups the table into
+   three logical bands: identity (Team/League/Division), key stats (Elo/Actual/
+   Avg/Luck/Percentile), and distribution stats (Min/5th/Q1/Median/Q3/95th/Max). */
+.rss-season-summary-table th.rss-vsep,
+.rss-season-summary-table td.rss-vsep {
+  border-left: 1px solid #cbd5db;
+}
+
+/* Overview tab — Playoff Probability split layout (live seasons only).
+   Left column holds the Top 10 table; right column stacks gainers and losers.
+   On narrow viewports the columns stack vertically. */
+.rss-overview-split {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.rss-overview-left {
+  flex: 1 1 380px;
+  min-width: 320px;
+}
+
+.rss-overview-right {
+  flex: 1 1 380px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Make sure the leaderboard tables nest correctly inside the split columns */
+.rss-overview-split .rss-leaderboard {
+  width: 100%;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .rss-overview-split {
+    flex-direction: column;
+  }
+}
