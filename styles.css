@@ -2532,3 +2532,18 @@ h3 { font-size: 24px; }
 .rss-gamelog-table tbody tr:hover {
   background: #fafafa;
 }
+
+/* H2H section now has TWO matrices per division (within + outside).
+   This subtitle separates them with a clear label. */
+.rss-h2h-subtitle {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 15px;
+  color: #002744;
+  margin: 18px 0 8px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.rss-h2h-subtitle:first-child {
+  margin-top: 4px;
+}
