@@ -2313,7 +2313,7 @@ h3 { font-size: 24px; }
 .rss-playoff-path-card {
   background: white;
   border-radius: 8px;
-  padding: 16px 20px;
+  padding: 20px 24px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
@@ -2321,18 +2321,18 @@ h3 { font-size: 24px; }
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 .rss-playoff-path-header .rss-team-name {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   color: #002744;
 }
 
 .rss-playoff-path-pct {
-  font-size: 13px;
+  font-size: 14px;
   color: #555;
   font-weight: 500;
 }
@@ -2340,17 +2340,19 @@ h3 { font-size: 24px; }
 .rss-playoff-path-steps {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
+  align-items: stretch;
+  gap: 10px;
   font-family: 'Inter', sans-serif;
-  font-size: 13px;
 }
 
 .rss-playoff-path-step {
   background: #f4f6f8;
-  border-radius: 6px;
-  padding: 8px 12px;
-  min-width: 0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .rss-playoff-path-round {
@@ -2358,27 +2360,63 @@ h3 { font-size: 24px; }
   text-transform: uppercase;
   letter-spacing: 0.5px;
   color: #777;
-  margin-bottom: 2px;
+  font-weight: 600;
 }
 
 .rss-playoff-path-opp {
   color: #1C1C1C;
+  font-size: 14px;
+  margin-bottom: 6px;
 }
 
 .rss-playoff-path-opp strong {
   color: #002744;
+  font-weight: 600;
 }
 
-.rss-playoff-path-prob {
-  color: #777;
-  font-size: 12px;
-  margin-left: 4px;
+.rss-playoff-path-stats {
+  display: flex;
+  gap: 16px;
+  border-top: 1px solid #e6e9ec;
+  padding-top: 8px;
+  margin-top: auto;
+}
+
+.rss-playoff-path-stat {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.rss-playoff-path-stat-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #888;
+  font-weight: 500;
+}
+
+.rss-playoff-path-stat-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #002744;
+  font-variant-numeric: tabular-nums;
+  margin-top: 2px;
 }
 
 .rss-playoff-path-arrow {
   color: #888;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+/* Switcher bar that wraps onto multiple lines when there are many tabs
+   (used by the championship-paths section with 12 teams) */
+.rss-switcher-bar-wrap {
+  flex-wrap: wrap;
+  row-gap: 8px;
 }
 
 /* Champion column on success tables — slight emphasis */
