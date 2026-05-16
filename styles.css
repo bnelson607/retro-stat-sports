@@ -2201,22 +2201,19 @@ h3 { font-size: 24px; }
    22. Model Insights tab — HFA, heatmaps, scatters
 ----------------------------------- */
 
-/* Subsection titles (e.g., "By Division", "Overall") within Model Insights */
+/* Subsection titles (e.g., "By Division", "By League / Overall") */
 .rss-subsection-title {
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-size: 18px;
   font-weight: 500;
   color: #002744;
   letter-spacing: 0.5px;
-  margin: 24px 0 12px;
+  margin: 28px 0 12px;
   text-align: center;
   text-transform: uppercase;
 }
 
-/* Heatmap blocks behave like H2H blocks — hidden by default, shown via the
-   division switcher. Same toggle JS already in base.html handles them
-   because it targets .rss-h2h-block AND .rss-standings-block AND we add
-   .rss-heatmap-block below. */
+/* Heatmap blocks behave like H2H blocks — hidden by default, shown when active */
 .rss-heatmap-block {
   display: none;
 }
@@ -2225,20 +2222,55 @@ h3 { font-size: 24px; }
   display: block;
 }
 
-/* Multiple .rss-chart-frame elements stacked in Model Insights should each
-   sit centered with sensible spacing. */
+/* ----- Generic switcher bar (used for conf-league + sim-scatter toggles) ----- */
+.rss-switcher-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 16px 0 16px;
+}
+
+.rss-switcher-btn {
+  font-family: 'Inter Tight', 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  background: #fff;
+  color: #1C1C1C;
+  border: 1px solid #d4d4d4;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.rss-switcher-btn:hover {
+  background: #f4f4f4;
+}
+
+.rss-switcher-btn.active {
+  background: #002744;
+  color: #fff;
+  border-color: #002744;
+}
+
+.rss-switcher-block {
+  display: none;
+}
+
+.rss-switcher-block.active {
+  display: block;
+}
+
+/* Spacing between stacked chart frames in Model Insights */
 .rss-section .rss-chart-frame + .rss-chart-frame {
   margin-top: 24px;
 }
 
-/* Conference heatmaps stack vertically with breathing room */
-.rss-conference-heatmap + .rss-conference-heatmap {
-  margin-top: 16px;
-}
-
-/* On narrow screens, give the HFA bar chart enough room for team names */
-@media (max-width: 600px) {
-  .rss-section .rss-chart-frame {
-    padding: 10px;
-  }
+/* Chart frame should let Plotly fill its width.
+   The frame stays centered (text-align: center inherited) and the chart fills the
+   inner box. */
+.rss-section .rss-chart-frame {
+  width: 100%;
+  box-sizing: border-box;
 }
