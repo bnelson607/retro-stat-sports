@@ -2597,25 +2597,26 @@ h3 { font-size: 24px; }
 
 /* Overview tab — Playoff Probability split layout (live seasons only).
    Left column holds the Top 10 table; right column stacks gainers and losers.
-   On narrow viewports the columns stack vertically. */
+   Uses CSS Grid with strict 1fr 1fr columns to match the Most Unlikely Streaks
+   layout below — flexbox lets content width drag column widths, which is what
+   was causing the right column to overlap the left. min-width:0 lets grid items
+   shrink past their content's intrinsic width if needed. */
 .rss-overview-split {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
 }
 
-.rss-overview-left {
-  flex: 1 1 380px;
-  min-width: 320px;
+.rss-overview-left,
+.rss-overview-right {
+  min-width: 0;
 }
 
 .rss-overview-right {
-  flex: 1 1 380px;
-  min-width: 320px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
 /* Make sure the leaderboard tables nest correctly inside the split columns */
@@ -2626,6 +2627,38 @@ h3 { font-size: 24px; }
 
 @media (max-width: 900px) {
   .rss-overview-split {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
+}
+
+/* Year navigation — prev/next links to adjacent season pages of the same sport.
+   Sits in the breadcrumb row, right-aligned. Matches the user's existing site
+   convention (←2023  2025→ style next to the breadcrumb). */
+.rss-breadcrumb-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.rss-year-nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.rss-year-nav a {
+  color: #002744;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  transition: color 0.15s ease;
+}
+
+.rss-year-nav a:hover {
+  color: #A4161A;
+  text-decoration: underline;
 }
