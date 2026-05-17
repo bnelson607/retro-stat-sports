@@ -1273,11 +1273,23 @@ h3 { font-size: 24px; }
 .rss-bracket-al .rss-bracket-league-title { color: #002744; }
 .rss-bracket-nl .rss-bracket-league-title { color: #00642E; }
 
-/* Rounds: arrange horizontally on desktop, vertically on phones */
+/* Rounds: arrange horizontally on desktop, vertically on phones.
+   Uses flexbox so rounds auto-distribute width based on how many there
+   are — 3 rounds (NHL/MLB/NBA pre-2020) → ~33% each, 4 rounds
+   (NBA with Play-In Tournament) → ~25% each, 5 rounds (MLS, future)
+   → ~20% each. No per-format CSS overrides needed. */
+.rss-bracket-league {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rss-bracket-league .rss-bracket-league-title {
+  flex: 1 1 100%;   /* h3 takes the full top row of the flex container */
+}
+
 .rss-bracket-league .rss-bracket-round {
-  display: inline-block;
-  vertical-align: top;
-  width: calc(33.333% - 12px);
+  flex: 1 1 0;       /* equal share of available width */
+  min-width: 0;      /* allow flex shrink below content's intrinsic width */
   margin-right: 12px;
 }
 
@@ -1746,8 +1758,7 @@ h3 { font-size: 24px; }
   }
 
   .rss-bracket-league .rss-bracket-round {
-    display: block;
-    width: 100%;
+    flex: 1 1 100%;   /* each round takes the full row, stacking vertically */
     margin-right: 0;
     margin-bottom: 16px;
   }
