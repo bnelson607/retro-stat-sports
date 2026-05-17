@@ -1304,10 +1304,16 @@ h3 { font-size: 24px; }
    to exactly 100%, so flex-wrap leaves them on the same row and the
    round gets squeezed to ~0px wide. :only-of-type matches because the
    h3 title is a different element type and doesn't count toward the
-   "div.rss-bracket-round" count. */
+   "div.rss-bracket-round" count.
+
+   max-width caps the matchup tile width to match .rss-bracket-matchup-big
+   (the championship centerpiece, also 480px) — this keeps the visual
+   weight of the round consistent with the championship card below it,
+   rather than stretching the tiles uncomfortably wide across the page. */
 .rss-bracket-league .rss-bracket-round:only-of-type {
   flex: 1 1 100%;
-  margin-right: 0;
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 .rss-bracket-round-title {
