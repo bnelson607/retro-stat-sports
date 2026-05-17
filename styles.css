@@ -464,7 +464,6 @@ h3 { font-size: 24px; }
   font-family: 'Inter Tight', sans-serif;
   font-size: 14px;
   color: #555;
-  margin: 24px 0 16px;
 }
 
 .rss-breadcrumb a {
@@ -2637,9 +2636,10 @@ h3 { font-size: 24px; }
 .rss-breadcrumb-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;       /* align text baselines so left and right line up */
   gap: 16px;
   flex-wrap: wrap;
+  margin: 24px 0 16px;          /* spacing moved from .rss-breadcrumb so the row aligns */
 }
 
 .rss-year-nav {
