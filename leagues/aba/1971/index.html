@@ -1449,21 +1449,72 @@ Outside Teams          </h3>
         return Number(v).toFixed(decimals);
       }
 
+      // Pick a "nice" bin width for histograms based on the score range.
+      // Hockey/baseball/soccer (span ≤ 20) stay at 1 score per bar — the
+      // long-standing behavior. Basketball/football collapse into 5-unit
+      // bins so the x-axis labels are readable and the bars aren't 1-pixel
+      // splinters. Very wide spans go to 10-unit bins (or wider).
+      function niceBinWidth(span) {
+        if (span <= 20) return 1;
+        if (span <= 80) return 5;
+        if (span <= 200) return 10;
+        return Math.ceil(span / 100) * 5;
+      }
+
       function renderHistogram(divId, counts, title, color) {
-        var xs = Object.keys(counts).map(Number).sort(function (a, b) { return a - b; });
-        var ys = xs.map(function (k) { return counts[k]; });
+        var el = document.getElementById(divId);
+        if (!el) return;
+
+        var rawScores = Object.keys(counts).map(Number);
+        if (!rawScores.length) {
+          try { Plotly.purge(divId); } catch (e) {}
+          el.innerHTML = '<div class="rss-chart-empty">No game data.</div>';
+          return;
+        }
+
+        var lo = Math.min.apply(null, rawScores);
+        var hi = Math.max.apply(null, rawScores);
+        var binWidth = niceBinWidth(hi - lo);
+
+        // Re-aggregate the per-score counts into bins of `binWidth`. Each
+        // bin holds scores in [binStart, binStart + binWidth).
+        var binned = {};
+        Object.keys(counts).forEach(function (k) {
+          var score = Number(k);
+          var binStart = Math.floor(score / binWidth) * binWidth;
+          binned[binStart] = (binned[binStart] || 0) + counts[k];
+        });
+
+        var sortedStarts = Object.keys(binned).map(Number).sort(function (a, b) { return a - b; });
+        // Place each bar at the center of its bin so round-number axis
+        // ticks (e.g., 80, 85, 90 for binWidth=5) line up under the bars
+        // they describe rather than between them.
+        var xs = sortedStarts.map(function (bs) { return bs + (binWidth - 1) / 2; });
+        var ys = sortedStarts.map(function (bs) { return binned[bs]; });
+        var customdata = sortedStarts.map(function (bs) { return [bs, bs + binWidth - 1]; });
+
+        var hovertemplate = binWidth === 1
+          ? '%{customdata[0]} → %{y} games<extra></extra>'
+          : '%{customdata[0]}–%{customdata[1]} → %{y} games<extra></extra>';
+
         var trace = {
           type: 'bar',
           x: xs,
           y: ys,
+          // Bar width in DATA units. 90% of binWidth leaves a small visible
+          // gap between adjacent bins without making the bars look starved.
+          width: binWidth * 0.9,
           marker: { color: color, line: { width: 0 } },
-          hovertemplate: '%{x} → %{y} games<extra></extra>',
+          customdata: customdata,
+          hovertemplate: hovertemplate,
         };
         var layout = Object.assign({}, layoutBase, {
           title: { text: title, font: { size: 14, color: '#1C1C1C' }, x: 0.5 },
-          xaxis: { title: { text: 'Score', standoff: 8 }, gridcolor: '#e0e0e0', zeroline: false, dtick: 1 },
+          // No explicit dtick — Plotly auto-spaces ticks at readable intervals
+          // based on the axis range, which is much friendlier than forcing a
+          // tick at every integer for high-scoring sports.
+          xaxis: { title: { text: 'Score', standoff: 8 }, gridcolor: '#e0e0e0', zeroline: false },
           yaxis: { title: { text: 'Games', standoff: 4 }, gridcolor: '#e0e0e0', zeroline: false, rangemode: 'tozero' },
-          bargap: 0.1,
         });
         Plotly.react(divId, [trace], layout, configBase);
       }
@@ -1484,12 +1535,18 @@ Outside Teams          </h3>
         var cs = scatter.map(function (p) { return p.count; });
         var maxC = cs.reduce(function (a, b) { return Math.max(a, b); }, 1);
 
-        // Axis max = highest score either side reached for THIS filter
-        var teamMax = 0;
-        for (var i = 0; i < xs.length; i++) {
-          if (xs[i] > teamMax) teamMax = xs[i];
-          if (ys[i] > teamMax) teamMax = ys[i];
-        }
+        // Compute zoomed-in axis range from the actual data. We use the
+        // SAME range on both axes (combined min/max of team and opponent
+        // scores) so the diagonal tie line lines up at a true 45° and so
+        // the plot is square. Pad by 5% of the span (minimum 1 unit) so
+        // boundary points aren't glued to the axis. Floor at 0 — scores
+        // can't be negative, so don't waste space showing -5 to +x.
+        var combined = xs.concat(ys);
+        var lo = Math.min.apply(null, combined);
+        var hi = Math.max.apply(null, combined);
+        var span = hi - lo;
+        var pad = Math.max(span * 0.05, 1);
+        var axisRange = [Math.max(0, lo - pad), hi + pad];
 
         // Simple diameter-based scaling: bigger counts get bigger bubbles,
         // sqrt(count) compresses the long tail (a 100-game pair shouldn't be 100x bigger than a 1-game pair).
@@ -1513,27 +1570,26 @@ Outside Teams          </h3>
           hovertemplate: 'Team scored %{y}, opponent scored %{x}<br>%{customdata} game(s)<extra></extra>',
         };
 
-        var axisRange = [0, teamMax + 0.5];
         var layout = Object.assign({}, layoutBase, {
           title: { text: 'Team Score vs. Opponent Score', font: { size: 14, color: '#1C1C1C' }, x: 0.5 },
+          // No explicit dtick — Plotly picks readable tick spacing based on
+          // the data range (5s for basketball, 1s for baseball, etc.).
           xaxis: {
             title: { text: 'Opponent score', standoff: 8 },
             range: axisRange,
             gridcolor: '#e0e0e0',
             zeroline: false,
-            dtick: 1,
           },
           yaxis: {
             title: { text: 'Team score', standoff: 4 },
             range: axisRange,
             gridcolor: '#e0e0e0',
             zeroline: false,
-            dtick: 1,
           },
           shapes: [
             {  // diagonal tie line — team scored = opponent scored
               type: 'line',
-              x0: 0, y0: 0, x1: teamMax, y1: teamMax,
+              x0: axisRange[0], y0: axisRange[0], x1: axisRange[1], y1: axisRange[1],
               line: { color: '#aaa', dash: 'dash', width: 1 },
             },
           ],
