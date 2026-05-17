@@ -86,6 +86,13 @@ h3 { font-size: 24px; }
 ----------------------------------- */
 #site-header {
   background: transparent;
+  /* Reserve vertical space matching the injected .site-header-bar height
+     (20px top padding + 36px brand line + 16px bottom padding + 1px border).
+     Without this, the empty wrapper is 0px tall until main.js finishes
+     fetching header.html and injects content — at which point everything
+     below it (the season title, breadcrumb, tabs) gets pushed down ~73px,
+     causing the visible jump. Tune up if your header ever wraps to two rows. */
+  min-height: 73px;
 }
 
 .site-header-bar {
