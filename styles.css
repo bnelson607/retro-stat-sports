@@ -1297,6 +1297,19 @@ h3 { font-size: 24px; }
   margin-right: 0;
 }
 
+/* Single-round bracket cards (AAFC 1949 / AFL 1969) — when there's only
+   one round inside the league card, give it the full row width instead
+   of the equal-share-among-multiple-rounds default. Without this rule,
+   the round's flex-basis: 0 plus the title's flex-basis: 100% adds up
+   to exactly 100%, so flex-wrap leaves them on the same row and the
+   round gets squeezed to ~0px wide. :only-of-type matches because the
+   h3 title is a different element type and doesn't count toward the
+   "div.rss-bracket-round" count. */
+.rss-bracket-league .rss-bracket-round:only-of-type {
+  flex: 1 1 100%;
+  margin-right: 0;
+}
+
 .rss-bracket-round-title {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 12px;
