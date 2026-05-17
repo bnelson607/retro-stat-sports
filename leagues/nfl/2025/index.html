@@ -4695,8 +4695,1218 @@ Other Divisions          </h3>
 </section>
 
 
+<section class="rss-section">
+  <h2 class="rss-section-title">Actual Bracket Simulation</h2>
+  <p class="rss-section-subtitle">
+    With the actual playoff bracket fixed in place, this second simulation re-runs each
+    matchup 1,000 times and tallies how often
+    each team advanced past each round and won the title. The right-most column shows
+    what actually happened. Round buttons switch to matchup heatmaps for that round.
+  </p>
+
+  <div class="rss-switcher-bar rss-switcher-bar-wrap" data-switcher="bracket-section">
+    <button type="button" class="rss-switcher-btn active" data-target="table">Table</button>
+      <button type="button" class="rss-switcher-btn" data-target="wild-card-round--afc">Wild Card Round — AFC</button>
+      <button type="button" class="rss-switcher-btn" data-target="wild-card-round--nfc">Wild Card Round — NFC</button>
+      <button type="button" class="rss-switcher-btn" data-target="divisional-round--afc">Divisional Round — AFC</button>
+      <button type="button" class="rss-switcher-btn" data-target="divisional-round--nfc">Divisional Round — NFC</button>
+      <button type="button" class="rss-switcher-btn" data-target="conference-championship--afc">Conference Championship — AFC</button>
+      <button type="button" class="rss-switcher-btn" data-target="conference-championship--nfc">Conference Championship — NFC</button>
+      <button type="button" class="rss-switcher-btn" data-target="super-bowl">Super Bowl</button>
+  </div>
+
+  <div class="rss-switcher-block active" data-switcher="bracket-section" data-block="table">
+    <div class="rss-leaderboard rss-playoff-table">
+      <table class="rss-leaderboard-table" data-tablesort>
+        <thead>
+          <tr>
+            <th class="team">Team</th>
+              <th class="num" data-sort-method="number">Advanced to Divisional Round</th>
+              <th class="num" data-sort-method="number">Advanced to Conference Championship</th>
+              <th class="num" data-sort-method="number">Advanced to Super Bowl</th>
+              <th class="num" data-sort-method="number">Won Super Bowl</th>
+              <th class="team" data-sort-method="number">Actual Outcome</th>
+          </tr>
+        </thead>
+        <tbody>
+              <tr>
+                <td class="team"><span class="rss-team-name">Seattle Seahawks</span></td>
+                  <td class="num"
+                      data-sort="1.0">100.0%</td>
+                  <td class="num"
+                      data-sort="0.733">73.3%</td>
+                  <td class="num"
+                      data-sort="0.499">49.9%</td>
+                  <td class="num rss-td-champ"
+                      data-sort="0.296">29.6%</td>
+                <td class="team" data-sort="2">Eliminated in Conference Championship</td>
+              </tr>
+              <tr>
+                <td class="team"><span class="rss-team-name">Denver Broncos</span></td>
+                  <td class="num"
+                      data-sort="1.0">100.0%</td>
+                  <td class="num"
+                      data-sort="0.585">58.5%</td>
+                  <td class="num"
+                      data-sort="0.301">30.1%</td>
+                  <td class="num rss-td-champ"
+                      data-sort="0.141">14.1%</td>
+                <td class="team" data-sort="2">Eliminated in Conference Championship</td>
+              </tr>
+              <tr>
+                <td class="team"><span class="rss-team-name">Los Angeles Rams</span></td>
+                  <td class="num"
+                      data-sort="0.824">82.4%</td>
+                  <td class="num"
+                      data-sort="0.417">41.7%</td>
+                  <td class="num"
+                      data-sort="0.192">19.2%</td>
+                  <td class="num rss-td-champ"
+                      data-sort="0.098">9.8%</td>
+                <td class="team" data-sort="2">Eliminated in Conference Championship</td>
+              </tr>
+              <tr>
+                <td class="team"><span class="rss-team-name">Houston Texans</span></td>
+                  <td class="num"
+                      data-sort="0.667">66.7%</td>
+                  <td class="num"
+                      data-sort="0.345">34.5%</td>
+                  <td class="num"
+                      data-sort="0.182">18.2%</td>
+                  <td class="num rss-td-champ"
+                      data-sort="0.097">9.7%</td>
+                <td class="team" data-sort="1">Eliminated in Divisional Round</td>
+              </tr>
+              <tr>
+                <td class="team"><span class="rss-team-name">Jacksonville Jaguars</span></td>
+                  <td class="num"
+                      data-sort="0.575">57.5%</td>
+                  <td class="num"
+                      data-sort="0.313">31.3%</td>
+                  <td class="num"
+                      data-sort="0.159">15.9%</td>
+                  <td class="num rss-td-champ"
+                      data-sort="0.08">8.0%</td>
+                <td class="team" data-sort="0">Eliminated in Wild Card Round</td>
+              </tr>
+              <tr>
+                <td class="team"><span class="rss-team-name">New England Patriots</span></td>
+                  <td class="num"
+                      data-sort="0.667">66.7%</td>
+                  <td class="num"
+                      data-sort="0.342">34.2%</td>
+                  <td class="num"
+                      data-sort="0.173">17.3%</td>
+                  <td class="num rss-td-champ"
+                      data-sort="0.076">7.6%</td>
+                <td class="team" data-sort="2">Eliminated in Conference Championship</td>
+              </tr>
+              <tr>
+                <td class="team"><span class="rss-team-name">Buffalo Bills</span></td>
+                  <td class="num"
+                      data-sort="0.425">42.5%</td>
+                  <td class="num"
+                      data-sort="0.201">20.1%</td>
+                  <td class="num"
+                      data-sort="0.099">9.9%</td>
+                  <td class="num rss-td-champ"
+                      data-sort="0.051">5.1%</td>
+                <td class="team" data-sort="1">Eliminated in Divisional Round</td>
+              </tr>
+              <tr>
+                <td class="team"><span class="rss-team-name">Philadelphia Eagles</span></td>
+                  <td class="num"
+                      data-sort="0.491">49.1%</td>
+                  <td class="num"
+                      data-sort="0.249">24.9%</td>
+                  <td class="num"
+                      data-sort="0.091">9.1%</td>
+                  <td class="num rss-td-champ"
+                      data-sort="0.041">4.1%</td>
+                <td class="team" data-sort="0">Eliminated in Wild Card Round</td>
+              </tr>
+              <tr>
+                <td class="team"><span class="rss-team-name">San Francisco 49ers</span></td>
+                  <td class="num"
+                      data-sort="0.509">50.9%</td>
+                  <td class="num"
+                      data-sort="0.191">19.1%</td>
+                  <td class="num"
+                      data-sort="0.084">8.4%</td>
+                  <td class="num rss-td-champ"
+                      data-sort="0.037">3.7%</td>
+                <td class="team" data-sort="1">Eliminated in Divisional Round</td>
+              </tr>
+              <tr>
+                <td class="team"><span class="rss-team-name">Chicago Bears</span></td>
+                  <td class="num"
+                      data-sort="0.552">55.2%</td>
+                  <td class="num"
+                      data-sort="0.269">26.9%</td>
+                  <td class="num"
+                      data-sort="0.091">9.1%</td>
+                  <td class="num rss-td-champ"
+                      data-sort="0.031">3.1%</td>
+                <td class="team" data-sort="1">Eliminated in Divisional Round</td>
+              </tr>
+              <tr>
+                <td class="team"><span class="rss-team-name">Green Bay Packers</span></td>
+                  <td class="num"
+                      data-sort="0.448">44.8%</td>
+                  <td class="num"
+                      data-sort="0.101">10.1%</td>
+                  <td class="num"
+                      data-sort="0.04">4.0%</td>
+                  <td class="num rss-td-champ"
+                      data-sort="0.018">1.8%</td>
+                <td class="team" data-sort="0">Eliminated in Wild Card Round</td>
+              </tr>
+              <tr>
+                <td class="team"><span class="rss-team-name">Pittsburgh Steelers</span></td>
+                  <td class="num"
+                      data-sort="0.333">33.3%</td>
+                  <td class="num"
+                      data-sort="0.108">10.8%</td>
+                  <td class="num"
+                      data-sort="0.049">4.9%</td>
+                  <td class="num rss-td-champ"
+                      data-sort="0.018">1.8%</td>
+                <td class="team" data-sort="0">Eliminated in Wild Card Round</td>
+              </tr>
+              <tr>
+                <td class="team"><span class="rss-team-name">Los Angeles Chargers</span></td>
+                  <td class="num"
+                      data-sort="0.333">33.3%</td>
+                  <td class="num"
+                      data-sort="0.106">10.6%</td>
+                  <td class="num"
+                      data-sort="0.037">3.7%</td>
+                  <td class="num rss-td-champ"
+                      data-sort="0.015">1.5%</td>
+                <td class="team" data-sort="0">Eliminated in Wild Card Round</td>
+              </tr>
+              <tr>
+                <td class="team"><span class="rss-team-name">Carolina Panthers</span></td>
+                  <td class="num"
+                      data-sort="0.176">17.6%</td>
+                  <td class="num"
+                      data-sort="0.04">4.0%</td>
+                  <td class="num"
+                      data-sort="0.003">0.3%</td>
+                  <td class="num rss-td-champ"
+                      data-sort="0.001">0.1%</td>
+                <td class="team" data-sort="0">Eliminated in Wild Card Round</td>
+              </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+    <div class="rss-switcher-block" data-switcher="bracket-section" data-block="wild-card-round--afc">
+      <div class="rss-chart-frame"><div>                            <div id="playoff-bracket-matchup-wild-card-round--afc" class="plotly-graph-div" style="height:800px; width:800px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("playoff-bracket-matchup-wild-card-round--afc")) {                    Plotly.newPlot(                        "playoff-bracket-matchup-wild-card-round--afc",                        [{"coloraxis":"coloraxis","name":"0","texttemplate":"%{z:.1%}","x":["Buffalo Bills","Houston Texans","Jacksonville Jaguars","Los Angeles Chargers","New England Patriots","Pittsburgh Steelers"],"y":["Buffalo Bills","Houston Texans","Jacksonville Jaguars","Los Angeles Chargers","New England Patriots","Pittsburgh Steelers"],"z":[[null,null,0.425,null,null,null],[null,null,null,null,null,0.667],[0.575,null,null,null,null,null],[null,null,null,null,0.333,null],[null,null,null,0.667,null,null],[null,0.333,null,null,null,null]],"type":"heatmap","xaxis":"x","yaxis":"y","hovertemplate":"Losing Team: %{x}\u003cbr\u003eWinning Team: %{y}\u003cbr\u003eProbability: %{z}\u003cextra\u003e\u003c\u002fextra\u003e"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Losing Team"},"fixedrange":true,"side":"bottom","automargin":true,"tickangle":-90},"yaxis":{"anchor":"x","domain":[0.0,1.0],"autorange":"reversed","title":{"text":"Winning Team"},"fixedrange":true,"automargin":true},"coloraxis":{"colorbar":{"title":{"text":"Probability"}},"colorscale":[[0.0,"#FFFFFF"],[0.15,"#EEF1F5"],[0.4,"#9FB4C5"],[0.7,"#3E5E7C"],[1.0,"#002744"]],"showscale":false},"margin":{"t":60,"l":20,"r":20,"b":20},"font":{"family":"Inter, sans-serif","size":12,"color":"#1C1C1C"},"title":{"font":{"size":15,"color":"#1C1C1C"},"text":"Wild Card Round — AFC — Matchup Probabilities","x":0.5,"xanchor":"center"},"dragmode":false,"hovermode":"closest","width":800,"height":800,"autosize":false,"paper_bgcolor":"white","plot_bgcolor":"white"},                        {"displayModeBar": false, "responsive": false}                    )                };            </script>        </div></div>
+    </div>
+    <div class="rss-switcher-block" data-switcher="bracket-section" data-block="wild-card-round--nfc">
+      <div class="rss-chart-frame"><div>                            <div id="playoff-bracket-matchup-wild-card-round--nfc" class="plotly-graph-div" style="height:800px; width:800px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("playoff-bracket-matchup-wild-card-round--nfc")) {                    Plotly.newPlot(                        "playoff-bracket-matchup-wild-card-round--nfc",                        [{"coloraxis":"coloraxis","name":"0","texttemplate":"%{z:.1%}","x":["Carolina Panthers","Chicago Bears","Green Bay Packers","Los Angeles Rams","Philadelphia Eagles","San Francisco 49ers"],"y":["Carolina Panthers","Chicago Bears","Green Bay Packers","Los Angeles Rams","Philadelphia Eagles","San Francisco 49ers"],"z":[[null,null,null,0.176,null,null],[null,null,0.552,null,null,null],[null,0.448,null,null,null,null],[0.824,null,null,null,null,null],[null,null,null,null,null,0.491],[null,null,null,null,0.509,null]],"type":"heatmap","xaxis":"x","yaxis":"y","hovertemplate":"Losing Team: %{x}\u003cbr\u003eWinning Team: %{y}\u003cbr\u003eProbability: %{z}\u003cextra\u003e\u003c\u002fextra\u003e"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Losing Team"},"fixedrange":true,"side":"bottom","automargin":true,"tickangle":-90},"yaxis":{"anchor":"x","domain":[0.0,1.0],"autorange":"reversed","title":{"text":"Winning Team"},"fixedrange":true,"automargin":true},"coloraxis":{"colorbar":{"title":{"text":"Probability"}},"colorscale":[[0.0,"#FFFFFF"],[0.15,"#EEF1F5"],[0.4,"#9FB4C5"],[0.7,"#3E5E7C"],[1.0,"#002744"]],"showscale":false},"margin":{"t":60,"l":20,"r":20,"b":20},"font":{"family":"Inter, sans-serif","size":12,"color":"#1C1C1C"},"title":{"font":{"size":15,"color":"#1C1C1C"},"text":"Wild Card Round — NFC — Matchup Probabilities","x":0.5,"xanchor":"center"},"dragmode":false,"hovermode":"closest","width":800,"height":800,"autosize":false,"paper_bgcolor":"white","plot_bgcolor":"white"},                        {"displayModeBar": false, "responsive": false}                    )                };            </script>        </div></div>
+    </div>
+    <div class="rss-switcher-block" data-switcher="bracket-section" data-block="divisional-round--afc">
+      <div class="rss-chart-frame"><div>                            <div id="playoff-bracket-matchup-divisional-round--afc" class="plotly-graph-div" style="height:800px; width:800px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("playoff-bracket-matchup-divisional-round--afc")) {                    Plotly.newPlot(                        "playoff-bracket-matchup-divisional-round--afc",                        [{"coloraxis":"coloraxis","name":"0","texttemplate":"%{z:.1%}","x":["Buffalo Bills","Denver Broncos","Houston Texans","Jacksonville Jaguars","Los Angeles Chargers","New England Patriots","Pittsburgh Steelers"],"y":["Buffalo Bills","Denver Broncos","Houston Texans","Jacksonville Jaguars","Los Angeles Chargers","New England Patriots","Pittsburgh Steelers"],"z":[[null,0.137,0.033,null,null,null,0.031],[0.142,null,0.128,null,0.227,null,0.088],[0.063,0.124,null,0.061,null,0.097,null],[null,null,0.064,null,null,0.204,0.045],[null,0.106,null,null,null,null,null],[null,null,0.097,0.184,null,null,0.061],[0.019,0.048,null,0.017,null,0.024,null]],"type":"heatmap","xaxis":"x","yaxis":"y","hovertemplate":"Losing Team: %{x}\u003cbr\u003eWinning Team: %{y}\u003cbr\u003eProbability: %{z}\u003cextra\u003e\u003c\u002fextra\u003e"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Losing Team"},"fixedrange":true,"side":"bottom","automargin":true,"tickangle":-90},"yaxis":{"anchor":"x","domain":[0.0,1.0],"autorange":"reversed","title":{"text":"Winning Team"},"fixedrange":true,"automargin":true},"coloraxis":{"colorbar":{"title":{"text":"Probability"}},"colorscale":[[0.0,"#FFFFFF"],[0.15,"#EEF1F5"],[0.4,"#9FB4C5"],[0.7,"#3E5E7C"],[1.0,"#002744"]],"showscale":false},"margin":{"t":60,"l":20,"r":20,"b":20},"font":{"family":"Inter, sans-serif","size":12,"color":"#1C1C1C"},"title":{"font":{"size":15,"color":"#1C1C1C"},"text":"Divisional Round — AFC — Matchup Probabilities","x":0.5,"xanchor":"center"},"dragmode":false,"hovermode":"closest","width":800,"height":800,"autosize":false,"paper_bgcolor":"white","plot_bgcolor":"white"},                        {"displayModeBar": false, "responsive": false}                    )                };            </script>        </div></div>
+    </div>
+    <div class="rss-switcher-block" data-switcher="bracket-section" data-block="divisional-round--nfc">
+      <div class="rss-chart-frame"><div>                            <div id="playoff-bracket-matchup-divisional-round--nfc" class="plotly-graph-div" style="height:800px; width:800px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("playoff-bracket-matchup-divisional-round--nfc")) {                    Plotly.newPlot(                        "playoff-bracket-matchup-divisional-round--nfc",                        [{"coloraxis":"coloraxis","name":"0","texttemplate":"%{z:.1%}","x":["Carolina Panthers","Chicago Bears","Green Bay Packers","Los Angeles Rams","Philadelphia Eagles","San Francisco 49ers","Seattle Seahawks"],"y":["Carolina Panthers","Chicago Bears","Green Bay Packers","Los Angeles Rams","Philadelphia Eagles","San Francisco 49ers","Seattle Seahawks"],"z":[[null,0.016,null,null,0.006,0.011,0.007],[0.03,null,null,0.11,0.129,null,null],[null,null,null,null,null,null,0.101],[null,0.134,null,null,0.107,0.098,0.078],[0.034,0.133,null,0.082,null,null,null],[0.026,null,null,0.084,null,null,0.081],[0.046,null,0.347,0.131,null,0.209,null]],"type":"heatmap","xaxis":"x","yaxis":"y","hovertemplate":"Losing Team: %{x}\u003cbr\u003eWinning Team: %{y}\u003cbr\u003eProbability: %{z}\u003cextra\u003e\u003c\u002fextra\u003e"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Losing Team"},"fixedrange":true,"side":"bottom","automargin":true,"tickangle":-90},"yaxis":{"anchor":"x","domain":[0.0,1.0],"autorange":"reversed","title":{"text":"Winning Team"},"fixedrange":true,"automargin":true},"coloraxis":{"colorbar":{"title":{"text":"Probability"}},"colorscale":[[0.0,"#FFFFFF"],[0.15,"#EEF1F5"],[0.4,"#9FB4C5"],[0.7,"#3E5E7C"],[1.0,"#002744"]],"showscale":false},"margin":{"t":60,"l":20,"r":20,"b":20},"font":{"family":"Inter, sans-serif","size":12,"color":"#1C1C1C"},"title":{"font":{"size":15,"color":"#1C1C1C"},"text":"Divisional Round — NFC — Matchup Probabilities","x":0.5,"xanchor":"center"},"dragmode":false,"hovermode":"closest","width":800,"height":800,"autosize":false,"paper_bgcolor":"white","plot_bgcolor":"white"},                        {"displayModeBar": false, "responsive": false}                    )                };            </script>        </div></div>
+    </div>
+    <div class="rss-switcher-block" data-switcher="bracket-section" data-block="conference-championship--afc">
+      <div class="rss-chart-frame"><div>                            <div id="playoff-bracket-matchup-conference-championship--afc" class="plotly-graph-div" style="height:800px; width:800px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("playoff-bracket-matchup-conference-championship--afc")) {                    Plotly.newPlot(                        "playoff-bracket-matchup-conference-championship--afc",                        [{"coloraxis":"coloraxis","name":"0","texttemplate":"%{z:.1%}","x":["Buffalo Bills","Denver Broncos","Houston Texans","Jacksonville Jaguars","Los Angeles Chargers","New England Patriots","Pittsburgh Steelers"],"y":["Buffalo Bills","Denver Broncos","Houston Texans","Jacksonville Jaguars","Los Angeles Chargers","New England Patriots","Pittsburgh Steelers"],"z":[[null,0.018,0.023,null,0.016,0.035,0.007],[0.02,null,0.062,0.1,null,0.101,0.018],[0.022,0.073,null,0.037,0.027,0.023,null],[null,0.097,0.029,null,0.019,null,0.014],[0.01,null,0.014,0.009,null,null,0.004],[0.042,0.08,0.035,null,null,null,0.016],[0.008,0.016,null,0.008,0.007,0.01,null]],"type":"heatmap","xaxis":"x","yaxis":"y","hovertemplate":"Losing Team: %{x}\u003cbr\u003eWinning Team: %{y}\u003cbr\u003eProbability: %{z}\u003cextra\u003e\u003c\u002fextra\u003e"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Losing Team"},"fixedrange":true,"side":"bottom","automargin":true,"tickangle":-90},"yaxis":{"anchor":"x","domain":[0.0,1.0],"autorange":"reversed","title":{"text":"Winning Team"},"fixedrange":true,"automargin":true},"coloraxis":{"colorbar":{"title":{"text":"Probability"}},"colorscale":[[0.0,"#FFFFFF"],[0.15,"#EEF1F5"],[0.4,"#9FB4C5"],[0.7,"#3E5E7C"],[1.0,"#002744"]],"showscale":false},"margin":{"t":60,"l":20,"r":20,"b":20},"font":{"family":"Inter, sans-serif","size":12,"color":"#1C1C1C"},"title":{"font":{"size":15,"color":"#1C1C1C"},"text":"Conference Championship — AFC — Matchup Probabilities","x":0.5,"xanchor":"center"},"dragmode":false,"hovermode":"closest","width":800,"height":800,"autosize":false,"paper_bgcolor":"white","plot_bgcolor":"white"},                        {"displayModeBar": false, "responsive": false}                    )                };            </script>        </div></div>
+    </div>
+    <div class="rss-switcher-block" data-switcher="bracket-section" data-block="conference-championship--nfc">
+      <div class="rss-chart-frame"><div>                            <div id="playoff-bracket-matchup-conference-championship--nfc" class="plotly-graph-div" style="height:800px; width:800px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("playoff-bracket-matchup-conference-championship--nfc")) {                    Plotly.newPlot(                        "playoff-bracket-matchup-conference-championship--nfc",                        [{"coloraxis":"coloraxis","name":"0","texttemplate":"%{z:.1%}","x":["Carolina Panthers","Chicago Bears","Green Bay Packers","Los Angeles Rams","Philadelphia Eagles","San Francisco 49ers","Seattle Seahawks"],"y":["Carolina Panthers","Chicago Bears","Green Bay Packers","Los Angeles Rams","Philadelphia Eagles","San Francisco 49ers","Seattle Seahawks"],"z":[[null,0.001,null,null,null,0.001,0.001],[0.003,null,null,0.015,null,0.02,0.053],[0.003,null,null,0.014,0.012,0.011,null],[null,0.025,0.035,null,0.02,0.013,0.099],[0.003,null,0.014,0.018,null,null,0.056],[0.006,0.024,0.012,0.017,null,null,0.025],[0.022,0.128,null,0.161,0.126,0.062,null]],"type":"heatmap","xaxis":"x","yaxis":"y","hovertemplate":"Losing Team: %{x}\u003cbr\u003eWinning Team: %{y}\u003cbr\u003eProbability: %{z}\u003cextra\u003e\u003c\u002fextra\u003e"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Losing Team"},"fixedrange":true,"side":"bottom","automargin":true,"tickangle":-90},"yaxis":{"anchor":"x","domain":[0.0,1.0],"autorange":"reversed","title":{"text":"Winning Team"},"fixedrange":true,"automargin":true},"coloraxis":{"colorbar":{"title":{"text":"Probability"}},"colorscale":[[0.0,"#FFFFFF"],[0.15,"#EEF1F5"],[0.4,"#9FB4C5"],[0.7,"#3E5E7C"],[1.0,"#002744"]],"showscale":false},"margin":{"t":60,"l":20,"r":20,"b":20},"font":{"family":"Inter, sans-serif","size":12,"color":"#1C1C1C"},"title":{"font":{"size":15,"color":"#1C1C1C"},"text":"Conference Championship — NFC — Matchup Probabilities","x":0.5,"xanchor":"center"},"dragmode":false,"hovermode":"closest","width":800,"height":800,"autosize":false,"paper_bgcolor":"white","plot_bgcolor":"white"},                        {"displayModeBar": false, "responsive": false}                    )                };            </script>        </div></div>
+    </div>
+    <div class="rss-switcher-block" data-switcher="bracket-section" data-block="super-bowl">
+      <div class="rss-chart-frame"><div>                            <div id="playoff-bracket-matchup-super-bowl" class="plotly-graph-div" style="height:732px; width:1100px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("playoff-bracket-matchup-super-bowl")) {                    Plotly.newPlot(                        "playoff-bracket-matchup-super-bowl",                        [{"coloraxis":"coloraxis","name":"0","texttemplate":"%{z:.1%}","x":["Buffalo Bills","Carolina Panthers","Chicago Bears","Denver Broncos","Green Bay Packers","Houston Texans","Jacksonville Jaguars","Los Angeles Chargers","Los Angeles Rams","New England Patriots","Philadelphia Eagles","Pittsburgh Steelers","San Francisco 49ers","Seattle Seahawks"],"y":["Buffalo Bills","Carolina Panthers","Chicago Bears","Denver Broncos","Green Bay Packers","Houston Texans","Jacksonville Jaguars","Los Angeles Chargers","Los Angeles Rams","New England Patriots","Philadelphia Eagles","Pittsburgh Steelers","San Francisco 49ers","Seattle Seahawks"],"z":[[null,0.001,0.005,null,0.005,null,null,null,0.011,null,0.004,null,0.006,0.019],[null,null,null,null,null,null,0.001,null,null,null,null,null,null,null],[0.003,null,null,0.011,null,0.004,0.004,0.002,null,0.003,null,0.004,null,null],[null,0.001,0.02,null,0.005,null,null,null,0.029,null,0.012,null,0.012,0.062],[0.004,null,null,0.005,null,0.002,0.002,0.002,null,0.002,null,0.001,null,null],[null,null,0.011,null,0.009,null,null,null,0.014,null,0.012,null,0.013,0.038],[null,null,0.012,null,0.003,null,null,null,0.015,null,0.01,null,0.006,0.034],[null,null,0.001,null,null,null,null,null,0.003,null,0.001,null,0.001,0.009],[0.009,null,null,0.028,null,0.019,0.016,0.002,null,0.018,null,0.006,null,null],[null,null,0.008,null,null,null,null,null,0.019,null,0.007,null,0.006,0.036],[0.004,null,null,0.013,null,0.007,0.007,0.002,null,0.006,null,0.002,null,null],[null,null,0.003,null,null,null,null,null,0.003,null,0.004,null,0.003,0.005],[0.002,null,null,0.01,null,0.008,0.004,0.002,null,0.008,null,0.003,null,null],[0.026,null,null,0.093,null,0.045,0.045,0.012,null,0.06,null,0.015,null,null]],"type":"heatmap","xaxis":"x","yaxis":"y","hovertemplate":"Losing Team: %{x}\u003cbr\u003eWinning Team: %{y}\u003cbr\u003eProbability: %{z}\u003cextra\u003e\u003c\u002fextra\u003e"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Losing Team"},"fixedrange":true,"side":"bottom","automargin":true,"tickangle":-90},"yaxis":{"anchor":"x","domain":[0.0,1.0],"autorange":"reversed","title":{"text":"Winning Team"},"fixedrange":true,"automargin":true},"coloraxis":{"colorbar":{"title":{"text":"Probability"}},"colorscale":[[0.0,"#FFFFFF"],[0.15,"#EEF1F5"],[0.4,"#9FB4C5"],[0.7,"#3E5E7C"],[1.0,"#002744"]],"showscale":false},"margin":{"t":60,"l":20,"r":20,"b":20},"font":{"family":"Inter, sans-serif","size":12,"color":"#1C1C1C"},"title":{"font":{"size":15,"color":"#1C1C1C"},"text":"Super Bowl — Matchup Probabilities","x":0.5,"xanchor":"center"},"dragmode":false,"hovermode":"closest","width":1100,"height":732,"autosize":false,"paper_bgcolor":"white","plot_bgcolor":"white"},                        {"displayModeBar": false, "responsive": false}                    )                };            </script>        </div></div>
+    </div>
+</section>
 
 
+<section class="rss-section">
+  <h2 class="rss-section-title">Most-Likely Championship Paths</h2>
+  <p class="rss-section-subtitle">
+    For each playoff team, the opponent they most often faced and defeated at each round
+    across all bracket simulations. Each step shows two numbers: <strong>Matchup %</strong>
+    is the fraction of this team's wins in this round that came against this opponent;
+    <strong>Win %</strong> is the head-to-head probability they beat this opponent when the
+    two meet. Note: fixed early-round matchups against bracket-determined opponents will
+    show 100% Matchup — that's because those pairings are decided by the bracket.
+  </p>
+
+  <div class="rss-switcher-bar rss-switcher-bar-wrap" data-switcher="paths">
+      <button type="button"
+              class="rss-switcher-btn active"
+              data-target="seattle-seahawks">Seattle Seahawks</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="denver-broncos">Denver Broncos</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="los-angeles-rams">Los Angeles Rams</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="houston-texans">Houston Texans</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="jacksonville-jaguars">Jacksonville Jaguars</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="new-england-patriots">New England Patriots</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="buffalo-bills">Buffalo Bills</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="philadelphia-eagles">Philadelphia Eagles</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="san-francisco-49ers">San Francisco 49ers</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="chicago-bears">Chicago Bears</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="green-bay-packers">Green Bay Packers</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="pittsburgh-steelers">Pittsburgh Steelers</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="los-angeles-chargers">Los Angeles Chargers</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="carolina-panthers">Carolina Panthers</button>
+  </div>
+
+    <div class="rss-switcher-block active"
+         data-switcher="paths"
+         data-block="seattle-seahawks">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Seattle Seahawks</span>
+          <span class="rss-playoff-path-pct">29.6% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Divisional Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Green Bay Packers</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">47.3%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">77.5%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Los Angeles Rams</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">32.3%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">61.9%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Super Bowl</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Denver Broncos</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">31.4%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">60.0%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="denver-broncos">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Denver Broncos</span>
+          <span class="rss-playoff-path-pct">14.1% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Divisional Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Los Angeles Chargers</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">38.8%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">68.2%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>New England Patriots</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">33.6%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">55.8%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Super Bowl</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Seattle Seahawks</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">44.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">40.0%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="los-angeles-rams">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Los Angeles Rams</span>
+          <span class="rss-playoff-path-pct">9.8% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Wild Card Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Carolina Panthers</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">100.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">82.4%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Divisional Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Chicago Bears</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">32.1%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">54.9%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Seattle Seahawks</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">51.6%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">38.1%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Super Bowl</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Denver Broncos</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">28.6%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">49.1%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="houston-texans">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Houston Texans</span>
+          <span class="rss-playoff-path-pct">9.7% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Wild Card Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Pittsburgh Steelers</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">100.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">66.7%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Divisional Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Denver Broncos</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">35.9%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">49.2%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Denver Broncos</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">40.1%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">54.1%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Super Bowl</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Seattle Seahawks</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">39.2%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">45.8%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="jacksonville-jaguars">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Jacksonville Jaguars</span>
+          <span class="rss-playoff-path-pct">8.0% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Wild Card Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Buffalo Bills</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">100.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">57.5%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Divisional Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>New England Patriots</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">65.2%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">52.6%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Denver Broncos</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">61.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">49.2%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Super Bowl</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Seattle Seahawks</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">42.5%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">43.0%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="new-england-patriots">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">New England Patriots</span>
+          <span class="rss-playoff-path-pct">7.6% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Wild Card Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Los Angeles Chargers</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">100.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">66.7%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Divisional Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Jacksonville Jaguars</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">53.8%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">47.4%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Denver Broncos</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">46.2%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">44.2%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Super Bowl</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Seattle Seahawks</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">47.4%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">37.5%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="buffalo-bills">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Buffalo Bills</span>
+          <span class="rss-playoff-path-pct">5.1% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Wild Card Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Jacksonville Jaguars</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">100.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">42.5%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Divisional Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Denver Broncos</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">68.2%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">49.1%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>New England Patriots</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">35.4%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">45.5%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Super Bowl</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Seattle Seahawks</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">37.3%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">42.2%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="philadelphia-eagles">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Philadelphia Eagles</span>
+          <span class="rss-playoff-path-pct">4.1% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Wild Card Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>San Francisco 49ers</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">100.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">49.1%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Divisional Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Chicago Bears</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">53.4%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">50.8%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Seattle Seahawks</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">61.5%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">30.8%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Super Bowl</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Denver Broncos</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">31.7%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">52.0%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="san-francisco-49ers">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">San Francisco 49ers</span>
+          <span class="rss-playoff-path-pct">3.7% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Wild Card Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Philadelphia Eagles</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">100.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">50.9%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Divisional Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Los Angeles Rams</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">44.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">46.2%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Seattle Seahawks</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">29.8%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">28.7%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Super Bowl</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Denver Broncos</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">27.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">45.5%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="chicago-bears">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Chicago Bears</span>
+          <span class="rss-playoff-path-pct">3.1% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Wild Card Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Green Bay Packers</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">100.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">55.2%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Divisional Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Philadelphia Eagles</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">48.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">49.2%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Seattle Seahawks</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">58.2%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">29.3%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Super Bowl</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Denver Broncos</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">35.5%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">35.5%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="green-bay-packers">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Green Bay Packers</span>
+          <span class="rss-playoff-path-pct">1.8% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Wild Card Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Chicago Bears</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">100.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">44.8%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Divisional Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Seattle Seahawks</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">100.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">22.5%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Los Angeles Rams</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">35.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">28.6%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Super Bowl</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Denver Broncos</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">27.8%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">50.0%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="pittsburgh-steelers">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Pittsburgh Steelers</span>
+          <span class="rss-playoff-path-pct">1.8% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Wild Card Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Houston Texans</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">100.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">33.3%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Divisional Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Denver Broncos</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">44.4%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">35.3%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Denver Broncos</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">32.7%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">47.1%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Super Bowl</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Seattle Seahawks</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">27.8%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">25.0%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="los-angeles-chargers">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Los Angeles Chargers</span>
+          <span class="rss-playoff-path-pct">1.5% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Wild Card Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>New England Patriots</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">100.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">33.3%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Divisional Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Denver Broncos</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">100.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">31.8%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Houston Texans</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">37.8%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">34.1%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Super Bowl</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Seattle Seahawks</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">60.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">42.9%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="carolina-panthers">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Carolina Panthers</span>
+          <span class="rss-playoff-path-pct">0.1% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Wild Card Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Los Angeles Rams</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">100.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">17.6%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Divisional Round</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Chicago Bears</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">40.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">34.8%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Chicago Bears</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">33.3%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">25.0%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Super Bowl</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Jacksonville Jaguars</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">100.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">100.0%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</section>
         </div>
 
         <div class="rss-tab-pane" data-tab="season-trends">
