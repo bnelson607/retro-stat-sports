@@ -551,11 +551,11 @@ h3 { font-size: 24px; }
 
 .rss-live-eyebrow {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 12px;
-  letter-spacing: 2px;
+  font-size: 18px;
+  letter-spacing: 1.5px;
   color: #555;
   text-transform: uppercase;
-  margin: 0 0 8px;
+  margin: 0 0 10px;
 }
 
 .rss-live-title {
@@ -727,8 +727,8 @@ h3 { font-size: 24px; }
 
 .rss-story-tag {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 11px;
-  letter-spacing: 1.5px;
+  font-size: 16px;
+  letter-spacing: 1.2px;
   color: #555;
   text-transform: uppercase;
   margin: 0 0 8px;
