@@ -491,9 +491,10 @@ h3 { font-size: 24px; }
 }
 
 .rss-league-page-icon {
-  font-size: 40px;
-  color: #B8860B;
-  line-height: 1;
+  width: 44px;
+  height: 44px;
+  display: block;       /* removes inline whitespace alignment quirks */
+  flex-shrink: 0;       /* parent is flex; never shrink the icon */
 }
 
 .rss-league-page-title {
@@ -1029,9 +1030,10 @@ h3 { font-size: 24px; }
 }
 
 .rss-season-header-icon {
-  font-size: 36px;
-  color: #B8860B;
-  line-height: 1;
+  width: 40px;
+  height: 40px;
+  display: block;       /* removes inline whitespace alignment quirks */
+  flex-shrink: 0;       /* parent is flex; never shrink the icon */
 }
 
 .rss-season-title {
