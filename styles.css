@@ -2567,7 +2567,7 @@ h3 { font-size: 24px; }
 }
 
 .rss-gamelog-table thead th.num {
-  text-align: right;
+  text-align: center;
 }
 
 .rss-gamelog-table thead th.rss-gamelog-th:hover {
@@ -2592,7 +2592,7 @@ h3 { font-size: 24px; }
 }
 
 .rss-gamelog-table tbody td.num {
-  text-align: right;
+  text-align: center;
 }
 
 .rss-gamelog-table tbody td.team {
@@ -2606,6 +2606,32 @@ h3 { font-size: 24px; }
 .rss-gamelog-table tbody tr:hover {
   background: #fafafa;
 }
+
+/* Explicit left-alignment for Date and Opponent columns in the game logs.
+   thead defaults to left already, but tbody td needs an explicit class so
+   the alignment is self-documenting in the HTML and doesn't depend on the
+   absence of a `num` class. */
+.rss-gamelog-table thead th.text-left,
+.rss-gamelog-table tbody td.text-left {
+  text-align: left;
+}
+
+/* Vertical separators in the game logs. Applied to the cell that should
+   show a divider on its RIGHT, creating clean visual breaks between groups
+   of related columns. In the overall log: after Score (separating game
+   context from pregame model state) and after Loss % (separating pregame
+   model state from the model's reaction + running record). */
+.rss-gamelog-table th.rss-vsep-right,
+.rss-gamelog-table td.rss-vsep-right {
+  border-right: 1px solid #cbd5db;
+}
+
+/* W/L/T color coding on the Score cell. Subtle — these tables already have
+   plenty going on visually; the goal is a fast at-a-glance read, not a
+   rainbow. The result letter shares the cell with the "4-2" score. */
+.rss-gamelog-table tbody td.rss-result-w { color: #006633; font-weight: 500; }
+.rss-gamelog-table tbody td.rss-result-l { color: #A4161A; font-weight: 500; }
+.rss-gamelog-table tbody td.rss-result-t { color: #555;    font-weight: 500; }
 
 /* H2H section now has TWO matrices per division (within + outside).
    This subtitle separates them with a clear label. */
