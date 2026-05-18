@@ -596,6 +596,91 @@ h3 { font-size: 24px; }
 }
 
 
+/* ---- League page top row: live callout (left) + stacked stories (right) ---- */
+.rss-top-row {
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  gap: 16px;
+  margin: 0 0 36px;
+}
+
+/* When the live callout is inside the top row, kill its standalone bottom margin
+   so the row's margin governs spacing instead. */
+.rss-top-row .rss-live-callout {
+  margin: 0;
+}
+
+/* Projection table inside the live callout (replaces the old prose subtitle). */
+.rss-projection-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Inter Tight', sans-serif;
+  margin: 4px 0 14px;
+}
+
+.rss-projection-table th {
+  text-align: left;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #888;
+  font-weight: normal;
+  padding: 8px 0 6px;
+  border-bottom: 1px solid #e8e8e2;
+  text-transform: uppercase;
+}
+
+.rss-projection-table th.num,
+.rss-projection-table td.num {
+  text-align: right;
+}
+
+.rss-projection-table td {
+  padding: 7px 0;
+  font-size: 14px;
+  color: #1C1C1C;
+  border-bottom: 1px solid #f3f3f0;
+}
+
+.rss-projection-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.rss-projection-table td.tm {
+  font-weight: 500;
+}
+
+.rss-projection-table td.num {
+  font-variant-numeric: tabular-nums;
+}
+
+.rss-projection-table .up {
+  color: #1d8a4f;
+  font-weight: 500;
+}
+
+.rss-projection-table .dn {
+  color: #b13a3a;
+  font-weight: 500;
+}
+
+/* Story stack — vertical column of cards sitting next to the live callout.
+   Each card flex-grows to share the column height equally, matching the
+   live callout's height for visual alignment. */
+.rss-story-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rss-story-stack .rss-story-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
 /* -----------------------------------
    11. League Page — Generic Sections & Story Cards
 ----------------------------------- */
@@ -1719,6 +1804,17 @@ h3 { font-size: 24px; }
 @media (max-width: 900px) {
   .rss-league-page-title {
     font-size: 28px;
+  }
+
+  /* Top row collapses to single column: live callout on top, stories below.
+     Story cards revert to natural (auto) height since they're no longer
+     stretching to match the live callout. */
+  .rss-top-row {
+    grid-template-columns: 1fr;
+  }
+
+  .rss-story-stack .rss-story-card {
+    flex: initial;
   }
 
   .rss-story-grid {

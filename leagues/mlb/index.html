@@ -61,24 +61,39 @@
             </div>
         </section>
 
-        <!-- Live projection callout -->
-        <section class="rss-live-callout">
-            <div class="rss-live-callout-header">
-                <span class="rss-live-badge">Live</span>
-                <span class="rss-live-meta">Updated <span id="update-date">—</span></span>
-            </div>
-            <p class="rss-live-eyebrow">2026 Projection</p>
-            <h2 class="rss-live-title">Dodgers lead at 18.2%, but eight teams are above 5%</h2>
-            <p class="rss-live-subtitle">Biggest mover this week: Tigers, up 3.4 points after sweeping the Rangers.</p>
-            <a href="/retro-stat-sports/leagues/mlb/2026/" class="rss-live-link">See full 2026 projection <i class="ti ti-arrow-right"></i></a>
-        </section>
+        <!-- Top row: live projection callout (left) + stacked MLB stories (right) -->
+        <div class="rss-top-row">
 
-        <!-- MLB Stories -->
-        <section class="rss-section">
-            <h2 class="rss-section-title">MLB Stories</h2>
-            <p class="rss-section-subtitle">Auto-generated rankings across every season we've simulated.</p>
+            <!-- Live projection callout -->
+            <section class="rss-live-callout">
+                <div class="rss-live-callout-header">
+                    <span class="rss-live-badge">Live</span>
+                    <span class="rss-live-meta">Updated <span id="update-date">—</span></span>
+                </div>
+                <p class="rss-live-eyebrow">2026 Projection</p>
+                <h2 class="rss-live-title">Dodgers lead at 18.2%, five teams above 7%</h2>
+                <table class="rss-projection-table">
+                    <thead>
+                        <tr>
+                            <th>Team</th>
+                            <th class="num">Elo</th>
+                            <th class="num">Title %</th>
+                            <th class="num">Δ wk</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="tm">Dodgers</td><td class="num">1612</td><td class="num">18.2</td><td class="num up">+1.2</td></tr>
+                        <tr><td class="tm">Phillies</td><td class="num">1598</td><td class="num">12.5</td><td class="num dn">-0.4</td></tr>
+                        <tr><td class="tm">Yankees</td><td class="num">1591</td><td class="num">9.8</td><td class="num up">+0.6</td></tr>
+                        <tr><td class="tm">Tigers</td><td class="num">1576</td><td class="num">7.5</td><td class="num up">+3.4</td></tr>
+                        <tr><td class="tm">Braves</td><td class="num">1572</td><td class="num">7.1</td><td class="num dn">-1.1</td></tr>
+                    </tbody>
+                </table>
+                <a href="/retro-stat-sports/leagues/mlb/2026/" class="rss-live-link">See full 2026 projection <i class="ti ti-arrow-right"></i></a>
+            </section>
 
-            <div class="rss-story-grid">
+            <!-- MLB Stories — stacked vertically alongside the live callout -->
+            <div class="rss-story-stack">
                 <a href="/retro-stat-sports/leagues/mlb/1998/" class="rss-story-card">
                     <p class="rss-story-tag">Most Dominant</p>
                     <p class="rss-story-headline">1998 Yankees</p>
@@ -95,7 +110,8 @@
                     <p class="rss-story-detail">116 wins, no title, 71% sim odds.</p>
                 </a>
             </div>
-        </section>
+
+        </div>
 
         <!-- Every MLB Season -->
         <section class="rss-section">
