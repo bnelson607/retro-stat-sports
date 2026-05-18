@@ -518,12 +518,22 @@ h3 { font-size: 24px; }
    10. League Page — Live Projection Callout
 ----------------------------------- */
 .rss-live-callout {
+  display: block;              /* anchor: behave as a block-level card */
+  text-decoration: none;
+  color: inherit;              /* don't apply the global link color to descendants */
   background-color: white;
   border-radius: 10px;
   padding: 24px 28px;
   margin: 0 0 32px;
   border-left: 6px solid #A4161A;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.1s ease, box-shadow 0.15s ease;
+}
+
+.rss-live-callout:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
 }
 
 .rss-live-callout-header {
@@ -586,7 +596,9 @@ h3 { font-size: 24px; }
   gap: 6px;
 }
 
-.rss-live-link:hover {
+/* The whole .rss-live-callout is the link now; hovering anywhere on the tile
+   lights up the inner "See full projection →" text as a click-affordance cue. */
+.rss-live-callout:hover .rss-live-link {
   color: #A4161A;
   text-decoration: none;
 }
