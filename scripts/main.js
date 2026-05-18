@@ -116,3 +116,27 @@ document.addEventListener("DOMContentLoaded", function() {
             console.error("Failed to load simulation date:", err);
         });
 });
+
+// Landing-page projection table. Only runs on pages that have the
+// projection table elements (sport landing pages); other pages early-return.
+document.addEventListener("DOMContentLoaded", function() {
+    const headlineEl = document.getElementById('projection-headline');
+    const tbodyEl = document.getElementById('projection-table-body');
+    if (!headlineEl || !tbodyEl) return;
+
+    fetch("projection.json")
+        .then(response => response.json())
+        .then(data => {
+            headlineEl.textContent = data.headline;
+            tbodyEl.innerHTML = data.top5.map(r => `
+                <tr>
+                    <td class="tm">${r.team}</td>
+                    <td class="num">${r.elo != null ? r.elo : '—'}</td>
+                    <td class="num">${r.title_pct.toFixed(1)}</td>
+                </tr>
+            `).join('');
+        })
+        .catch(err => {
+            console.error("Failed to load projection:", err);
+        });
+});
