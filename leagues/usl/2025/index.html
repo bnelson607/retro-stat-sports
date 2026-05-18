@@ -4824,8 +4824,1067 @@ Outside Teams          </h3>
 </section>
 
 
+<section class="rss-section">
+  <h2 class="rss-section-title">Actual Bracket Simulation</h2>
+  <p class="rss-section-subtitle">
+    With the actual playoff bracket fixed in place, this second simulation re-runs each
+    matchup 1,000 times and tallies how often
+    each team advanced past each round and won the title. The right-most column shows
+    what actually happened. Round buttons switch to matchup heatmaps for that round.
+  </p>
+
+  <div class="rss-switcher-bar rss-switcher-bar-wrap" data-switcher="bracket-section">
+    <button type="button" class="rss-switcher-btn active" data-target="table">Table</button>
+      <button type="button" class="rss-switcher-btn" data-target="conference-semifinals--eastern">Conference Semifinals — Eastern</button>
+      <button type="button" class="rss-switcher-btn" data-target="conference-semifinals--western">Conference Semifinals — Western</button>
+      <button type="button" class="rss-switcher-btn" data-target="conference-finals--eastern">Conference Finals — Eastern</button>
+      <button type="button" class="rss-switcher-btn" data-target="conference-finals--western">Conference Finals — Western</button>
+      <button type="button" class="rss-switcher-btn" data-target="usl-championship">USL Championship</button>
+  </div>
+
+  <div class="rss-switcher-block active" data-switcher="bracket-section" data-block="table">
+    <div class="rss-leaderboard rss-playoff-table">
+      <table class="rss-leaderboard-table" data-tablesort>
+        <thead>
+          <tr>
+            <th class="team">Team</th>
+              <th class="num" data-sort-method="number">Advanced to Conference Finals</th>
+              <th class="num" data-sort-method="number">Advanced to USL Championship</th>
+              <th class="num" data-sort-method="number">Won USL Championship</th>
+              <th class="team" data-sort-method="number">Actual Outcome</th>
+          </tr>
+        </thead>
+        <tbody>
+              <tr>
+                <td class="team"><span class="rss-team-name">FC Tulsa</span></td>
+                  <td class="num"
+                      data-sort="0.485">48.5%</td>
+                  <td class="num"
+                      data-sort="0.28">28.0%</td>
+                  <td class="num rss-td-champ"
+                      data-sort="0.096">9.6%</td>
+                <td class="team" data-sort="2">Eliminated in USL Championship</td>
+              </tr>
+              <tr>
+                <td class="team"><span class="rss-team-name">Pittsburgh Riverhounds</span></td>
+                  <td class="num"
+                      data-sort="0.198">19.8%</td>
+                  <td class="num"
+                      data-sort="0.084">8.4%</td>
+                  <td class="num rss-td-champ"
+                      data-sort="0.042">4.2%</td>
+                <td class="team" data-sort="3">Won USL Championship</td>
+              </tr>
+              <tr>
+                <td class="team"><span class="rss-team-name">New Mexico United</span></td>
+                  <td class="num"
+                      data-sort="0.288">28.8%</td>
+                  <td class="num"
+                      data-sort="0.119">11.9%</td>
+                  <td class="num rss-td-champ"
+                      data-sort="0.037">3.7%</td>
+                <td class="team" data-sort="1">Eliminated in Conference Finals</td>
+              </tr>
+              <tr>
+                <td class="team"><span class="rss-team-name">North Carolina FC</span></td>
+                  <td class="num"
+                      data-sort="0.224">22.4%</td>
+                  <td class="num"
+                      data-sort="0.078">7.8%</td>
+                  <td class="num rss-td-champ"
+                      data-sort="0.034">3.4%</td>
+                <td class="team" data-sort="0">Eliminated in Conference Semifinals</td>
+              </tr>
+              <tr>
+                <td class="team"><span class="rss-team-name">Phoenix Rising</span></td>
+                  <td class="num"
+                      data-sort="0.172">17.2%</td>
+                  <td class="num"
+                      data-sort="0.065">6.5%</td>
+                  <td class="num rss-td-champ"
+                      data-sort="0.019">1.9%</td>
+                <td class="team" data-sort="0">Eliminated in Conference Semifinals</td>
+              </tr>
+              <tr>
+                <td class="team"><span class="rss-team-name">Detroit City FC</span></td>
+                  <td class="num"
+                      data-sort="0.052">5.2%</td>
+                  <td class="num"
+                      data-sort="0.024">2.4%</td>
+                  <td class="num rss-td-champ"
+                      data-sort="0.012">1.2%</td>
+                <td class="team" data-sort="0">Eliminated in Conference Semifinals</td>
+              </tr>
+              <tr>
+                <td class="team"><span class="rss-team-name">Orange County SC</span></td>
+                  <td class="num"
+                      data-sort="0.097">9.7%</td>
+                  <td class="num"
+                      data-sort="0.048">4.8%</td>
+                  <td class="num rss-td-champ"
+                      data-sort="0.01">1.0%</td>
+                <td class="team" data-sort="0">Eliminated in Conference Semifinals</td>
+              </tr>
+              <tr>
+                <td class="team"><span class="rss-team-name">Rhode Island FC</span></td>
+                  <td class="num"
+                      data-sort="0.062">6.2%</td>
+                  <td class="num"
+                      data-sort="0.023">2.3%</td>
+                  <td class="num rss-td-champ"
+                      data-sort="0.007">0.7%</td>
+                <td class="team" data-sort="1">Eliminated in Conference Finals</td>
+              </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+    <div class="rss-switcher-block" data-switcher="bracket-section" data-block="conference-semifinals--eastern">
+      <div class="rss-chart-frame"><div>                            <div id="playoff-bracket-matchup-conference-semifinals--eastern" class="plotly-graph-div" style="height:800px; width:800px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("playoff-bracket-matchup-conference-semifinals--eastern")) {                    Plotly.newPlot(                        "playoff-bracket-matchup-conference-semifinals--eastern",                        [{"coloraxis":"coloraxis","name":"0","texttemplate":"%{z:.1%}","x":["Charleston Battery","Detroit City FC","Hartford Athletic","Loudoun United","Louisville City FC","North Carolina FC","Pittsburgh Riverhounds","Rhode Island FC"],"y":["Charleston Battery","Detroit City FC","Hartford Athletic","Loudoun United","Louisville City FC","North Carolina FC","Pittsburgh Riverhounds","Rhode Island FC"],"z":[[null,0.087,0.059,null,null,0.326,0.1,null],[0.035,null,0.002,null,null,0.01,0.005,null],[0.024,0.003,null,0.028,0.044,0.04,null,0.005],[null,null,0.016,null,0.042,null,0.026,0.01],[null,null,0.14,0.175,null,null,0.197,0.142],[0.106,0.015,0.045,null,null,null,0.058,null],[0.034,0.006,null,0.042,0.051,0.055,null,0.01],[null,null,0.005,0.006,0.046,null,0.005,null]],"type":"heatmap","xaxis":"x","yaxis":"y","hovertemplate":"Losing Team: %{x}\u003cbr\u003eWinning Team: %{y}\u003cbr\u003eProbability: %{z}\u003cextra\u003e\u003c\u002fextra\u003e"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Losing Team"},"fixedrange":true,"side":"bottom","automargin":true,"tickangle":-90},"yaxis":{"anchor":"x","domain":[0.0,1.0],"autorange":"reversed","title":{"text":"Winning Team"},"fixedrange":true,"automargin":true},"coloraxis":{"colorbar":{"title":{"text":"Probability"}},"colorscale":[[0.0,"#FFFFFF"],[0.15,"#EEF1F5"],[0.4,"#9FB4C5"],[0.7,"#3E5E7C"],[1.0,"#002744"]],"showscale":false},"margin":{"t":60,"l":20,"r":20,"b":20},"font":{"family":"Inter, sans-serif","size":12,"color":"#1C1C1C"},"title":{"font":{"size":15,"color":"#1C1C1C"},"text":"Conference Semifinals — Eastern — Matchup Probabilities","x":0.5,"xanchor":"center"},"dragmode":false,"hovermode":"closest","width":800,"height":800,"autosize":false,"paper_bgcolor":"white","plot_bgcolor":"white"},                        {"displayModeBar": false, "responsive": false}                    )                };            </script>        </div></div>
+    </div>
+    <div class="rss-switcher-block" data-switcher="bracket-section" data-block="conference-semifinals--western">
+      <div class="rss-chart-frame"><div>                            <div id="playoff-bracket-matchup-conference-semifinals--western" class="plotly-graph-div" style="height:800px; width:800px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("playoff-bracket-matchup-conference-semifinals--western")) {                    Plotly.newPlot(                        "playoff-bracket-matchup-conference-semifinals--western",                        [{"coloraxis":"coloraxis","name":"0","texttemplate":"%{z:.1%}","x":["Colorado Springs Switchbacks","El Paso Locomotive","FC Tulsa","New Mexico United","Orange County SC","Phoenix Rising","Sacramento Republic","San Antonio FC"],"y":["Colorado Springs Switchbacks","El Paso Locomotive","FC Tulsa","New Mexico United","Orange County SC","Phoenix Rising","Sacramento Republic","San Antonio FC"],"z":[[null,0.009,null,0.024,null,0.008,0.063,null],[0.008,null,0.049,0.052,0.018,null,0.027,0.047],[null,0.127,null,null,0.127,0.11,null,0.121],[0.031,0.079,null,null,null,0.076,0.102,null],[null,0.014,0.06,null,null,0.01,null,0.013],[0.007,null,0.04,0.048,0.013,null,0.024,0.04],[0.159,0.056,null,0.224,null,0.071,null,null],[null,0.042,0.057,null,0.019,0.025,null,null]],"type":"heatmap","xaxis":"x","yaxis":"y","hovertemplate":"Losing Team: %{x}\u003cbr\u003eWinning Team: %{y}\u003cbr\u003eProbability: %{z}\u003cextra\u003e\u003c\u002fextra\u003e"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Losing Team"},"fixedrange":true,"side":"bottom","automargin":true,"tickangle":-90},"yaxis":{"anchor":"x","domain":[0.0,1.0],"autorange":"reversed","title":{"text":"Winning Team"},"fixedrange":true,"automargin":true},"coloraxis":{"colorbar":{"title":{"text":"Probability"}},"colorscale":[[0.0,"#FFFFFF"],[0.15,"#EEF1F5"],[0.4,"#9FB4C5"],[0.7,"#3E5E7C"],[1.0,"#002744"]],"showscale":false},"margin":{"t":60,"l":20,"r":20,"b":20},"font":{"family":"Inter, sans-serif","size":12,"color":"#1C1C1C"},"title":{"font":{"size":15,"color":"#1C1C1C"},"text":"Conference Semifinals — Western — Matchup Probabilities","x":0.5,"xanchor":"center"},"dragmode":false,"hovermode":"closest","width":800,"height":800,"autosize":false,"paper_bgcolor":"white","plot_bgcolor":"white"},                        {"displayModeBar": false, "responsive": false}                    )                };            </script>        </div></div>
+    </div>
+    <div class="rss-switcher-block" data-switcher="bracket-section" data-block="conference-finals--eastern">
+      <div class="rss-chart-frame"><div>                            <div id="playoff-bracket-matchup-conference-finals--eastern" class="plotly-graph-div" style="height:800px; width:800px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("playoff-bracket-matchup-conference-finals--eastern")) {                    Plotly.newPlot(                        "playoff-bracket-matchup-conference-finals--eastern",                        [{"coloraxis":"coloraxis","name":"0","texttemplate":"%{z:.1%}","x":["Charleston Battery","Detroit City FC","Hartford Athletic","Loudoun United","Louisville City FC","North Carolina FC","Pittsburgh Riverhounds","Rhode Island FC"],"y":["Charleston Battery","Detroit City FC","Hartford Athletic","Loudoun United","Louisville City FC","North Carolina FC","Pittsburgh Riverhounds","Rhode Island FC"],"z":[[null,null,0.042,0.033,0.129,0.021,0.037,null],[null,null,0.004,0.007,null,0.002,0.008,0.003],[0.014,0.004,null,0.003,0.017,0.006,null,0.007],[0.011,0.003,0.003,null,0.004,null,0.001,0.003],[0.252,null,0.038,0.015,null,0.098,0.05,null],[0.01,0.007,0.005,null,0.029,null,0.011,0.016],[0.023,0.01,null,0.008,0.022,0.011,null,0.01],[null,0.004,0.001,0.003,null,0.008,0.007,null]],"type":"heatmap","xaxis":"x","yaxis":"y","hovertemplate":"Losing Team: %{x}\u003cbr\u003eWinning Team: %{y}\u003cbr\u003eProbability: %{z}\u003cextra\u003e\u003c\u002fextra\u003e"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Losing Team"},"fixedrange":true,"side":"bottom","automargin":true,"tickangle":-90},"yaxis":{"anchor":"x","domain":[0.0,1.0],"autorange":"reversed","title":{"text":"Winning Team"},"fixedrange":true,"automargin":true},"coloraxis":{"colorbar":{"title":{"text":"Probability"}},"colorscale":[[0.0,"#FFFFFF"],[0.15,"#EEF1F5"],[0.4,"#9FB4C5"],[0.7,"#3E5E7C"],[1.0,"#002744"]],"showscale":false},"margin":{"t":60,"l":20,"r":20,"b":20},"font":{"family":"Inter, sans-serif","size":12,"color":"#1C1C1C"},"title":{"font":{"size":15,"color":"#1C1C1C"},"text":"Conference Finals — Eastern — Matchup Probabilities","x":0.5,"xanchor":"center"},"dragmode":false,"hovermode":"closest","width":800,"height":800,"autosize":false,"paper_bgcolor":"white","plot_bgcolor":"white"},                        {"displayModeBar": false, "responsive": false}                    )                };            </script>        </div></div>
+    </div>
+    <div class="rss-switcher-block" data-switcher="bracket-section" data-block="conference-finals--western">
+      <div class="rss-chart-frame"><div>                            <div id="playoff-bracket-matchup-conference-finals--western" class="plotly-graph-div" style="height:800px; width:800px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("playoff-bracket-matchup-conference-finals--western")) {                    Plotly.newPlot(                        "playoff-bracket-matchup-conference-finals--western",                        [{"coloraxis":"coloraxis","name":"0","texttemplate":"%{z:.1%}","x":["Colorado Springs Switchbacks","El Paso Locomotive","FC Tulsa","New Mexico United","Orange County SC","Phoenix Rising","Sacramento Republic","San Antonio FC"],"y":["Colorado Springs Switchbacks","El Paso Locomotive","FC Tulsa","New Mexico United","Orange County SC","Phoenix Rising","Sacramento Republic","San Antonio FC"],"z":[[null,0.014,null,0.009,0.005,0.01,null,0.011],[0.012,null,0.017,0.012,0.008,null,0.02,0.004],[null,0.037,null,0.076,null,0.026,0.127,0.014],[0.008,0.012,0.048,null,0.02,0.014,0.017,null],[0.011,0.008,null,0.018,null,0.005,null,0.006],[0.012,null,0.019,0.008,0.01,null,0.008,0.008],[null,0.053,0.117,0.046,null,0.05,null,0.044],[0.012,0.004,0.004,null,0.006,0.002,0.028,null]],"type":"heatmap","xaxis":"x","yaxis":"y","hovertemplate":"Losing Team: %{x}\u003cbr\u003eWinning Team: %{y}\u003cbr\u003eProbability: %{z}\u003cextra\u003e\u003c\u002fextra\u003e"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Losing Team"},"fixedrange":true,"side":"bottom","automargin":true,"tickangle":-90},"yaxis":{"anchor":"x","domain":[0.0,1.0],"autorange":"reversed","title":{"text":"Winning Team"},"fixedrange":true,"automargin":true},"coloraxis":{"colorbar":{"title":{"text":"Probability"}},"colorscale":[[0.0,"#FFFFFF"],[0.15,"#EEF1F5"],[0.4,"#9FB4C5"],[0.7,"#3E5E7C"],[1.0,"#002744"]],"showscale":false},"margin":{"t":60,"l":20,"r":20,"b":20},"font":{"family":"Inter, sans-serif","size":12,"color":"#1C1C1C"},"title":{"font":{"size":15,"color":"#1C1C1C"},"text":"Conference Finals — Western — Matchup Probabilities","x":0.5,"xanchor":"center"},"dragmode":false,"hovermode":"closest","width":800,"height":800,"autosize":false,"paper_bgcolor":"white","plot_bgcolor":"white"},                        {"displayModeBar": false, "responsive": false}                    )                };            </script>        </div></div>
+    </div>
+    <div class="rss-switcher-block" data-switcher="bracket-section" data-block="usl-championship">
+      <div class="rss-chart-frame"><div>                            <div id="playoff-bracket-matchup-usl-championship" class="plotly-graph-div" style="height:808px; width:1100px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("playoff-bracket-matchup-usl-championship")) {                    Plotly.newPlot(                        "playoff-bracket-matchup-usl-championship",                        [{"coloraxis":"coloraxis","name":"0","texttemplate":"%{z:.1%}","x":["Charleston Battery","Colorado Springs Switchbacks","Detroit City FC","El Paso Locomotive","FC Tulsa","Hartford Athletic","Loudoun United","Louisville City FC","New Mexico United","North Carolina FC","Orange County SC","Phoenix Rising","Pittsburgh Riverhounds","Rhode Island FC","Sacramento Republic","San Antonio FC"],"y":["Charleston Battery","Colorado Springs Switchbacks","Detroit City FC","El Paso Locomotive","FC Tulsa","Hartford Athletic","Loudoun United","Louisville City FC","New Mexico United","North Carolina FC","Orange County SC","Phoenix Rising","Pittsburgh Riverhounds","Rhode Island FC","Sacramento Republic","San Antonio FC"],"z":[[null,0.007,null,0.022,0.054,null,null,null,0.023,null,0.007,0.016,null,null,0.055,0.012],[0.005,null,0.001,null,null,0.002,null,0.004,null,0.004,null,null,0.001,0.001,null,null],[null,0.001,null,0.003,0.003,null,null,null,0.001,null,0.001,0.002,null,null,0.001,null],[0.004,null,null,null,null,0.002,0.001,0.003,null,0.002,null,null,0.001,0.001,null,null],[0.022,null,0.002,null,null,0.007,0.007,0.029,null,0.009,null,null,0.015,0.005,null,null],[null,0.002,null,0.004,0.006,null,null,null,0.002,null,0.001,0.003,null,null,0.006,0.002],[null,null,null,null,0.004,null,null,null,null,null,null,null,null,null,0.001,0.001],[null,0.018,null,0.021,0.097,null,null,null,0.045,null,0.022,0.024,null,null,0.099,0.019],[0.008,null,0.001,null,null,0.002,0.003,0.01,null,0.009,null,null,0.004,null,null,null],[null,0.003,null,0.002,0.006,null,null,null,0.009,null,0.002,0.001,null,null,0.007,0.004],[0.002,null,0.001,null,null,null,0.001,0.004,null,0.001,null,null,0.001,null,null,null],[0.002,null,0.001,null,null,0.001,null,0.006,null,0.005,null,null,0.002,0.002,null,null],[null,null,null,0.007,0.011,null,null,null,0.002,null,0.005,null,null,null,0.014,0.003],[null,null,null,null,0.003,null,null,null,null,null,null,null,null,null,0.004,null],[0.019,null,0.005,null,null,0.01,0.006,0.047,null,0.014,null,null,0.016,0.006,null,null],[0.004,null,0.001,null,null,0.001,0.001,0.005,null,null,null,null,0.002,0.001,null,null]],"type":"heatmap","xaxis":"x","yaxis":"y","hovertemplate":"Losing Team: %{x}\u003cbr\u003eWinning Team: %{y}\u003cbr\u003eProbability: %{z}\u003cextra\u003e\u003c\u002fextra\u003e"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Losing Team"},"fixedrange":true,"side":"bottom","automargin":true,"tickangle":-90},"yaxis":{"anchor":"x","domain":[0.0,1.0],"autorange":"reversed","title":{"text":"Winning Team"},"fixedrange":true,"automargin":true},"coloraxis":{"colorbar":{"title":{"text":"Probability"}},"colorscale":[[0.0,"#FFFFFF"],[0.15,"#EEF1F5"],[0.4,"#9FB4C5"],[0.7,"#3E5E7C"],[1.0,"#002744"]],"showscale":false},"margin":{"t":60,"l":20,"r":20,"b":20},"font":{"family":"Inter, sans-serif","size":12,"color":"#1C1C1C"},"title":{"font":{"size":15,"color":"#1C1C1C"},"text":"USL Championship — Matchup Probabilities","x":0.5,"xanchor":"center"},"dragmode":false,"hovermode":"closest","width":1100,"height":808,"autosize":false,"paper_bgcolor":"white","plot_bgcolor":"white"},                        {"displayModeBar": false, "responsive": false}                    )                };            </script>        </div></div>
+    </div>
+</section>
 
 
+<section class="rss-section">
+  <h2 class="rss-section-title">Most-Likely Championship Paths</h2>
+  <p class="rss-section-subtitle">
+    For each playoff team, the opponent they most often faced and defeated at each round
+    across all bracket simulations. Each step shows two numbers: <strong>Matchup %</strong>
+    is the fraction of this team's wins in this round that came against this opponent;
+    <strong>Win %</strong> is the head-to-head probability they beat this opponent when the
+    two meet. Note: fixed early-round matchups against bracket-determined opponents will
+    show 100% Matchup — that's because those pairings are decided by the bracket.
+  </p>
+
+  <div class="rss-switcher-bar rss-switcher-bar-wrap" data-switcher="paths">
+      <button type="button"
+              class="rss-switcher-btn active"
+              data-target="louisville-city-fc">Louisville City FC</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="charleston-battery">Charleston Battery</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="sacramento-republic">Sacramento Republic</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="fc-tulsa">FC Tulsa</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="pittsburgh-riverhounds">Pittsburgh Riverhounds</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="new-mexico-united">New Mexico United</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="north-carolina-fc">North Carolina FC</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="hartford-athletic">Hartford Athletic</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="phoenix-rising">Phoenix Rising</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="colorado-springs-switchbacks">Colorado Springs Switchbacks</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="san-antonio-fc">San Antonio FC</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="el-paso-locomotive">El Paso Locomotive</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="detroit-city-fc">Detroit City FC</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="orange-county-sc">Orange County SC</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="rhode-island-fc">Rhode Island FC</button>
+      <button type="button"
+              class="rss-switcher-btn"
+              data-target="loudoun-united">Loudoun United</button>
+  </div>
+
+    <div class="rss-switcher-block active"
+         data-switcher="paths"
+         data-block="louisville-city-fc">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Louisville City FC</span>
+          <span class="rss-playoff-path-pct">34.5% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Semifinals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Pittsburgh Riverhounds</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">30.1%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">79.4%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Finals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Charleston Battery</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">55.6%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">66.1%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">USL Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Sacramento Republic</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">28.7%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">67.8%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="charleston-battery">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Charleston Battery</span>
+          <span class="rss-playoff-path-pct">19.6% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Semifinals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>North Carolina FC</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">57.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">75.5%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Finals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Louisville City FC</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">49.2%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">33.9%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">USL Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Sacramento Republic</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">28.1%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">74.3%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="sacramento-republic">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Sacramento Republic</span>
+          <span class="rss-playoff-path-pct">12.3% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Semifinals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>New Mexico United</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">43.9%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">68.7%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Finals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>FC Tulsa</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">37.7%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">48.0%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">USL Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Louisville City FC</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">38.2%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">32.2%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="fc-tulsa">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">FC Tulsa</span>
+          <span class="rss-playoff-path-pct">9.6% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Semifinals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>El Paso Locomotive</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">26.2%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">72.2%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Finals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Sacramento Republic</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">45.4%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">52.0%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">USL Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Louisville City FC</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">30.2%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">23.0%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="pittsburgh-riverhounds">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Pittsburgh Riverhounds</span>
+          <span class="rss-playoff-path-pct">4.2% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Semifinals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>North Carolina FC</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">27.8%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">48.7%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Finals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Charleston Battery</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">27.4%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">38.3%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">USL Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Sacramento Republic</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">33.3%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">46.7%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="new-mexico-united">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">New Mexico United</span>
+          <span class="rss-playoff-path-pct">3.7% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Semifinals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Sacramento Republic</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">35.4%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">31.3%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Finals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>FC Tulsa</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">40.3%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">38.7%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">USL Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Louisville City FC</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">27.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">18.2%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="north-carolina-fc">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">North Carolina FC</span>
+          <span class="rss-playoff-path-pct">3.4% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Semifinals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Charleston Battery</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">47.3%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">24.5%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Finals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Louisville City FC</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">37.2%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">22.8%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">USL Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>New Mexico United</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">26.5%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">50.0%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="hartford-athletic">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Hartford Athletic</span>
+          <span class="rss-playoff-path-pct">2.6% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Semifinals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Louisville City FC</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">30.6%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">23.9%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Finals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Louisville City FC</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">33.3%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">30.9%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">USL Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>FC Tulsa</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">23.1%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">46.2%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="phoenix-rising">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Phoenix Rising</span>
+          <span class="rss-playoff-path-pct">1.9% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Semifinals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>New Mexico United</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">27.9%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">38.7%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Finals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>FC Tulsa</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">29.2%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">42.2%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">USL Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Louisville City FC</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">31.6%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">20.0%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="colorado-springs-switchbacks">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Colorado Springs Switchbacks</span>
+          <span class="rss-playoff-path-pct">1.8% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Semifinals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Sacramento Republic</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">60.6%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">28.4%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Finals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>El Paso Locomotive</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">28.6%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">53.8%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">USL Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Charleston Battery</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">27.8%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">41.7%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="san-antonio-fc">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">San Antonio FC</span>
+          <span class="rss-playoff-path-pct">1.5% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Semifinals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>FC Tulsa</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">39.9%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">32.0%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Finals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Sacramento Republic</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">50.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">38.9%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">USL Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Louisville City FC</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">33.3%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">20.8%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="el-paso-locomotive">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">El Paso Locomotive</span>
+          <span class="rss-playoff-path-pct">1.4% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Semifinals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>New Mexico United</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">25.9%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">39.7%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Finals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Sacramento Republic</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">27.4%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">27.4%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">USL Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Charleston Battery</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">28.6%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">15.4%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="detroit-city-fc">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Detroit City FC</span>
+          <span class="rss-playoff-path-pct">1.2% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Semifinals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Charleston Battery</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">67.3%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">28.7%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Finals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Pittsburgh Riverhounds</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">33.3%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">44.4%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">USL Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>El Paso Locomotive</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">25.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">100.0%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="orange-county-sc">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Orange County SC</span>
+          <span class="rss-playoff-path-pct">1.0% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Semifinals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>FC Tulsa</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">61.9%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">32.1%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Finals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>New Mexico United</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">37.5%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">47.4%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">USL Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Louisville City FC</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">40.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">15.4%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="rhode-island-fc">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Rhode Island FC</span>
+          <span class="rss-playoff-path-pct">0.7% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Semifinals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Louisville City FC</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">74.2%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">24.5%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Finals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>North Carolina FC</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">34.8%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">33.3%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">USL Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Sacramento Republic</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">57.1%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">40.0%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="rss-switcher-block"
+         data-switcher="paths"
+         data-block="loudoun-united">
+      <div class="rss-playoff-path-card">
+        <div class="rss-playoff-path-header">
+          <span class="rss-team-name">Loudoun United</span>
+          <span class="rss-playoff-path-pct">0.6% chance to win</span>
+        </div>
+        <div class="rss-playoff-path-steps">
+            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Semifinals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Louisville City FC</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">44.7%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">19.4%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">Conference Finals</div>
+              <div class="rss-playoff-path-opp">vs. <strong>Charleston Battery</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">44.0%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">25.0%</div>
+                </div>
+              </div>
+            </div>
+<div class="rss-playoff-path-arrow">→</div>            <div class="rss-playoff-path-step">
+              <div class="rss-playoff-path-round">USL Championship</div>
+              <div class="rss-playoff-path-opp">vs. <strong>FC Tulsa</strong></div>
+              <div class="rss-playoff-path-stats">
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Matchup</div>
+                  <div class="rss-playoff-path-stat-value">66.7%</div>
+                </div>
+                <div class="rss-playoff-path-stat">
+                  <div class="rss-playoff-path-stat-label">Win Prob</div>
+                  <div class="rss-playoff-path-stat-value">36.4%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</section>
         </div>
 
         <div class="rss-tab-pane" data-tab="season-trends">
