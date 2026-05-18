@@ -2633,6 +2633,12 @@ h3 { font-size: 24px; }
 .rss-gamelog-table tbody td.rss-result-l { color: #A4161A; font-weight: 500; }
 .rss-gamelog-table tbody td.rss-result-t { color: #555;    font-weight: 500; }
 
+/* Elo Δ accent in the Biggest Elo Changes table. The values shown there are
+   always the magnitude of the swing from the winning team's perspective — so
+   they read as "the model learned this much from this game" and a single
+   positive accent color is the right semantic. Same green as a W result. */
+.rss-gamelog-table tbody td.rss-elo-change { color: #006633; font-weight: 500; }
+
 /* H2H section now has TWO matrices per division (within + outside).
    This subtitle separates them with a clear label. */
 .rss-h2h-subtitle {
