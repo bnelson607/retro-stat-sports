@@ -2761,10 +2761,15 @@ h3 { font-size: 24px; }
 
 /* Overview tab — Playoff Probability split layout (live seasons only).
    Left column holds the Top 10 table; right column stacks gainers and losers.
-   Uses CSS Grid with strict 1fr 1fr columns to match the Most Unlikely Streaks
+   Uses CSS Grid with strict 1fr 1fr columns to match the Recent Elo Movers
    layout below — flexbox lets content width drag column widths, which is what
    was causing the right column to overlap the left. min-width:0 lets grid items
-   shrink past their content's intrinsic width if needed. */
+   shrink past their content's intrinsic width if needed.
+   Note: no `width: 100%` rule on the nested .rss-leaderboard cards on purpose.
+   Without a global `box-sizing: border-box` reset, width:100% + padding would
+   make each card 40px wider than its grid cell (content-box semantics), which
+   produces visible overlap. Grid + flex handle widths correctly with the
+   default width:auto. */
 .rss-overview-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2781,12 +2786,6 @@ h3 { font-size: 24px; }
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-/* Make sure the leaderboard tables nest correctly inside the split columns */
-.rss-overview-split .rss-leaderboard {
-  width: 100%;
-  margin: 0;
 }
 
 @media (max-width: 900px) {
