@@ -3369,11 +3369,16 @@ Other Divisions          </h3>
         var pad = Math.max(span * 0.05, 1);
         var axisRange = [Math.max(0, lo - pad), hi + pad];
 
-        // Simple diameter-based scaling: bigger counts get bigger bubbles,
-        // sqrt(count) compresses the long tail (a 100-game pair shouldn't be 100x bigger than a 1-game pair).
-        // Clamped to [5, 28] px so smallest bubbles are still visible and largest don't overwhelm.
+        // Normalize by the max count IN THE CURRENT VIEW (league-wide vs.
+        // single team) so the biggest pair is always rendered at the cap
+        // and the rest scale relative to it. Otherwise, switching to a team
+        // view shrinks every bubble because absolute counts drop from
+        // ~hundreds of games down to ~tens — and the visual differentiation
+        // between rare and common scores within that team disappears.
+        // sqrt() compresses the long tail so a 10%-as-frequent pair isn't
+        // a tiny dot next to the maximum. Floor at 5px and cap at 28px.
         var sizes = cs.map(function (c) {
-          return Math.max(5, Math.min(28, 4 + Math.sqrt(c) * 2.2));
+          return Math.max(5, Math.min(28, 4 + Math.sqrt(c / maxC) * 24));
         });
 
         var trace = {
