@@ -2755,6 +2755,16 @@ h3 { font-size: 24px; }
    positive accent color is the right semantic. Same green as a W result. */
 .rss-gamelog-table tbody td.rss-elo-change { color: #006633; font-weight: 500; }
 
+/* Asterisk marker for playoff games in the Biggest Upsets and Biggest Elo
+   Changes tables. Subtle goldenrod color and bold weight pulls the eye without
+   shouting. Inline span so it sits right after the date inside the same cell. */
+.rss-playoff-marker {
+  color: #B8860B;
+  font-weight: 700;
+  margin-left: 2px;
+  cursor: help;
+}
+
 /* H2H section now has TWO matrices per division (within + outside).
    This subtitle separates them with a clear label. */
 .rss-h2h-subtitle {
