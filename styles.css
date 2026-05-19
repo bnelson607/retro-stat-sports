@@ -1242,6 +1242,11 @@ h3 { font-size: 24px; }
 
 .rss-standings-block.active {
   display: block;
+  /* Mobile: the standings table has a 180px-min team column plus 9-11 other
+     columns, which exceeds typical phone viewport widths. Allow horizontal
+     scroll on the wrapper rather than clipping or compressing the table. */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Standings table */
@@ -1568,6 +1573,13 @@ h3 { font-size: 24px; }
   border-radius: 8px;
   padding: 18px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  /* Mobile: wide leaderboard tables — especially the playoff Stochastic
+     Outcomes and Bracket Simulation tables with many per-round columns —
+     overflow phone viewports. Scroll horizontally instead of clipping.
+     No-op on narrow leaderboards (Top Playoff Probs, Recent Elo Movers)
+     since their 3-4 columns fit easily. */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .rss-leaderboard-title {
@@ -2224,7 +2236,12 @@ h3 { font-size: 24px; }
   background: white;
   border-radius: 8px;
   padding: 16px 0;            /* vertical padding only — keeps 1160-wide charts within container */
-  overflow: hidden;           /* clip chart corners to rounded card edges */
+  /* Mobile: when the chart is wider than the screen, let the frame scroll
+     horizontally rather than clipping the chart. overflow-y stays hidden so
+     the rounded corners still clip the chart top/bottom cleanly. */
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
   text-align: center;
 }
