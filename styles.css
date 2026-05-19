@@ -2873,3 +2873,89 @@ h3 { font-size: 24px; }
   color: #A4161A;
   text-decoration: underline;
 }
+
+
+/* ============================================================
+   Mobile sticky first columns
+
+   When the wrappers above scroll horizontally (< 700px viewports —
+   phones and narrow tablets), pin the team column (and rank column
+   where it exists) to the left edge so users keep their orientation
+   while scrolling through other columns. Without this, scrolling
+   right would push team names off-screen, leaving disconnected
+   numbers floating in the viewport.
+
+   Three table types are handled:
+     1. .rss-standings-table  — [#] [Team] [W] [L] ... [vsSim]
+                                rank @ 0, team @ 36px
+     2. .rss-leaderboard-table with rank+team
+        (Overview's Top Playoff Probs, Recent Movers)
+                                rank @ 0, team @ 28px
+     3. .rss-leaderboard-table with team-first (no rank)
+        (Playoffs tab's Stochastic + Bracket Sim tables)
+                                team @ 0
+
+   Implementation notes:
+     • Selectors keyed off existing class names (.rank / .team) plus
+       :nth-child guards so the team class only sticks when it's in
+       position 2 (avoids accidentally sticking the "Actual Outcome"
+       column on the bracket-sim table, which also uses class="team").
+     • Sticky cells need an explicit background to mask cells scrolling
+       behind them. Standings header uses #002744 (navy); body and the
+       leaderboard tables use white.
+     • z-index ordering: rank > team so the rank column overlays team
+       cleanly during scroll (matters when they're both pinned). 4 vs 3
+       so they stack above the (non-sticky) header row's z-index when
+       Plotly or other content gets stacking contexts above us.
+============================================================ */
+@media (max-width: 700px) {
+  /* ----- Standings table: pin rank + team ----- */
+  .rss-standings-table thead th.rank,
+  .rss-standings-table tbody td.rank {
+    position: sticky;
+    left: 0;
+    z-index: 4;
+  }
+  .rss-standings-table thead th.rank {
+    background: #002744;  /* match navy header */
+  }
+  .rss-standings-table tbody td.rank {
+    background: white;
+  }
+
+  .rss-standings-table thead th.team,
+  .rss-standings-table tbody td.team {
+    position: sticky;
+    left: 36px;           /* match the rank column width */
+    z-index: 3;
+  }
+  .rss-standings-table thead th.team {
+    background: #002744;
+  }
+  .rss-standings-table tbody td.team {
+    background: white;
+  }
+
+  /* ----- Leaderboard tables: pin whatever is in column 1 (either rank
+     or team, depending on table structure) ----- */
+  .rss-leaderboard-table thead th:first-child,
+  .rss-leaderboard-table tbody td:first-child {
+    position: sticky;
+    left: 0;
+    background: white;    /* leaderboard headers have no fill — white works for both */
+    z-index: 4;
+  }
+
+  /* ----- When the team column is at position 2 (Overview leaderboards
+     that have rank in column 1), also pin it at 28px so users see
+     both rank and team while scrolling. The :nth-child(2) guard prevents
+     this from accidentally sticking the "Actual Outcome" column on the
+     bracket-sim table (which uses class="team" but lives at the far right). */
+  .rss-leaderboard-table thead th.team:nth-child(2),
+  .rss-leaderboard-table tbody td.team:nth-child(2) {
+    position: sticky;
+    left: 28px;
+    background: white;
+    z-index: 3;
+  }
+}
