@@ -559,13 +559,13 @@ h3 { font-size: 24px; }
 
 .rss-live-meta {
   font-family: 'Inter Tight', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   color: #555;
 }
 
 .rss-live-eyebrow {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: 1.5px;
   color: #555;
   text-transform: uppercase;
@@ -574,7 +574,7 @@ h3 { font-size: 24px; }
 
 .rss-live-title {
   font-family: 'Barlow Semi Condensed', sans-serif;
-  font-size: 22px;
+  font-size: 24px;
   color: #1C1C1C;
   letter-spacing: 0.5px;
   margin: 0 0 10px;
@@ -714,7 +714,7 @@ h3 { font-size: 24px; }
 
 .rss-section-subtitle {
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: #555;
   margin: 0 0 20px;
 }
@@ -743,7 +743,7 @@ h3 { font-size: 24px; }
 
 .rss-story-tag {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 1.2px;
   color: #555;
   text-transform: uppercase;
@@ -752,7 +752,7 @@ h3 { font-size: 24px; }
 
 .rss-story-headline {
   font-family: 'Barlow Semi Condensed', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   color: #1C1C1C;
   margin: 0 0 8px;
   letter-spacing: 0.5px;
@@ -761,7 +761,7 @@ h3 { font-size: 24px; }
 
 .rss-story-detail {
   font-family: 'Inter', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   color: #555;
   margin: 0;
   line-height: 1.5;
@@ -825,15 +825,6 @@ h3 { font-size: 24px; }
   display: block;
 }
 
-.rss-era-section-label {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 14px;
-  letter-spacing: 2px;
-  color: #555;
-  text-transform: uppercase;
-  margin: 0 0 12px;
-}
-
 .rss-empty-decade {
   font-family: 'Inter', sans-serif;
   font-size: 14px;
@@ -851,27 +842,14 @@ h3 { font-size: 24px; }
    Wider tiles allow more substantial blurbs (1-2 sentences). */
 .rss-season-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 14px;
 }
 
-/* 4-4-2 layout: when a decade has exactly 10 seasons, tile 9 skips column 1
-   and starts in column 2 so the last two tiles sit centered under columns
-   2-3. The 10th tile naturally flows into column 3.
-
-   4-2 layout: when a decade has exactly 6 seasons (current 2020s before the
-   decade fills out), tile 5 starts in column 2 and tile 6 naturally lands
-   in column 3 — same diamond symmetry as the 10-tile case.
-
-   The :has() selector scopes each rule to grids with the matching child
-   count, so partial decades with other counts (1, 2, 3, 5, 7, 8, 9, 11+)
-   flow naturally left-to-right without centering. */
-.rss-season-grid:has(.rss-season-card:nth-child(10):last-child) > .rss-season-card:nth-child(9) {
-  grid-column: 2;
-}
-.rss-season-grid:has(.rss-season-card:nth-child(6):last-child) > .rss-season-card:nth-child(5) {
-  grid-column: 2;
-}
+/* No centering rules — tiles flow left-to-right and partial last rows
+   are naturally left-justified. With 5 columns, most decades will have
+   the standard 10 seasons (2 clean rows of 5), and the rare 9 or 11
+   season decades just have one extra/missing tile on the last row. */
 
 .rss-season-card {
   display: flex;
@@ -922,9 +900,10 @@ h3 { font-size: 24px; }
 }
 
 .rss-season-champ {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Barlow Semi Condensed', sans-serif;
   font-size: 20px;
   font-weight: 500;
+  letter-spacing: 0.3px;
   color: #1C1C1C;
   margin: 0;
   line-height: 1.2;
@@ -995,7 +974,7 @@ h3 { font-size: 24px; }
 
 .rss-browse-title {
   font-family: 'Barlow Semi Condensed', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   color: #1C1C1C;
   letter-spacing: 0.5px;
   margin: 0 0 2px;
@@ -1003,7 +982,7 @@ h3 { font-size: 24px; }
 
 .rss-browse-subtitle {
   font-family: 'Inter', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   color: #555;
   margin: 0;
 }
@@ -1926,34 +1905,19 @@ h3 { font-size: 24px; }
 }
 
 /* Season tiles collapse to 1 column on narrower screens (phones, narrow tablets) */
-/* Season grid responsive progression — 4 columns at full desktop,
-   2 columns at tablet/narrow desktop widths, 1 column on phones.
-   The 4-tile-and-6-tile centering rules above only make sense in 4-column
-   mode, so they get reset in the 2-column and 1-column ranges so the
-   forced `grid-column: 2` doesn't extend the implicit grid. */
-@media (max-width: 900px) {
+/* Season grid responsive progression — 5 columns at full desktop,
+   2 columns at tablet, 1 column on phones. Tile font sizes stay
+   identical at every breakpoint so the design reads consistently
+   regardless of viewport. */
+@media (max-width: 1000px) {
   .rss-season-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  /* Reset the centering rules — natural flow works for 2 columns */
-  .rss-season-grid > .rss-season-card:nth-child(5),
-  .rss-season-grid > .rss-season-card:nth-child(9) {
-    grid-column: auto;
-  }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .rss-season-grid {
     grid-template-columns: 1fr;
-  }
-
-  .rss-season-card {
-    padding: 16px 18px;
-  }
-
-  .rss-season-year {
-    font-size: 26px;
   }
 }
 
