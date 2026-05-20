@@ -944,8 +944,7 @@ h3 { font-size: 24px; }
 
 .rss-season-titlenum {
   font-size: 12px;
-  font-weight: 500;
-  color: #1C1C1C;
+  color: #555;
   margin: 0;
 }
 
@@ -968,14 +967,11 @@ h3 { font-size: 24px; }
 .rss-franchise-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  aspect-ratio: 2 / 1;            /* half-height vs square season cards */
+  aspect-ratio: 2.3 / 1;          /* shorter than 2/1 — content drives below */
   box-sizing: border-box;
   background-color: white;
   border-radius: 12px;
-  padding: 10px 14px;
-  text-align: center;
+  padding: 12px 14px;
   text-decoration: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
   transition: transform 0.1s ease, box-shadow 0.15s ease;
@@ -988,13 +984,12 @@ h3 { font-size: 24px; }
 }
 
 .rss-franchise-name {
-  font-family: 'Barlow Semi Condensed', sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 0.3px;
-  color: #1C1C1C;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: #002744;
+  line-height: 1;
   margin: 0;
-  line-height: 1.2;
 }
 
 .rss-franchise-years {
@@ -1004,6 +999,22 @@ h3 { font-size: 24px; }
   color: #555;
   margin: 4px 0 0;
   line-height: 1.3;
+}
+
+.rss-franchise-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: auto;               /* pushes footer to bottom of tile */
+}
+
+.rss-franchise-record,
+.rss-franchise-titles {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
 }
 
 .rss-franchise-section-label {
