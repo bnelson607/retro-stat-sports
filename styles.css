@@ -851,15 +851,37 @@ h3 { font-size: 24px; }
    Wider tiles allow more substantial blurbs (1-2 sentences). */
 .rss-season-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 14px;
 }
 
+/* 4-4-2 layout: when a decade has exactly 10 seasons, tile 9 skips column 1
+   and starts in column 2 so the last two tiles sit centered under columns
+   2-3. The 10th tile naturally flows into column 3.
+
+   4-2 layout: when a decade has exactly 6 seasons (current 2020s before the
+   decade fills out), tile 5 starts in column 2 and tile 6 naturally lands
+   in column 3 — same diamond symmetry as the 10-tile case.
+
+   The :has() selector scopes each rule to grids with the matching child
+   count, so partial decades with other counts (1, 2, 3, 5, 7, 8, 9, 11+)
+   flow naturally left-to-right without centering. */
+.rss-season-grid:has(.rss-season-card:nth-child(10):last-child) > .rss-season-card:nth-child(9) {
+  grid-column: 2;
+}
+.rss-season-grid:has(.rss-season-card:nth-child(6):last-child) > .rss-season-card:nth-child(5) {
+  grid-column: 2;
+}
+
 .rss-season-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  aspect-ratio: 1;                /* square tiles */
+  box-sizing: border-box;
   background-color: white;
-  border-radius: 8px;
-  padding: 18px 22px;
+  border-radius: 12px;
+  padding: 18px;
   text-decoration: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
   transition: transform 0.1s ease, box-shadow 0.15s ease;
@@ -874,40 +896,84 @@ h3 { font-size: 24px; }
 .rss-season-card-header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  margin: 0 0 8px;
+  align-items: flex-start;
+  margin: 0;
 }
 
 .rss-season-year {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 30px;
-  letter-spacing: 1px;
+  font-size: 28px;
+  letter-spacing: 1.5px;
   color: #002744;
   line-height: 1;
 }
 
 .rss-season-status {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 11px;
-  letter-spacing: 1.5px;
+  font-size: 10px;
+  letter-spacing: 1px;
   color: #555;
   text-transform: uppercase;
+  margin-top: 8px;            /* sits at year's baseline visually */
+}
+
+.rss-season-card-body {
+  text-align: center;
 }
 
 .rss-season-champ {
   font-family: 'Inter', sans-serif;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 500;
   color: #1C1C1C;
-  margin: 0 0 6px;
+  margin: 0;
+  line-height: 1.2;
 }
 
-.rss-season-blurb {
+.rss-season-matchup {
   font-family: 'Inter', sans-serif;
-  font-size: 13px;
+  font-size: 16px;
+  font-weight: 400;
   color: #555;
-  margin: 0;
+  margin: 4px 0 0;
+  line-height: 1.3;
+}
+
+.rss-season-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.rss-season-odds {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #555;
+  text-align: left;
   line-height: 1.5;
+}
+
+.rss-season-odds p {
+  margin: 0;
+}
+
+.rss-season-titleinfo {
+  font-family: 'Inter', sans-serif;
+  text-align: right;
+  line-height: 1.5;
+}
+
+.rss-season-titlenum {
+  font-size: 12px;
+  font-weight: 500;
+  color: #1C1C1C;
+  margin: 0;
+}
+
+.rss-season-last {
+  font-size: 12px;
+  color: #555;
+  margin: 2px 0 0;
 }
 
 
@@ -1860,7 +1926,24 @@ h3 { font-size: 24px; }
 }
 
 /* Season tiles collapse to 1 column on narrower screens (phones, narrow tablets) */
-@media (max-width: 700px) {
+/* Season grid responsive progression — 4 columns at full desktop,
+   2 columns at tablet/narrow desktop widths, 1 column on phones.
+   The 4-tile-and-6-tile centering rules above only make sense in 4-column
+   mode, so they get reset in the 2-column and 1-column ranges so the
+   forced `grid-column: 2` doesn't extend the implicit grid. */
+@media (max-width: 900px) {
+  .rss-season-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Reset the centering rules — natural flow works for 2 columns */
+  .rss-season-grid > .rss-season-card:nth-child(5),
+  .rss-season-grid > .rss-season-card:nth-child(9) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 600px) {
   .rss-season-grid {
     grid-template-columns: 1fr;
   }
