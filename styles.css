@@ -1226,10 +1226,10 @@ h3 { font-size: 24px; }
 }
 
 .rss-headline-overachiever {
-  border-top-color: #00642E;
+  border-top-color: #002744;
 }
 .rss-headline-overachiever .rss-headline-card-icon {
-  color: #00642E;
+  color: #002744;
 }
 
 .rss-headline-underachiever {
@@ -1237,6 +1237,13 @@ h3 { font-size: 24px; }
 }
 .rss-headline-underachiever .rss-headline-card-icon {
   color: #A4161A;
+}
+
+.rss-headline-runnerup {
+  border-top-color: #475569;
+}
+.rss-headline-runnerup .rss-headline-card-icon {
+  color: #475569;
 }
 
 
@@ -1415,7 +1422,7 @@ h3 { font-size: 24px; }
 }
 
 .rss-bracket-al { border-left-color: #002744; }
-.rss-bracket-nl { border-left-color: #00642E; }
+.rss-bracket-nl { border-left-color: #A4161A; }
 
 .rss-bracket-league-title {
   font-family: 'Barlow Semi Condensed', sans-serif;
@@ -1426,7 +1433,7 @@ h3 { font-size: 24px; }
 }
 
 .rss-bracket-al .rss-bracket-league-title { color: #002744; }
-.rss-bracket-nl .rss-bracket-league-title { color: #00642E; }
+.rss-bracket-nl .rss-bracket-league-title { color: #A4161A; }
 
 /* Rounds: arrange horizontally on desktop, vertically on phones.
    Uses flexbox so rounds auto-distribute width based on how many there
@@ -1545,15 +1552,15 @@ h3 { font-size: 24px; }
   background-color: white;
   border-radius: 10px;
   padding: 24px 28px;
-  box-shadow: 0 2px 8px rgba(164, 22, 26, 0.15);
-  border-left: 6px solid #A4161A;
+  box-shadow: 0 2px 8px rgba(0, 100, 46, 0.15);
+  border-left: 6px solid #00642E;
   text-align: center;
 }
 
 .rss-bracket-ws-title {
   font-family: 'Graduate', serif;
   font-size: 24px;
-  color: #A4161A;
+  color: #00642E;
   letter-spacing: 1.5px;
   margin: 0 0 14px;
   display: flex;
@@ -1573,7 +1580,7 @@ h3 { font-size: 24px; }
   background: #fafafa;
   padding: 14px 20px;
   border-radius: 8px;
-  border-left: 4px solid #A4161A;
+  border-left: 4px solid #00642E;
 }
 
 .rss-bracket-matchup-big .rss-bracket-team-name {
